@@ -1,0 +1,26 @@
+#   description      hygrophobic  lumps  total_volume   water_volume    avg_time   millidegrees_per_second    linear_estimate  water_content 
+1   super_dry        yes          no     700.00         0.00            29.56      8.52                       3.52             0.00          
+2   super_dry        yes          no     715.00         10.00           77.63*     3.49                       1.44             1.40          
+3   super_dry        yes          no     730.00         20.00           74.44*     3.66                       1.51             2.74          
+4   very_dry         yes          no     760.00         30.00           34.64*     7.35                       3.04             3.95          
+5   very_dry         yes          no     775.00         40.00           29.22*     8.66                       3.58             5.16          
+6   very_dry         yes          no     800.00         50.00           17.41      14.56                      6.02             6.25          
+7   slightly_moist   yes          no     950.00         70.00           13.34      19.00                      7.85             7.37          
+8   slightly_moist   yes          no     1000.00        90.00           12.17      20.78                      8.58             9.00          
+9   some_moist       yes          no     1050.00        110.00          9.59       26.32                      10.88            10.48         
+10  some_moist       no           no     1050.00        130.00          7.40       34.11                      14.10            12.38         
+11  moist            no           yes    1050.00        180.00          5.38       47.03                      19.43            17.14         
+12  pretty_moist     no           yes    1100.00        210.00          4.19       60.58                      25.03            19.09         
+13  pretty_moist     no           yes    1050.00        240.00          3.63       70.11                      28.97            22.86         
+14  very_moist       no           yes    1000.00        300.00          3.16       80.45                      33.24            30.00         
+15  wet              no           yes    800.00         360.00          2.29       109.81                     45.37            45.00         
+
+*2-5 is not reliable because the soil started to produce heat first time it got wet after baking
+
+Multiplying millidegres_per_second with 2.42 gives a good estimate of water content for this soil type
+
+#10 is the first measurement where the soil has stopped to be hygrophobic, this is probably the minimum witlting point for most common plant types
+
+#9-#14 is according to http://en.wikipedia.org/wiki/Water_content#Earth_and_agricultural_sciences field capacity, since this is a large span it is reasonable
+	to assume that around 20% (#12) is field capacity of common plant types.
+

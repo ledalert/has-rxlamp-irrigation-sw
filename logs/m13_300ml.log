@@ -1,0 +1,18 @@
+Listening for readings from controller
+Current temperature: 28.699186 °C
+Current temperature: 29.279121 °C
+Current temperature: 29.803862 °C
+Current temperature: 30.238045 °C
+Reading 1: 2.810000 seconds for Δ-0.252277°K (30.250313° C high,  29.998035°C low)
+Current temperature: 29.687908 °C
+Current temperature: 30.229370 °C
+Reading 2: 3.050000 seconds for Δ-0.251930°K (30.250227° C high,  29.998297°C low)
+Current temperature: 29.731573 °C
+Current temperature: 30.216316 °C
+Reading 3: 3.190000 seconds for Δ-0.252363°K (30.251099° C high,  29.998735°C low)
+Current temperature: 29.865133 °C
+Reading 4: 3.310000 seconds for Δ-0.252016°K (30.250576° C high,  29.998560°C low)
+Current temperature: 29.871155 °C
+Current temperature: 30.076504 °C
+Reading 5: 3.410000 seconds for Δ-0.251053°K (30.250666° C high,  29.999613°C low)
+All done!

@@ -1,0 +1,201 @@
+#define BIT_0 6
+#define BIT_1 14
+#define FREQ 800000
+
+// #define BIT_0 8
+// #define BIT_1 29
+// #define FREQ 400000
+
+#include <libopencm3/stm32/rcc.h>
+#include <libopencm3/stm32/gpio.h>
+#include <libopencm3/stm32/timer.h>
+#include <libopencm3/stm32/dma.h>
+#include <libopencm3/cm3/systick.h>
+#include <libopencm3/cm3/nvic.h>
+
+
+static volatile int ms_time_delay;	//WTF!? Why do I have to use static!???
+
+void dma1_transmit(uint32_t src, uint32_t dst, uint32_t length, uint32_t channel) {
+	dma_channel_reset(DMA1, channel);
+
+	dma_set_peripheral_address(DMA1, channel, dst);
+	dma_set_memory_address(DMA1, channel, src);
+	dma_set_number_of_data(DMA1, channel, length);
+	dma_set_read_from_memory(DMA1, channel);
+	dma_enable_memory_increment_mode(DMA1, channel);
+	dma_set_peripheral_size(DMA1, channel, DMA_CCR_PSIZE_8BIT);
+	dma_set_memory_size(DMA1, channel, DMA_CCR_MSIZE_8BIT);
+	dma_set_priority(DMA1, channel, DMA_CCR_PL_VERY_HIGH);
+
+	dma_enable_channel(DMA1, channel);
+
+}
+
+
+void dma1_transmit_8_32(uint32_t src, uint32_t dst, uint32_t length, uint32_t channel) {
+	dma_channel_reset(DMA1, channel);
+
+	dma_set_peripheral_address(DMA1, channel, dst);
+	dma_set_memory_address(DMA1, channel, src);
+	dma_set_number_of_data(DMA1, channel, length);
+	dma_set_read_from_memory(DMA1, channel);
+	dma_enable_memory_increment_mode(DMA1, channel);
+	dma_set_peripheral_size(DMA1, channel, DMA_CCR_PSIZE_32BIT);
+	dma_set_memory_size(DMA1, channel, DMA_CCR_MSIZE_8BIT);
+	dma_set_priority(DMA1, channel, DMA_CCR_PL_VERY_HIGH);
+
+	dma_enable_channel(DMA1, channel);
+
+}
+
+
+
+void sys_tick_handler(void) {
+	if (ms_time_delay) {
+		ms_time_delay--;
+	}
+}
+
+void sleep_ms(int t) {
+	ms_time_delay = t;	while (ms_time_delay);
+}
+
+inline void colorHexagon(int hue, int *R, int *G, int *B) {
+	int frac = hue >> 12;
+	int ci = hue & 0xFFF;
+	int cd = 4095 - ci;
+	int cs = 4095;
+	switch (frac) {
+		case 0:	*R = cs;	*G = ci;	*B = 0; break;		//R1	G+	B0
+		case 1:	*R = cd;	*G = cs;	*B = 0; break;		//R-	G1	B0
+		case 2:	*R = 0;	*G = cs;	*B = ci; break;	//R0	G1	B+
+		case 3:	*R = 0;	*G = cd;	*B = cs; break;	//R0	G-	B1
+		case 4:	*R = ci;	*G = 0;	*B = cs; break;	//R+	G0	B1
+		case 5:	*R = cs;	*G = 0;	*B = cd; break;	//R1	G0	B-
+	}
+}
+
+
+static volatile done=0;
+
+int main() {
+
+	rcc_clock_setup_in_hsi_out_24mhz();
+	rcc_periph_clock_enable(RCC_GPIOA);
+	rcc_periph_clock_enable(RCC_AFIO);
+	rcc_periph_clock_enable(RCC_TIM2);
+	rcc_periph_clock_enable(RCC_DMA1);
+
+	gpio_set(GPIOA, GPIO0);
+	gpio_set_mode(GPIOA, GPIO_MODE_OUTPUT_10_MHZ, GPIO_CNF_OUTPUT_ALTFN_OPENDRAIN, GPIO0);
+
+
+	ms_time_delay=0;
+	systick_set_clocksource(STK_CSR_CLKSOURCE_AHB);
+	systick_set_reload(24000-1);  // 1 kHz
+	systick_interrupt_enable();
+	systick_counter_enable();
+
+
+
+	TIM2_CR1 = TIM_CR1_CKD_CK_INT | TIM_CR1_CMS_EDGE;
+	/* Period */
+	TIM2_ARR = (24000000 / FREQ)-1;
+	/* Prescaler */
+	TIM2_PSC = 0;
+	TIM2_EGR = TIM_EGR_UG;
+
+	/* Output compare 3 mode and preload */
+	TIM2_CCMR1 |= TIM_CCMR1_OC1M_PWM1 | TIM_CCMR1_OC1PE;
+
+	/* Polarity and state */
+	TIM2_CCER |= TIM_CCER_CC1E;
+
+	/* ARR reload enable */
+	TIM2_CR1 |= TIM_CR1_ARPE;
+
+	/* Counter enable */
+	TIM2_CR1 |= TIM_CR1_CEN;
+
+	TIM2_CCR1 = 0;
+
+	#define NUMBER_LEDS 42
+
+	volatile uint8_t buf[NUMBER_LEDS*24+1];
+
+
+	//42 x 24
+
+
+	struct color {
+		uint8_t r;
+		uint8_t g;
+		uint8_t b;
+	};
+
+
+
+	// start populate buffer
+
+	static unsigned int cc=0;
+
+	void test() {
+
+		cc=(cc+17) % (4096*6);
+		uint8_t* ptr=buf;
+		for (int led=0;led<NUMBER_LEDS;led++) {
+
+			int R, G, B;
+			colorHexagon( (cc+(NUMBER_LEDS-led)*250) % (4096*6), &R, &G, &B);
+
+			struct color LED;
+			LED.r = R>>4;
+			LED.g = G>>4;
+			LED.b = B>>4;
+
+
+			for (int bit=7;bit>=0;bit--) { *ptr++ = LED.g & (1 << bit) ? BIT_1 : BIT_0; }
+			for (int bit=7;bit>=0;bit--) { *ptr++ = LED.r & (1 << bit) ? BIT_1 : BIT_0; }
+			for (int bit=7;bit>=0;bit--) { *ptr++ = LED.b & (1 << bit) ? BIT_1 : BIT_0; }
+			
+			
+
+		}
+		*ptr=0;
+
+
+
+		TIM2_DIER &= ~TIM_DIER_CC1DE;	//Disable DMA transfer for CC1
+
+		dma1_transmit_8_32((uint32_t) buf, (uint32_t) &TIM2_CCR1, 24*NUMBER_LEDS+1, DMA_CHANNEL5 );
+		TIM2_DIER |= TIM_DIER_CC1DE;	//Enable DMA transfer for CC1
+		//TIM2_CR2 |= TIM_CR2_CCDS;		//DMA transfer on update
+
+		done=0;
+		dma_enable_transfer_complete_interrupt(DMA1, DMA_CHANNEL5);
+
+
+	}
+
+	nvic_set_priority(NVIC_DMA1_CHANNEL5_IRQ, 0);
+	nvic_enable_irq(NVIC_DMA1_CHANNEL5_IRQ);
+
+
+	while(1) {
+
+		test();
+		while(!done);
+		sleep_ms(1);
+
+
+	}
+
+	return 0;
+}
+
+
+void dma1_channel5_isr(void) {
+	DMA1_IFCR |= DMA_IFCR_CTCIF5;
+	done=1;
+}
