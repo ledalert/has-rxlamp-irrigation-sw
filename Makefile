@@ -1,6 +1,7 @@
+SHELL=bash
 #Project settings
-PROJECT_NAME = logic_test
-SOURCES = main.c
+PROJECT_NAME = rxlamp_pump
+SOURCES = main.c hw.c ws2812.c gpio.c timer.c
 BUILD_DIR = build/
 
 OBJECTS = $(SOURCES:%.c=$(BUILD_DIR)%.o)
@@ -52,10 +53,10 @@ $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
 $(TARGET_ELF): $(BUILD_DIR) $(LIBS) $(OBJECTS) $(LINK_SCRIPT)
-	$(CC) $(OBJECTS) $(CFLAGS) $(LINK_FLAGS) -o $(TARGET_ELF)
+	$(CC) $(OBJECTS) $(CFLAGS) $(LINK_FLAGS) -o $(TARGET_ELF) 2> >(python cleanup.py)
 
 $(OBJECTS): $(BUILD_DIR)%.o: %.c
-	$(CC) -c $(CFLAGS) $(INCLUDE_PATHS) $^ -o $@
+	$(CC) -c $(CFLAGS) $(INCLUDE_PATHS) $^ -o $@ 2> >(python cleanup.py)
 
 $(LINK_SCRIPT): libopencm3_stm32f1.a
 
