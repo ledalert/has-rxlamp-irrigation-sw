@@ -8,5 +8,6 @@ s.setDTR(True)
 s.setRTS(False)
 
 while 1:
-	print(struct.unpack('f', s.read(4)))
+	sys.stdout.buffer.write(s.read(1))
+	sys.stdout.flush()
 	
