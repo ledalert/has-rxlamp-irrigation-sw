@@ -1,0 +1,239 @@
+\hypertarget{main_8c}{}\section{src/main.c File Reference}
+\label{main_8c}\index{src/main.\+c@{src/main.\+c}}
+
+
+Irrigation controller main file.  
+
+
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ws2812\+\_\+macro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usart\+\_\+macro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}led\+\_\+macro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer\+\_\+macro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}systick.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}adc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}time.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filter.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}irrigation.\+h\char`\"{}}\\*
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structstate}{state}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{main_8c_abedacb9f24c8951e3091cbbb69e35b9f}{}\#define {\bfseries N\+T\+C\+\_\+\+Filter\+\_\+\+Size}~250\label{main_8c_abedacb9f24c8951e3091cbbb69e35b9f}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{main_8c_aa423cbe2bea57704cca655826b2338c1}{}{\bfseries G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (G\+P\+I\+O\+\_\+\+P\+A, G\+P\+I\+O\+A, R\+C\+C\+\_\+\+G\+P\+I\+O\+A)\label{main_8c_aa423cbe2bea57704cca655826b2338c1}
+
+\item 
+\hypertarget{main_8c_abebbe5a8f2ebcfc52329af1a2a452c32}{}{\bfseries G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (G\+P\+I\+O\+\_\+\+P\+B, G\+P\+I\+O\+B, R\+C\+C\+\_\+\+G\+P\+I\+O\+B)\label{main_8c_abebbe5a8f2ebcfc52329af1a2a452c32}
+
+\item 
+\hypertarget{main_8c_ab051ec5725126430e405e5a598ccfe70}{}{\bfseries W\+S2812\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (Status\+L\+E\+D, T\+I\+M\+E\+R1\+\_\+\+C\+C\+R3\+N\+\_\+\+D\+M\+A,\&G\+P\+I\+O\+\_\+\+P\+B, G\+P\+I\+O15, 1)\label{main_8c_ab051ec5725126430e405e5a598ccfe70}
+
+\item 
+\hypertarget{main_8c_a80f5b1b0fc5eac69c761e7388600dc59}{}{\bfseries U\+S\+A\+R\+T\+\_\+\+T\+X\+O\+N\+L\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (Serial, U\+S\+A\+R\+T1, R\+C\+C\+\_\+\+U\+S\+A\+R\+T1, 921600, 0, 0, 0, 0,\&G\+P\+I\+O\+\_\+\+P\+A, G\+P\+I\+O\+\_\+\+U\+S\+A\+R\+T1\+\_\+\+T\+X)\label{main_8c_a80f5b1b0fc5eac69c761e7388600dc59}
+
+\item 
+\hypertarget{main_8c_a853c3748541a5efcdc0a0aef2a523eb9}{}{\bfseries T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (Pump,\&G\+P\+I\+O\+\_\+\+P\+B, G\+P\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+2\+\_\+\+M\+H\+Z, G\+P\+I\+O\+\_\+\+C\+N\+F\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+L\+T\+F\+N\+\_\+\+P\+U\+S\+H\+P\+U\+L\+L, G\+P\+I\+O0, T\+I\+M\+E\+R3\+\_\+\+C\+C\+R3, 4095, 0)\label{main_8c_a853c3748541a5efcdc0a0aef2a523eb9}
+
+\item 
+\hypertarget{main_8c_a9454d469f767dc72f29f51487317ba6d}{}{\bfseries T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (Heater,\&G\+P\+I\+O\+\_\+\+P\+A, G\+P\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+2\+\_\+\+M\+H\+Z, G\+P\+I\+O\+\_\+\+C\+N\+F\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+L\+T\+F\+N\+\_\+\+P\+U\+S\+H\+P\+U\+L\+L, G\+P\+I\+O2, T\+I\+M\+E\+R2\+\_\+\+C\+C\+R3, 4095, 0)\label{main_8c_a9454d469f767dc72f29f51487317ba6d}
+
+\item 
+\hypertarget{main_8c_a1f98adee46907f4bd29dc153ce25dcb7}{}{\bfseries G\+A\+M\+M\+A\+\_\+\+L\+U\+T\+\_\+8\+\_\+8\+\_\+\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (L\+E\+D\+\_\+\+Gamma)\label{main_8c_a1f98adee46907f4bd29dc153ce25dcb7}
+
+\item 
+\hypertarget{main_8c_a3ffc4d6ea2a7a8039f889967b7a7d7e3}{}{\bfseries G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (N\+T\+C\+\_\+pin,\&G\+P\+I\+O\+\_\+\+P\+A, G\+P\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+P\+U\+T, G\+P\+I\+O\+\_\+\+C\+N\+F\+\_\+\+I\+N\+P\+U\+T\+\_\+\+A\+N\+A\+L\+O\+G, G\+P\+I\+O3)\label{main_8c_a3ffc4d6ea2a7a8039f889967b7a7d7e3}
+
+\item 
+void \hyperlink{main_8c_aabae29cd362c0001a2b417c9206cb330}{hw\+\_\+init\+\_\+state} (enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} \hyperlink{structstate}{state})
+\begin{DoxyCompactList}\small\item\em This function prototype calls all perhipherals with the state as argument. \end{DoxyCompactList}\item 
+\hypertarget{main_8c_afdd94f850b193691f1bfc60c724b542a}{}void {\bfseries sys\+\_\+tick\+\_\+handler} (void)\label{main_8c_afdd94f850b193691f1bfc60c724b542a}
+
+\item 
+\hypertarget{main_8c_a42ca7c9b89c22fcd9ec9aeed3e96b6c4}{}void {\bfseries get\+\_\+system\+\_\+time\+\_\+blocking} (struct \hyperlink{structsw__timer__system__time}{sw\+\_\+timer\+\_\+system\+\_\+time} $\ast$result)\label{main_8c_a42ca7c9b89c22fcd9ec9aeed3e96b6c4}
+
+\item 
+\hypertarget{main_8c_a8e3d66f43880efbd56cc2f68347b9b19}{}void {\bfseries dma1\+\_\+channel1\+\_\+isr} (void)\label{main_8c_a8e3d66f43880efbd56cc2f68347b9b19}
+
+\item 
+\hypertarget{main_8c_a6440cc6e50bc4445698e203198648185}{}void {\bfseries status\+\_\+color} (int r, int g, int b)\label{main_8c_a6440cc6e50bc4445698e203198648185}
+
+\item 
+\hypertarget{main_8c_ab8505b37986de5265d35fdaa3569b9af}{}void {\bfseries usart\+\_\+blocking\+\_\+tm} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, struct \hyperlink{structsw__timer__system__time}{sw\+\_\+timer\+\_\+system\+\_\+time} $\ast$\hyperlink{structtm}{tm})\label{main_8c_ab8505b37986de5265d35fdaa3569b9af}
+
+\item 
+\hypertarget{main_8c_a85b9fa287bbc4012266648cbfe73ef47}{}struct \hyperlink{structstate}{state} $\ast$ {\bfseries get\+\_\+state} (enum \hyperlink{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7}{irrigation\+\_\+status} status)\label{main_8c_a85b9fa287bbc4012266648cbfe73ef47}
+
+\item 
+\hypertarget{main_8c_a095a7fe46cf30b7abfbc4aac4b02c257}{}void {\bfseries report\+\_\+current\+\_\+temperature} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{main_8c_a095a7fe46cf30b7abfbc4aac4b02c257}
+
+\item 
+\hypertarget{main_8c_a2d729620635ca5fd1fe6d397b013ad06}{}void {\bfseries report\+\_\+validation\+\_\+temperatures} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{main_8c_a2d729620635ca5fd1fe6d397b013ad06}
+
+\item 
+\hypertarget{main_8c_a328fcba3c5cf7d17f02b4c5b76495653}{}void {\bfseries report\+\_\+sensor\+\_\+malfunction} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{main_8c_a328fcba3c5cf7d17f02b4c5b76495653}
+
+\item 
+\hypertarget{main_8c_afe20ef6128c561c493413063e7924081}{}void {\bfseries report\+\_\+sensor\+\_\+fluctuations} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{main_8c_afe20ef6128c561c493413063e7924081}
+
+\item 
+\hypertarget{main_8c_ae8259bbc867800edd5b8dc218f1a6693}{}void {\bfseries report\+\_\+msg\+\_\+note} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller, char $\ast$msg)\label{main_8c_ae8259bbc867800edd5b8dc218f1a6693}
+
+\item 
+\hypertarget{main_8c_a4ce529588e4fc671f721721ca40e9f2e}{}void {\bfseries report\+\_\+measurement\+\_\+data} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller, char $\ast$msg)\label{main_8c_a4ce529588e4fc671f721721ca40e9f2e}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsystick__config}{systick\+\_\+config} {\bfseries Systick\+\_\+config}
+\item 
+struct \hyperlink{structsystick}{systick} {\bfseries Systick}
+\item 
+struct \hyperlink{structadc__config}{adc\+\_\+config} {\bfseries N\+T\+C\+\_\+adc\+\_\+config}
+\item 
+\hypertarget{main_8c_a58930016c740c92d9007715fd9262f27}{}uint16\+\_\+t {\bfseries N\+T\+C\+\_\+buffer} \mbox{[}1\mbox{]}\label{main_8c_a58930016c740c92d9007715fd9262f27}
+
+\item 
+struct \hyperlink{structadc}{adc} {\bfseries N\+T\+C\+\_\+adc}
+\item 
+\hypertarget{main_8c_a5333e724c49577c06758ac990228568b}{}volatile uint32\+\_\+t {\bfseries N\+T\+C\+\_\+filter\+\_\+buffer} \mbox{[}N\+T\+C\+\_\+\+Filter\+\_\+\+Size\mbox{]}\label{main_8c_a5333e724c49577c06758ac990228568b}
+
+\item 
+struct \hyperlink{structfilter__rms}{filter\+\_\+rms} {\bfseries N\+T\+C\+\_\+filter}
+\item 
+\hypertarget{main_8c_ad6626ba12fbadd1981081605f892a7bb}{}volatile int {\bfseries sleep\+\_\+ms} = 0\label{main_8c_ad6626ba12fbadd1981081605f892a7bb}
+
+\item 
+\hypertarget{main_8c_a2d39b8e4f9506f28e2bdff70929287f6}{}volatile int {\bfseries N\+T\+C\+\_\+filtered\+\_\+value} = -\/1\label{main_8c_a2d39b8e4f9506f28e2bdff70929287f6}
+
+\item 
+\hypertarget{main_8c_a9d12c8106f421683f94175dd1c572624}{}volatile struct \hyperlink{structsw__timer__system__time}{sw\+\_\+timer\+\_\+system\+\_\+time} {\bfseries system\+\_\+time} = \{1420070400, 0\}\label{main_8c_a9d12c8106f421683f94175dd1c572624}
+
+\item 
+\hypertarget{main_8c_a153e3e14841d1967017a21ab4feacc19}{}volatile bool {\bfseries system\+\_\+time\+\_\+updated} =0\label{main_8c_a153e3e14841d1967017a21ab4feacc19}
+
+\item 
+\hypertarget{main_8c_a82cbd1bddefe1e9d0229cb36b068ec6d}{}const struct \hyperlink{structstate}{state} {\bfseries state\+\_\+init} = \{\hyperlink{group__state__init_gaeca2f683660bf42f5258acd6aac353d0}{state\+\_\+init\+\_\+enter}, \hyperlink{group__state__init_ga5b5f5a7ec8534a643fb599efdee6ed4f}{state\+\_\+init\+\_\+run}, \hyperlink{group__state__init_ga52863e306edb45d15c12acdecb7e5555}{state\+\_\+init\+\_\+exit}, \char`\"{}Init\char`\"{}\}\label{main_8c_a82cbd1bddefe1e9d0229cb36b068ec6d}
+
+\item 
+\hypertarget{main_8c_af5282fd583ec6d89886f7f7790721e29}{}const struct \hyperlink{structstate}{state} {\bfseries state\+\_\+validate} = \{\hyperlink{group__state__validate_gac0d41d4685bd461b3a613f6320405b79}{state\+\_\+validate\+\_\+enter}, \hyperlink{group__state__validate_gaec38509b93f8a850919aa7a36e543ed5}{state\+\_\+validate\+\_\+run}, \hyperlink{group__state__validate_gac480e756742ffd9acd9bd21ac1e8885c}{state\+\_\+validate\+\_\+exit}, \char`\"{}Validate temperature sensor\char`\"{}\}\label{main_8c_af5282fd583ec6d89886f7f7790721e29}
+
+\item 
+\hypertarget{main_8c_abc9312d41f1b93fd44e0cdad05313483}{}const struct \hyperlink{structstate}{state} {\bfseries state\+\_\+reboot} = \{state\+\_\+reboot\+\_\+enter, state\+\_\+reboot\+\_\+run, state\+\_\+reboot\+\_\+exit, \char`\"{}Reboot\char`\"{}\}\label{main_8c_abc9312d41f1b93fd44e0cdad05313483}
+
+\item 
+\hypertarget{main_8c_a3ce37ea920e9b7c6b383d70fe40233e7}{}const struct \hyperlink{structstate}{state} {\bfseries state\+\_\+measure} = \{state\+\_\+measure\+\_\+enter, state\+\_\+measure\+\_\+run, state\+\_\+measure\+\_\+exit, \char`\"{}Measure soil water content\char`\"{}\}\label{main_8c_a3ce37ea920e9b7c6b383d70fe40233e7}
+
+\item 
+struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} {\bfseries ic}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Irrigation controller main file. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000005}{Todo}]systick, adc, moisture sensor, pwm output, filter\end{DoxyRefDesc}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8c_aabae29cd362c0001a2b417c9206cb330}{}\index{main.\+c@{main.\+c}!hw\+\_\+init\+\_\+state@{hw\+\_\+init\+\_\+state}}
+\index{hw\+\_\+init\+\_\+state@{hw\+\_\+init\+\_\+state}!main.\+c@{main.\+c}}
+\subsubsection[{hw\+\_\+init\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf hw\+\_\+init\+\_\+state} (
+\begin{DoxyParamCaption}
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{main_8c_aabae29cd362c0001a2b417c9206cb330}
+
+
+This function prototype calls all perhipherals with the state as argument. 
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{main_8c_a2c433a8720f4e75971c7f216723aba26}{}\index{main.\+c@{main.\+c}!ic@{ic}}
+\index{ic@{ic}!main.\+c@{main.\+c}}
+\subsubsection[{ic}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf irrigation\+\_\+controller} ic}\label{main_8c_a2c433a8720f4e75971c7f216723aba26}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    .events = \{
+        .report\_validation\_temperatures = report\_validation\_temperatures,
+        .report\_sensor\_malfunction = report\_sensor\_malfunction,
+        .report\_sensor\_fluctuations = report\_sensor\_fluctuations,
+        .report\_current\_temperature = report\_current\_temperature,
+        .report\_msg\_note = report\_msg\_note,
+        .report\_measurement\_data = report\_measurement\_data,
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{main_8c_ab08aed4305f11ea61ea2ac93a524d34b}{}\index{main.\+c@{main.\+c}!N\+T\+C\+\_\+adc@{N\+T\+C\+\_\+adc}}
+\index{N\+T\+C\+\_\+adc@{N\+T\+C\+\_\+adc}!main.\+c@{main.\+c}}
+\subsubsection[{N\+T\+C\+\_\+adc}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf adc} N\+T\+C\+\_\+adc}\label{main_8c_ab08aed4305f11ea61ea2ac93a524d34b}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    .configuration = &NTC\_adc\_config,
+    .adc\_buffer = NTC\_buffer,
+\}
+\end{DoxyCode}
+\hypertarget{main_8c_a9036c54a901bdc13978408f1babe6f78}{}\index{main.\+c@{main.\+c}!N\+T\+C\+\_\+adc\+\_\+config@{N\+T\+C\+\_\+adc\+\_\+config}}
+\index{N\+T\+C\+\_\+adc\+\_\+config@{N\+T\+C\+\_\+adc\+\_\+config}!main.\+c@{main.\+c}}
+\subsubsection[{N\+T\+C\+\_\+adc\+\_\+config}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf adc\+\_\+config} N\+T\+C\+\_\+adc\+\_\+config}\label{main_8c_a9036c54a901bdc13978408f1babe6f78}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    .channel\_map = &(uint8\_t)\{3\},
+    .channel\_count = 1,
+\}
+\end{DoxyCode}
+\hypertarget{main_8c_ab0e81558ffe64a96a635a1a6af8ad8bd}{}\index{main.\+c@{main.\+c}!N\+T\+C\+\_\+filter@{N\+T\+C\+\_\+filter}}
+\index{N\+T\+C\+\_\+filter@{N\+T\+C\+\_\+filter}!main.\+c@{main.\+c}}
+\subsubsection[{N\+T\+C\+\_\+filter}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf filter\+\_\+rms} N\+T\+C\+\_\+filter}\label{main_8c_ab0e81558ffe64a96a635a1a6af8ad8bd}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    .buffer = NTC\_filter\_buffer,
+    .size = NTC\_Filter\_Size,
+    .valid\_range = \{    
+        .min = 1200,
+        .max = 3400,
+    \},
+\}
+\end{DoxyCode}
+\hypertarget{main_8c_a8d0d8fb8a23aac2b6ac6d9e81e7b58e2}{}\index{main.\+c@{main.\+c}!Systick@{Systick}}
+\index{Systick@{Systick}!main.\+c@{main.\+c}}
+\subsubsection[{Systick}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf systick} Systick}\label{main_8c_a8d0d8fb8a23aac2b6ac6d9e81e7b58e2}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    .configuration = &Systick\_config,
+\}
+\end{DoxyCode}
+\hypertarget{main_8c_a4fb87b3684142c82865003df813ef052}{}\index{main.\+c@{main.\+c}!Systick\+\_\+config@{Systick\+\_\+config}}
+\index{Systick\+\_\+config@{Systick\+\_\+config}!main.\+c@{main.\+c}}
+\subsubsection[{Systick\+\_\+config}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf systick\+\_\+config} Systick\+\_\+config}\label{main_8c_a4fb87b3684142c82865003df813ef052}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    .frequency = 1000,
+    .auto\_start = 1,
+\}
+\end{DoxyCode}

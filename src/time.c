@@ -1,10 +1,9 @@
 #include "time.h"
-volatile int system_time = 1420070400;
-volatile int mscounter=0;
 
 
 
-int __secs_to_tm(int t, struct tm *tm) {
+
+int time_tm_from_epoch(struct tm* tm, int t) {	
 	long long days, secs;
 	int remdays, remsecs, remyears;
 	int qc_cycles, c_cycles, q_cycles;

@@ -21,9 +21,14 @@ struct tm {
 #define DAYS_PER_100Y (365*100 + 24)
 #define DAYS_PER_4Y   (365*4   + 1)
 
-int localtime(struct tm* result);
 
-volatile int system_time;
+struct sw_timer_system_time {
+	int epoch;
+	int ms;
+};
+
+int time_tm_from_epoch(struct tm* result, int epoch);
+
 
 #define _TIME_H_
 #endif

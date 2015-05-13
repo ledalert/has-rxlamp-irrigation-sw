@@ -1,0 +1,86 @@
+\hypertarget{ws2812_8c}{}\section{src/ws2812.c File Reference}
+\label{ws2812_8c}\index{src/ws2812.\+c@{src/ws2812.\+c}}
+{\ttfamily \#include \char`\"{}ws2812.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ws2812_8c_abe4c1d1365ba3b842e733f00ff5b8cb4}{ws2812\+\_\+configure\+\_\+timer} (struct \hyperlink{structws2812}{ws2812} $\ast$led)
+\item 
+void \hyperlink{ws2812_8c_a35b250d1bf6fa32e168ca7d559309c9a}{ws2812\+\_\+configure\+\_\+gpio} (struct \hyperlink{structws2812}{ws2812} $\ast$led)
+\item 
+void \hyperlink{ws2812_8c_a077cfeecec2b7fbefaed4e75631e76c7}{ws2812\+\_\+set\+\_\+defaults} (struct \hyperlink{structws2812}{ws2812} $\ast$led)
+\item 
+void \hyperlink{ws2812_8c_adbff51511c0bd9a408d6065a5c2b9851}{ws2812\+\_\+init} (struct \hyperlink{structws2812}{ws2812} $\ast$led, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} \hyperlink{structstate}{state})
+\item 
+void \hyperlink{ws2812_8c_a76c614084b51bd6644076828269cecf6}{ws2812\+\_\+process\+\_\+buffer} (struct \hyperlink{structws2812}{ws2812} $\ast$led)
+\item 
+void \hyperlink{ws2812_8c_a4dbb8822e64ed089eb01c8145817e3ed}{ws2812\+\_\+update} (struct \hyperlink{structws2812}{ws2812} $\ast$led)
+\item 
+void \hyperlink{ws2812_8c_a82f2823a0771f8d6e1671ce1078aa5db}{ws2812\+\_\+update\+\_\+blocking} (struct \hyperlink{structws2812}{ws2812} $\ast$led)
+\item 
+void \hyperlink{ws2812_8c_a563ef0da6498fc194067eed2611705a9}{ws2812\+\_\+set\+\_\+led} (struct \hyperlink{structws2812}{ws2812} $\ast$led, int index, int r, int g, int b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{ws2812_8c_a35b250d1bf6fa32e168ca7d559309c9a}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+configure\+\_\+gpio@{ws2812\+\_\+configure\+\_\+gpio}}
+\index{ws2812\+\_\+configure\+\_\+gpio@{ws2812\+\_\+configure\+\_\+gpio}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+configure\+\_\+gpio}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+configure\+\_\+gpio (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_a35b250d1bf6fa32e168ca7d559309c9a}
+\hypertarget{ws2812_8c_abe4c1d1365ba3b842e733f00ff5b8cb4}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+configure\+\_\+timer@{ws2812\+\_\+configure\+\_\+timer}}
+\index{ws2812\+\_\+configure\+\_\+timer@{ws2812\+\_\+configure\+\_\+timer}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+configure\+\_\+timer}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+configure\+\_\+timer (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_abe4c1d1365ba3b842e733f00ff5b8cb4}
+\hypertarget{ws2812_8c_adbff51511c0bd9a408d6065a5c2b9851}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+init@{ws2812\+\_\+init}}
+\index{ws2812\+\_\+init@{ws2812\+\_\+init}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led, }
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_adbff51511c0bd9a408d6065a5c2b9851}
+\hypertarget{ws2812_8c_a76c614084b51bd6644076828269cecf6}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+process\+\_\+buffer@{ws2812\+\_\+process\+\_\+buffer}}
+\index{ws2812\+\_\+process\+\_\+buffer@{ws2812\+\_\+process\+\_\+buffer}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+process\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+process\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_a76c614084b51bd6644076828269cecf6}
+\hypertarget{ws2812_8c_a077cfeecec2b7fbefaed4e75631e76c7}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+set\+\_\+defaults@{ws2812\+\_\+set\+\_\+defaults}}
+\index{ws2812\+\_\+set\+\_\+defaults@{ws2812\+\_\+set\+\_\+defaults}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+set\+\_\+defaults}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+set\+\_\+defaults (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_a077cfeecec2b7fbefaed4e75631e76c7}
+\hypertarget{ws2812_8c_a563ef0da6498fc194067eed2611705a9}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+set\+\_\+led@{ws2812\+\_\+set\+\_\+led}}
+\index{ws2812\+\_\+set\+\_\+led@{ws2812\+\_\+set\+\_\+led}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+set\+\_\+led}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+set\+\_\+led (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led, }
+\item[{int}]{index, }
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_a563ef0da6498fc194067eed2611705a9}
+\hypertarget{ws2812_8c_a4dbb8822e64ed089eb01c8145817e3ed}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+update@{ws2812\+\_\+update}}
+\index{ws2812\+\_\+update@{ws2812\+\_\+update}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_a4dbb8822e64ed089eb01c8145817e3ed}
+\hypertarget{ws2812_8c_a82f2823a0771f8d6e1671ce1078aa5db}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+update\+\_\+blocking@{ws2812\+\_\+update\+\_\+blocking}}
+\index{ws2812\+\_\+update\+\_\+blocking@{ws2812\+\_\+update\+\_\+blocking}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+update\+\_\+blocking}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+update\+\_\+blocking (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_a82f2823a0771f8d6e1671ce1078aa5db}

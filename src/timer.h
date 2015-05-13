@@ -35,6 +35,7 @@ struct timer {
 
 void timer_ccr_init(struct timer_ccr* ccr, enum hw_init_state state);
 void timer_init(struct timer* timer, enum hw_init_state state);
+void timer_ccr_set(struct timer_ccr* ccr, uint32_t value);
 
 #define _TIMER_H_
 #endif

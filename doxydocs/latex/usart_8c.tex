@@ -1,0 +1,90 @@
+\hypertarget{usart_8c}{}\section{src/usart.c File Reference}
+\label{usart_8c}\index{src/usart.\+c@{src/usart.\+c}}
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{usart_8c_a6c89d4ecfd052df4b706797c6b35ee9a}{usart\+\_\+set\+\_\+defaults} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart})
+\item 
+void \hyperlink{usart_8c_abd17fc525b9c36f671bedf0729741976}{usart\+\_\+configure\+\_\+gpio} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart})
+\item 
+void \hyperlink{usart_8c_a0e3103fc345dfb09aa255989c86805e8}{usart\+\_\+init} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} \hyperlink{structstate}{state})
+\item 
+void \hyperlink{usart_8c_aeeebc4a9b5040f2c423773a4eea7a325}{usart\+\_\+blocking\+\_\+send} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, volatile void $\ast$data, int length)
+\item 
+void \hyperlink{usart_8c_ad39a26176dc8964ea1999629b1fd71f3}{usart\+\_\+blocking\+\_\+strz} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, volatile char $\ast$ptr)
+\item 
+void \hyperlink{usart_8c_a3af22e4da85d1cc56e9635c288cfee98}{usart\+\_\+blocking\+\_\+int} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, int data)
+\item 
+void \hyperlink{usart_8c_ab51e225534a49a351524b2b5f26707b5}{usart\+\_\+blocking\+\_\+int\+\_\+zp} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, int data, int dp)
+\item 
+void \hyperlink{usart_8c_af3f4d75d88bd6796e15f0e756525ac2e}{usart\+\_\+blocking\+\_\+float} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, float data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{usart_8c_af3f4d75d88bd6796e15f0e756525ac2e}{}\index{usart.\+c@{usart.\+c}!usart\+\_\+blocking\+\_\+float@{usart\+\_\+blocking\+\_\+float}}
+\index{usart\+\_\+blocking\+\_\+float@{usart\+\_\+blocking\+\_\+float}!usart.\+c@{usart.\+c}}
+\subsubsection[{usart\+\_\+blocking\+\_\+float}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+blocking\+\_\+float (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{float}]{data}
+\end{DoxyParamCaption}
+)}\label{usart_8c_af3f4d75d88bd6796e15f0e756525ac2e}
+\hypertarget{usart_8c_a3af22e4da85d1cc56e9635c288cfee98}{}\index{usart.\+c@{usart.\+c}!usart\+\_\+blocking\+\_\+int@{usart\+\_\+blocking\+\_\+int}}
+\index{usart\+\_\+blocking\+\_\+int@{usart\+\_\+blocking\+\_\+int}!usart.\+c@{usart.\+c}}
+\subsubsection[{usart\+\_\+blocking\+\_\+int}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+blocking\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{int}]{data}
+\end{DoxyParamCaption}
+)}\label{usart_8c_a3af22e4da85d1cc56e9635c288cfee98}
+\hypertarget{usart_8c_ab51e225534a49a351524b2b5f26707b5}{}\index{usart.\+c@{usart.\+c}!usart\+\_\+blocking\+\_\+int\+\_\+zp@{usart\+\_\+blocking\+\_\+int\+\_\+zp}}
+\index{usart\+\_\+blocking\+\_\+int\+\_\+zp@{usart\+\_\+blocking\+\_\+int\+\_\+zp}!usart.\+c@{usart.\+c}}
+\subsubsection[{usart\+\_\+blocking\+\_\+int\+\_\+zp}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+blocking\+\_\+int\+\_\+zp (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{int}]{data, }
+\item[{int}]{dp}
+\end{DoxyParamCaption}
+)}\label{usart_8c_ab51e225534a49a351524b2b5f26707b5}
+\hypertarget{usart_8c_aeeebc4a9b5040f2c423773a4eea7a325}{}\index{usart.\+c@{usart.\+c}!usart\+\_\+blocking\+\_\+send@{usart\+\_\+blocking\+\_\+send}}
+\index{usart\+\_\+blocking\+\_\+send@{usart\+\_\+blocking\+\_\+send}!usart.\+c@{usart.\+c}}
+\subsubsection[{usart\+\_\+blocking\+\_\+send}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+blocking\+\_\+send (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{volatile void $\ast$}]{data, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{usart_8c_aeeebc4a9b5040f2c423773a4eea7a325}
+\hypertarget{usart_8c_ad39a26176dc8964ea1999629b1fd71f3}{}\index{usart.\+c@{usart.\+c}!usart\+\_\+blocking\+\_\+strz@{usart\+\_\+blocking\+\_\+strz}}
+\index{usart\+\_\+blocking\+\_\+strz@{usart\+\_\+blocking\+\_\+strz}!usart.\+c@{usart.\+c}}
+\subsubsection[{usart\+\_\+blocking\+\_\+strz}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+blocking\+\_\+strz (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{volatile char $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\label{usart_8c_ad39a26176dc8964ea1999629b1fd71f3}
+\hypertarget{usart_8c_abd17fc525b9c36f671bedf0729741976}{}\index{usart.\+c@{usart.\+c}!usart\+\_\+configure\+\_\+gpio@{usart\+\_\+configure\+\_\+gpio}}
+\index{usart\+\_\+configure\+\_\+gpio@{usart\+\_\+configure\+\_\+gpio}!usart.\+c@{usart.\+c}}
+\subsubsection[{usart\+\_\+configure\+\_\+gpio}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+configure\+\_\+gpio (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart}
+\end{DoxyParamCaption}
+)}\label{usart_8c_abd17fc525b9c36f671bedf0729741976}
+\hypertarget{usart_8c_a0e3103fc345dfb09aa255989c86805e8}{}\index{usart.\+c@{usart.\+c}!usart\+\_\+init@{usart\+\_\+init}}
+\index{usart\+\_\+init@{usart\+\_\+init}!usart.\+c@{usart.\+c}}
+\subsubsection[{usart\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{usart_8c_a0e3103fc345dfb09aa255989c86805e8}
+\hypertarget{usart_8c_a6c89d4ecfd052df4b706797c6b35ee9a}{}\index{usart.\+c@{usart.\+c}!usart\+\_\+set\+\_\+defaults@{usart\+\_\+set\+\_\+defaults}}
+\index{usart\+\_\+set\+\_\+defaults@{usart\+\_\+set\+\_\+defaults}!usart.\+c@{usart.\+c}}
+\subsubsection[{usart\+\_\+set\+\_\+defaults}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+set\+\_\+defaults (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart}
+\end{DoxyParamCaption}
+)}\label{usart_8c_a6c89d4ecfd052df4b706797c6b35ee9a}

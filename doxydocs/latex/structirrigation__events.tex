@@ -1,0 +1,82 @@
+\hypertarget{structirrigation__events}{}\section{irrigation\+\_\+events Struct Reference}
+\label{structirrigation__events}\index{irrigation\+\_\+events@{irrigation\+\_\+events}}
+
+
+The event callback functions for the irrigation controller core.  
+
+
+
+
+{\ttfamily \#include $<$irrigation.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \hyperlink{structirrigation__events_acc5d9d31cce6888cab54d32463470f07}{report\+\_\+validation\+\_\+temperatures} )(struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$)
+\begin{DoxyCompactList}\small\item\em Report the measured temperatures for validation. \end{DoxyCompactList}\item 
+void($\ast$ \hyperlink{structirrigation__events_abafd6872889e6e54648653f690e61ec6}{report\+\_\+sensor\+\_\+malfunction} )(struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$)
+\begin{DoxyCompactList}\small\item\em Report that sensordata is invalid. \end{DoxyCompactList}\item 
+void($\ast$ \hyperlink{structirrigation__events_a41db6d6a624689abdb7be82425ff0b02}{report\+\_\+sensor\+\_\+fluctuations} )(struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$)
+\begin{DoxyCompactList}\small\item\em Report that sensordata fluctuates. \end{DoxyCompactList}\item 
+void($\ast$ \hyperlink{structirrigation__events_a47b81edd52377b4c4e1ed512b830e237}{report\+\_\+current\+\_\+temperature} )(struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$)
+\begin{DoxyCompactList}\small\item\em Reports current temperature. \end{DoxyCompactList}\item 
+void($\ast$ \hyperlink{structirrigation__events_add396df12f986fff177801aa022c35f2}{report\+\_\+measurement\+\_\+data} )(struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$)
+\begin{DoxyCompactList}\small\item\em Report water content data. \end{DoxyCompactList}\item 
+void($\ast$ \hyperlink{structirrigation__events_aae13c04da50716a2433bebd672d129e2}{report\+\_\+msg\+\_\+note} )(struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$, char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Generic note as a string, used for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The event callback functions for the irrigation controller core. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structirrigation__events_a47b81edd52377b4c4e1ed512b830e237}{}\index{irrigation\+\_\+events@{irrigation\+\_\+events}!report\+\_\+current\+\_\+temperature@{report\+\_\+current\+\_\+temperature}}
+\index{report\+\_\+current\+\_\+temperature@{report\+\_\+current\+\_\+temperature}!irrigation\+\_\+events@{irrigation\+\_\+events}}
+\subsubsection[{report\+\_\+current\+\_\+temperature}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ irrigation\+\_\+events\+::report\+\_\+current\+\_\+temperature) (struct {\bf irrigation\+\_\+controller} $\ast$)}\label{structirrigation__events_a47b81edd52377b4c4e1ed512b830e237}
+
+
+Reports current temperature. 
+
+\hypertarget{structirrigation__events_add396df12f986fff177801aa022c35f2}{}\index{irrigation\+\_\+events@{irrigation\+\_\+events}!report\+\_\+measurement\+\_\+data@{report\+\_\+measurement\+\_\+data}}
+\index{report\+\_\+measurement\+\_\+data@{report\+\_\+measurement\+\_\+data}!irrigation\+\_\+events@{irrigation\+\_\+events}}
+\subsubsection[{report\+\_\+measurement\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ irrigation\+\_\+events\+::report\+\_\+measurement\+\_\+data) (struct {\bf irrigation\+\_\+controller} $\ast$)}\label{structirrigation__events_add396df12f986fff177801aa022c35f2}
+
+
+Report water content data. 
+
+\hypertarget{structirrigation__events_aae13c04da50716a2433bebd672d129e2}{}\index{irrigation\+\_\+events@{irrigation\+\_\+events}!report\+\_\+msg\+\_\+note@{report\+\_\+msg\+\_\+note}}
+\index{report\+\_\+msg\+\_\+note@{report\+\_\+msg\+\_\+note}!irrigation\+\_\+events@{irrigation\+\_\+events}}
+\subsubsection[{report\+\_\+msg\+\_\+note}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ irrigation\+\_\+events\+::report\+\_\+msg\+\_\+note) (struct {\bf irrigation\+\_\+controller} $\ast$, char $\ast$msg)}\label{structirrigation__events_aae13c04da50716a2433bebd672d129e2}
+
+
+Generic note as a string, used for debugging. 
+
+\hypertarget{structirrigation__events_a41db6d6a624689abdb7be82425ff0b02}{}\index{irrigation\+\_\+events@{irrigation\+\_\+events}!report\+\_\+sensor\+\_\+fluctuations@{report\+\_\+sensor\+\_\+fluctuations}}
+\index{report\+\_\+sensor\+\_\+fluctuations@{report\+\_\+sensor\+\_\+fluctuations}!irrigation\+\_\+events@{irrigation\+\_\+events}}
+\subsubsection[{report\+\_\+sensor\+\_\+fluctuations}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ irrigation\+\_\+events\+::report\+\_\+sensor\+\_\+fluctuations) (struct {\bf irrigation\+\_\+controller} $\ast$)}\label{structirrigation__events_a41db6d6a624689abdb7be82425ff0b02}
+
+
+Report that sensordata fluctuates. 
+
+\hypertarget{structirrigation__events_abafd6872889e6e54648653f690e61ec6}{}\index{irrigation\+\_\+events@{irrigation\+\_\+events}!report\+\_\+sensor\+\_\+malfunction@{report\+\_\+sensor\+\_\+malfunction}}
+\index{report\+\_\+sensor\+\_\+malfunction@{report\+\_\+sensor\+\_\+malfunction}!irrigation\+\_\+events@{irrigation\+\_\+events}}
+\subsubsection[{report\+\_\+sensor\+\_\+malfunction}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ irrigation\+\_\+events\+::report\+\_\+sensor\+\_\+malfunction) (struct {\bf irrigation\+\_\+controller} $\ast$)}\label{structirrigation__events_abafd6872889e6e54648653f690e61ec6}
+
+
+Report that sensordata is invalid. 
+
+\hypertarget{structirrigation__events_acc5d9d31cce6888cab54d32463470f07}{}\index{irrigation\+\_\+events@{irrigation\+\_\+events}!report\+\_\+validation\+\_\+temperatures@{report\+\_\+validation\+\_\+temperatures}}
+\index{report\+\_\+validation\+\_\+temperatures@{report\+\_\+validation\+\_\+temperatures}!irrigation\+\_\+events@{irrigation\+\_\+events}}
+\subsubsection[{report\+\_\+validation\+\_\+temperatures}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ irrigation\+\_\+events\+::report\+\_\+validation\+\_\+temperatures) (struct {\bf irrigation\+\_\+controller} $\ast$)}\label{structirrigation__events_acc5d9d31cce6888cab54d32463470f07}
+
+
+Report the measured temperatures for validation. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__state__validate_gac0d41d4685bd461b3a613f6320405b79}{state\+\_\+validate\+\_\+enter} min\+\_\+temperature max\+\_\+temperature 
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{irrigation_8h}{irrigation.\+h}\end{DoxyCompactItemize}

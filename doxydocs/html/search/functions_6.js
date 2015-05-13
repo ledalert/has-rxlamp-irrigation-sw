@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['gamma_5flut_5f8_5f8_5fe_5finstance',['GAMMA_LUT_8_8_E_INSTANCE',['../main_8c.html#a1f98adee46907f4bd29dc153ce25dcb7',1,'main.c']]],
+  ['get_5favg',['get_avg',['../namespacelampa.html#a655d6832e131c14c5df3b9987311d5f9',1,'lampa.get_avg()'],['../namespacelampa2.html#a512f34abc1683ef72bcb0204c5239323',1,'lampa2.get_avg()'],['../namespacelampa3.html#aa0590cc862a5853961ca5fd86b7ac1fa',1,'lampa3.get_avg()'],['../namespacelampa4.html#a302ab3acaa65ffa45cd4113f8bdf5a6f',1,'lampa4.get_avg()'],['../namespacelampa__searchlight.html#ad3d1ac52979fc22e38e87631cae2595f',1,'lampa_searchlight.get_avg()']]],
+  ['get_5fblue',['get_blue',['../classcolour_1_1Color.html#a794cbda47ea884aa2660ea13d96db024',1,'colour::Color']]],
+  ['get_5fcpu_5ffreq',['get_cpu_freq',['../namespacetest__lamp.html#a0392456bb3af216fb2ddf1f848b47085',1,'test_lamp.get_cpu_freq()'],['../namespacetest__lamp__2.html#aea63f8556354db64a9a9a4c2b2867db9',1,'test_lamp_2.get_cpu_freq()']]],
+  ['get_5ffft_5fdata',['get_fft_data',['../namespacelampa2.html#a61fc5a989d9d50e6d469d21f3854d572',1,'lampa2.get_fft_data()'],['../namespacelampa3.html#a1f009a33d0f46ebbd311757b1be506e4',1,'lampa3.get_fft_data()'],['../namespacelampa4.html#ac033591ccd7b5c401328e4ff91a88288',1,'lampa4.get_fft_data()'],['../namespacelampa__searchlight.html#a28ff2343690d6bbf0fba90a140841c57',1,'lampa_searchlight.get_fft_data()']]],
+  ['get_5fgreen',['get_green',['../classcolour_1_1Color.html#a963f35ade87fb248b23eae30ba90bf82',1,'colour::Color']]],
+  ['get_5fhex',['get_hex',['../classcolour_1_1Color.html#ad8bfc766aa83c37bd115d66f9dce8ffa',1,'colour::Color']]],
+  ['get_5fhex_5fl',['get_hex_l',['../classcolour_1_1Color.html#abfdd0669ccebcb69919d21686ab072ab',1,'colour::Color']]],
+  ['get_5fhsl',['get_hsl',['../classcolour_1_1Color.html#aa1d8e0def73bf271d12f964609c1eba3',1,'colour::Color']]],
+  ['get_5fhue',['get_hue',['../classcolour_1_1Color.html#a4dd18006c4139d055c2ced25fd9d6dea',1,'colour::Color']]],
+  ['get_5fluminance',['get_luminance',['../classcolour_1_1Color.html#ae2fdc716be22587cad20486512a8d44b',1,'colour::Color']]],
+  ['get_5fnormalized',['get_normalized',['../classv3_1_1vec3.html#a8fd8168bd72eaa605539a2d6a46ab8d8',1,'v3::vec3']]],
+  ['get_5fred',['get_red',['../classcolour_1_1Color.html#aa29a66e211aa55ebc21873dc4f472daa',1,'colour::Color']]],
+  ['get_5frgb',['get_rgb',['../classcolour_1_1Color.html#a914307dd0d4427bd99a30a888849b42e',1,'colour::Color']]],
+  ['get_5fsaturation',['get_saturation',['../classcolour_1_1Color.html#a1014bb52287cb2916f26c6dec1819710',1,'colour::Color']]],
+  ['get_5fstate',['get_state',['../main_8c.html#a85b9fa287bbc4012266648cbfe73ef47',1,'main.c']]],
+  ['get_5fstruct',['get_struct',['../classtest__lamp__2_1_1LED.html#aad3c3abd2f25347cb7ff2e59ec44bb22',1,'test_lamp_2::LED']]],
+  ['get_5fsystem_5ftime_5fblocking',['get_system_time_blocking',['../main_8c.html#a42ca7c9b89c22fcd9ec9aeed3e96b6c4',1,'main.c']]],
+  ['get_5ftop',['get_top',['../namespacelampa2.html#adaab29c56d95f42dd9452720dab1eef2',1,'lampa2.get_top()'],['../namespacelampa3.html#a7a40d7179c5361c18fa11333f6bed3de',1,'lampa3.get_top()'],['../namespacelampa4.html#afd96591ceedfb79781d917a91760592e',1,'lampa4.get_top()'],['../namespacelampa__searchlight.html#aedf54322c274916b00b3c70c34a5127e',1,'lampa_searchlight.get_top()']]],
+  ['get_5fweb',['get_web',['../classcolour_1_1Color.html#ae309c720af12b0eb121feae3e4fb91b4',1,'colour::Color']]],
+  ['gpio_5fpin_5finit',['gpio_pin_init',['../gpio_8c.html#ac75279cf93c1946e67efa99e33d32569',1,'gpio_pin_init(struct gpio_pin *pin, enum hw_init_state state):&#160;gpio.c'],['../gpio_8h.html#ac75279cf93c1946e67efa99e33d32569',1,'gpio_pin_init(struct gpio_pin *pin, enum hw_init_state state):&#160;gpio.c']]],
+  ['gpio_5fpin_5finstance',['GPIO_PIN_INSTANCE',['../main_8c.html#a3ffc4d6ea2a7a8039f889967b7a7d7e3',1,'main.c']]],
+  ['gpio_5fport_5finit',['gpio_port_init',['../gpio_8c.html#a63bdba86b81c90cc95acc241a940bf43',1,'gpio_port_init(struct gpio_port *port, enum hw_init_state state):&#160;gpio.c'],['../gpio_8h.html#a15b8abcad7353c21ecd2f8bb0f5dee02',1,'gpio_port_init(struct gpio_port *pin, enum hw_init_state state):&#160;gpio.c']]],
+  ['gpio_5fport_5finstance',['GPIO_PORT_INSTANCE',['../main_8c.html#aa423cbe2bea57704cca655826b2338c1',1,'GPIO_PORT_INSTANCE(GPIO_PA, GPIOA, RCC_GPIOA):&#160;main.c'],['../main_8c.html#abebbe5a8f2ebcfc52329af1a2a452c32',1,'GPIO_PORT_INSTANCE(GPIO_PB, GPIOB, RCC_GPIOB):&#160;main.c']]],
+  ['grow',['grow',['../classv3_1_1box3.html#a62969f1b236a1c75d54f85167b638bc8',1,'v3::box3']]]
+];

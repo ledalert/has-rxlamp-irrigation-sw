@@ -1,0 +1,14 @@
+Först väntar vi 1 minut
+
+Om vi vill mäta så:
+	Kolla vi om vi får några temperaturfluktationer under 5 sekunder
+	Om vi inte fått detta så är temperaturen stabil och sensorn rätt inkopplad
+	Släng på kräm till sensorn under viss tid eller till viss måltemperatur
+
+	När vi når denna temperatur slår vi av krämen och väntar till temperaturen faller till ett bestämt värde
+	När den fallit hit tar vi tiden tills den faller ned ytterligare
+	När den nått lägre gräns så är mätningen klar och mätdata räknas ut
+
+	Om det är för torrt så pumpar vi vatten i 5 sekunder
+	Sedan väntar vi 1 minut och initierar en ny mätning fast vid den nya mätningen utgår vi från samma jordtemperatur som vi hade i början av mät-sessionen, detta för att förhindra uppvärmning av sensorn under bevattnings-cykel
+	Annars väntar vi 5 minuter till nästa mätning

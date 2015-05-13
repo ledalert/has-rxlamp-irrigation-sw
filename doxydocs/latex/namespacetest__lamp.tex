@@ -1,0 +1,117 @@
+\hypertarget{namespacetest__lamp}{}\section{test\+\_\+lamp Namespace Reference}
+\label{namespacetest__lamp}\index{test\+\_\+lamp@{test\+\_\+lamp}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacetest__lamp_a41c0903d93b79eca9987ad89a509a165}{send\+\_\+led\+\_\+data} (\hyperlink{namespacetest__lamp_a3bbaeee85014b3f126907a5f2437d3a5}{data})
+\item 
+def \hyperlink{namespacetest__lamp_a0392456bb3af216fb2ddf1f848b47085}{get\+\_\+cpu\+\_\+freq} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacetest__lamp_a2a800f9adfbfa469a4512743d36bd781}{s} = serial.\+Serial(\char`\"{}/dev/tty\+U\+S\+B0\char`\"{}, 1000000)
+\item 
+int \hyperlink{namespacetest__lamp_a96ed73138b4ac9b56fa6756621f158ae}{freq} = 100
+\item 
+float \hyperlink{namespacetest__lamp_ae5d1a14ec1ec8e97cf8938be9386e507}{delay} = 1.\+0
+\item 
+string \hyperlink{namespacetest__lamp_a3fcd0129cd517124f65cc0cb7173ebdd}{black} = \char`\"{}000000\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp_a51fd2448d3bc03744f0811a13cbaa0ef}{green} = \char`\"{}00\+F\+F00\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp_a1bbf62187c72933bcb170bb50c8566cf}{red} = \char`\"{}F\+F0000\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp_a7f447446745812eae2674efdeb1a94ed}{blue} = \char`\"{}0000\+F\+F\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp_aa06530574bc0e50eb9bf9cb94cb98d95}{white} = \char`\"{}F\+F\+F\+F\+F\+F\char`\"{}
+\item 
+tuple \hyperlink{namespacetest__lamp_a3f074fe7b6f4e5692ca115354c4b282f}{fifo} = list()
+\item 
+float \hyperlink{namespacetest__lamp_a065ccc382a9d2863201219bfa7e22130}{pos} = 0.\+0
+\item 
+tuple \hyperlink{namespacetest__lamp_a2154c1290fae45d62099a61e2f9a811d}{avg} = (sum(\mbox{[}v$\ast$$\ast$2 for v in \hyperlink{namespacetest__lamp_a3f074fe7b6f4e5692ca115354c4b282f}{fifo}\mbox{]}) / len(\hyperlink{namespacetest__lamp_a3f074fe7b6f4e5692ca115354c4b282f}{fifo}) )
+\item 
+int \hyperlink{namespacetest__lamp_a2dddcdd03c4015181b84d4e48ef0d678}{a} = 11
+\item 
+int \hyperlink{namespacetest__lamp_ae1d972cb1f7453e75b2d00c0b8dcddaa}{ss} = \hyperlink{namespacetest__lamp_a2154c1290fae45d62099a61e2f9a811d}{avg}/20000
+\item 
+tuple \hyperlink{namespacetest__lamp_ad2879a9a1a10baabf94f89a5342c30b4}{b} = int(\hyperlink{namespacetest__lamp_a065ccc382a9d2863201219bfa7e22130}{pos} \% float(\hyperlink{namespacetest__lamp_a2dddcdd03c4015181b84d4e48ef0d678}{a}))
+\item 
+tuple \hyperlink{namespacetest__lamp_af861b03726bd4fc04350abc65413da17}{c} = (\hyperlink{namespacetest__lamp_ad2879a9a1a10baabf94f89a5342c30b4}{b}+3)
+\item 
+string \hyperlink{namespacetest__lamp_a3bbaeee85014b3f126907a5f2437d3a5}{data} = \textquotesingle{}\textquotesingle{}
+\item 
+tuple \hyperlink{namespacetest__lamp_a9b344035322439e65e32b1f0f633b250}{n} = int(21+math.\+sin(time.\+time()$\ast$5)$\ast$21)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacetest__lamp_a0392456bb3af216fb2ddf1f848b47085}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!get\+\_\+cpu\+\_\+freq@{get\+\_\+cpu\+\_\+freq}}
+\index{get\+\_\+cpu\+\_\+freq@{get\+\_\+cpu\+\_\+freq}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{get\+\_\+cpu\+\_\+freq}]{\setlength{\rightskip}{0pt plus 5cm}def test\+\_\+lamp.\+get\+\_\+cpu\+\_\+freq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacetest__lamp_a0392456bb3af216fb2ddf1f848b47085}
+\hypertarget{namespacetest__lamp_a41c0903d93b79eca9987ad89a509a165}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!send\+\_\+led\+\_\+data@{send\+\_\+led\+\_\+data}}
+\index{send\+\_\+led\+\_\+data@{send\+\_\+led\+\_\+data}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{send\+\_\+led\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}def test\+\_\+lamp.\+send\+\_\+led\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{}]{data}
+\end{DoxyParamCaption}
+)}\label{namespacetest__lamp_a41c0903d93b79eca9987ad89a509a165}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacetest__lamp_a2dddcdd03c4015181b84d4e48ef0d678}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!a@{a}}
+\index{a@{a}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}int test\+\_\+lamp.\+a = 11}\label{namespacetest__lamp_a2dddcdd03c4015181b84d4e48ef0d678}
+\hypertarget{namespacetest__lamp_a2154c1290fae45d62099a61e2f9a811d}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!avg@{avg}}
+\index{avg@{avg}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{avg}]{\setlength{\rightskip}{0pt plus 5cm}tuple test\+\_\+lamp.\+avg = (sum(\mbox{[}v$\ast$$\ast$2 for v in {\bf fifo}\mbox{]}) / len({\bf fifo}) )}\label{namespacetest__lamp_a2154c1290fae45d62099a61e2f9a811d}
+\hypertarget{namespacetest__lamp_ad2879a9a1a10baabf94f89a5342c30b4}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!b@{b}}
+\index{b@{b}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}tuple test\+\_\+lamp.\+b = int({\bf pos} \% float({\bf a}))}\label{namespacetest__lamp_ad2879a9a1a10baabf94f89a5342c30b4}
+\hypertarget{namespacetest__lamp_a3fcd0129cd517124f65cc0cb7173ebdd}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!black@{black}}
+\index{black@{black}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{black}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp.\+black = \char`\"{}000000\char`\"{}}\label{namespacetest__lamp_a3fcd0129cd517124f65cc0cb7173ebdd}
+\hypertarget{namespacetest__lamp_a7f447446745812eae2674efdeb1a94ed}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!blue@{blue}}
+\index{blue@{blue}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{blue}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp.\+blue = \char`\"{}0000\+F\+F\char`\"{}}\label{namespacetest__lamp_a7f447446745812eae2674efdeb1a94ed}
+\hypertarget{namespacetest__lamp_af861b03726bd4fc04350abc65413da17}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!c@{c}}
+\index{c@{c}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{c}]{\setlength{\rightskip}{0pt plus 5cm}tuple test\+\_\+lamp.\+c = ({\bf b}+3)}\label{namespacetest__lamp_af861b03726bd4fc04350abc65413da17}
+\hypertarget{namespacetest__lamp_a3bbaeee85014b3f126907a5f2437d3a5}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!data@{data}}
+\index{data@{data}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp.\+data = \textquotesingle{}\textquotesingle{}}\label{namespacetest__lamp_a3bbaeee85014b3f126907a5f2437d3a5}
+\hypertarget{namespacetest__lamp_ae5d1a14ec1ec8e97cf8938be9386e507}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!delay@{delay}}
+\index{delay@{delay}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{delay}]{\setlength{\rightskip}{0pt plus 5cm}float test\+\_\+lamp.\+delay = 1.\+0}\label{namespacetest__lamp_ae5d1a14ec1ec8e97cf8938be9386e507}
+\hypertarget{namespacetest__lamp_a3f074fe7b6f4e5692ca115354c4b282f}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!fifo@{fifo}}
+\index{fifo@{fifo}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{fifo}]{\setlength{\rightskip}{0pt plus 5cm}tuple test\+\_\+lamp.\+fifo = list()}\label{namespacetest__lamp_a3f074fe7b6f4e5692ca115354c4b282f}
+\hypertarget{namespacetest__lamp_a96ed73138b4ac9b56fa6756621f158ae}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!freq@{freq}}
+\index{freq@{freq}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{freq}]{\setlength{\rightskip}{0pt plus 5cm}int test\+\_\+lamp.\+freq = 100}\label{namespacetest__lamp_a96ed73138b4ac9b56fa6756621f158ae}
+\hypertarget{namespacetest__lamp_a51fd2448d3bc03744f0811a13cbaa0ef}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!green@{green}}
+\index{green@{green}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{green}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp.\+green = \char`\"{}00\+F\+F00\char`\"{}}\label{namespacetest__lamp_a51fd2448d3bc03744f0811a13cbaa0ef}
+\hypertarget{namespacetest__lamp_a9b344035322439e65e32b1f0f633b250}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!n@{n}}
+\index{n@{n}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}int test\+\_\+lamp.\+n = int(21+math.\+sin(time.\+time()$\ast$5)$\ast$21)}\label{namespacetest__lamp_a9b344035322439e65e32b1f0f633b250}
+\hypertarget{namespacetest__lamp_a065ccc382a9d2863201219bfa7e22130}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!pos@{pos}}
+\index{pos@{pos}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}tuple test\+\_\+lamp.\+pos = 0.\+0}\label{namespacetest__lamp_a065ccc382a9d2863201219bfa7e22130}
+\hypertarget{namespacetest__lamp_a1bbf62187c72933bcb170bb50c8566cf}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!red@{red}}
+\index{red@{red}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{red}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp.\+red = \char`\"{}F\+F0000\char`\"{}}\label{namespacetest__lamp_a1bbf62187c72933bcb170bb50c8566cf}
+\hypertarget{namespacetest__lamp_a2a800f9adfbfa469a4512743d36bd781}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!s@{s}}
+\index{s@{s}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{s}]{\setlength{\rightskip}{0pt plus 5cm}tuple test\+\_\+lamp.\+s = serial.\+Serial(\char`\"{}/dev/tty\+U\+S\+B0\char`\"{}, 1000000)}\label{namespacetest__lamp_a2a800f9adfbfa469a4512743d36bd781}
+\hypertarget{namespacetest__lamp_ae1d972cb1f7453e75b2d00c0b8dcddaa}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!ss@{ss}}
+\index{ss@{ss}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{ss}]{\setlength{\rightskip}{0pt plus 5cm}int test\+\_\+lamp.\+ss = {\bf avg}/20000}\label{namespacetest__lamp_ae1d972cb1f7453e75b2d00c0b8dcddaa}
+\hypertarget{namespacetest__lamp_aa06530574bc0e50eb9bf9cb94cb98d95}{}\index{test\+\_\+lamp@{test\+\_\+lamp}!white@{white}}
+\index{white@{white}!test\+\_\+lamp@{test\+\_\+lamp}}
+\subsubsection[{white}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp.\+white = \char`\"{}F\+F\+F\+F\+F\+F\char`\"{}}\label{namespacetest__lamp_aa06530574bc0e50eb9bf9cb94cb98d95}

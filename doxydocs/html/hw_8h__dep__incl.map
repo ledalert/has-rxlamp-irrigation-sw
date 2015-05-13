@@ -1,0 +1,12 @@
+<map id="src/hw.h" name="src/hw.h">
+<area shape="rect" id="node2" href="$adc_8h_source.html" title="src/adc.h" alt="" coords="5,229,85,256"/>
+<area shape="rect" id="node4" href="$timer_8h_source.html" title="src/timer.h" alt="" coords="165,80,256,107"/>
+<area shape="rect" id="node8" href="$gpio_8h_source.html" title="src/gpio.h" alt="" coords="281,80,365,107"/>
+<area shape="rect" id="node11" href="$systick_8h_source.html" title="src/systick.h" alt="" coords="438,80,538,107"/>
+<area shape="rect" id="node3" href="$main_8c.html" title="Irrigation controller main file. " alt="" coords="195,304,283,331"/>
+<area shape="rect" id="node5" href="$ws2812_8h_source.html" title="src/ws2812.h" alt="" coords="242,155,347,181"/>
+<area shape="rect" id="node7" href="$timer__macro_8h_source.html" title="src/timer_macro.h" alt="" coords="79,155,217,181"/>
+<area shape="rect" id="node6" href="$ws2812__macro_8h_source.html" title="src/ws2812_macro.h" alt="" coords="162,229,315,256"/>
+<area shape="rect" id="node9" href="$uart_8h_source.html" title="src/uart.h" alt="" coords="371,155,453,181"/>
+<area shape="rect" id="node10" href="$usart__macro_8h_source.html" title="src/usart_macro.h" alt="" coords="340,229,479,256"/>
+</map>

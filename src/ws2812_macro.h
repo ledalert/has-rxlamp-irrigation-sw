@@ -1,26 +1,17 @@
 #ifndef _WS2812_MACRO_H_
 #include "ws2812.h"
+#include "gpio_macro.h"
+#include "timer_macro.h"
 
-// #define GPIO_PB15 GPIOB, RCC_GPIOB, GPIO15
- 
 
 #define WS2812_INSTANCE(...) WS2812_INSTANCE_EXP(__VA_ARGS__)
 
                                    //TIM1,            RCC_TIM1,             RCC_DMA1,          TIM_OC3N,     &TIM1_CCR3,                     DMA_CHANNEL6,            TIM_DIER_CC3DE
 
-#define WS2812_INSTANCE_EXP(Name, CCR_Channel_Timer, CCR_Channel_Timer_RCC, CCR_Timer_DMA_RCC, CCR_Channel, CCR_Channel_CCR_Register, CCR_Channel_DMA_Channel, CCR_Channel_DMA_Enable_Flag, Pin_Port, Pin_Port_RCC, Pin, LED_Count)\
-\
-struct gpio_port_config Name##_port_config = {\
-	.port = Pin_Port,\
-	.rcc = Pin_Port_RCC,\
-};\
-\
-struct gpio_port Name##_port = {\
-	.configuration = &Name##_port_config,\
-};\
+#define WS2812_INSTANCE_EXP(Name, CCR_Channel_Timer, CCR_Channel_Timer_RCC, CCR_Timer_DMA_RCC, CCR_Channel, CCR_Channel_CCR_Register, CCR_Channel_DMA_Channel, CCR_Channel_DMA_Enable_Flag, Pin_Port, Pin, LED_Count)\
 \
 struct gpio_pin_config Name##_pin_config = {\
-	.port = &Name##_port,\
+	.port = Pin_Port,\
 	.pin = Pin,	\
 };\
 \

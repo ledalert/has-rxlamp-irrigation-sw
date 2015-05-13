@@ -1,0 +1,29 @@
+\hypertarget{state__validate_8c}{}\section{src/state\+\_\+validate.c File Reference}
+\label{state__validate_8c}\index{src/state\+\_\+validate.\+c@{src/state\+\_\+validate.\+c}}
+
+
+Sensor validation state.  
+
+
+{\ttfamily \#include \char`\"{}irrigation.\+h\char`\"{}}\\*
+Include dependency graph for state\+\_\+validate.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{state__validate_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__state__validate_gac0d41d4685bd461b3a613f6320405b79}{state\+\_\+validate\+\_\+enter} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em We set up the validation timer and init the maximum and minim temperatured. \end{DoxyCompactList}\item 
+void \hyperlink{group__state__validate_gaec38509b93f8a850919aa7a36e543ed5}{state\+\_\+validate\+\_\+run} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em We have the heart beat L\+E\+D status and we update the minimum and maximum values while we continue to sample sensor data. \end{DoxyCompactList}\item 
+void \hyperlink{group__state__validate_gac480e756742ffd9acd9bd21ac1e8885c}{state\+\_\+validate\+\_\+exit} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em Nothing has to be done when we exit this state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sensor validation state. 
+

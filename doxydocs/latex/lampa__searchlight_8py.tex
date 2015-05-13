@@ -1,0 +1,52 @@
+\hypertarget{lampa__searchlight_8py}{}\section{python\+\_\+scripts/lampa\+\_\+searchlight.py File Reference}
+\label{lampa__searchlight_8py}\index{python\+\_\+scripts/lampa\+\_\+searchlight.\+py@{python\+\_\+scripts/lampa\+\_\+searchlight.\+py}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlampa__searchlight_1_1cball}{lampa\+\_\+searchlight.\+cball}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelampa__searchlight}{lampa\+\_\+searchlight}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacelampa__searchlight_ad3d1ac52979fc22e38e87631cae2595f}{lampa\+\_\+searchlight.\+get\+\_\+avg} (samples, bar1, bar2)
+\item 
+def \hyperlink{namespacelampa__searchlight_aedf54322c274916b00b3c70c34a5127e}{lampa\+\_\+searchlight.\+get\+\_\+top} (samples, bar1, bar2)
+\item 
+def \hyperlink{namespacelampa__searchlight_ab5356624d2d86561e69c80231e0be402}{lampa\+\_\+searchlight.\+process\+\_\+audio} ()
+\item 
+def \hyperlink{namespacelampa__searchlight_a28ff2343690d6bbf0fba90a140841c57}{lampa\+\_\+searchlight.\+get\+\_\+fft\+\_\+data} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacelampa__searchlight_ad70257e6ddb7843ea7aed97ce014b04d}{lampa\+\_\+searchlight.\+s} = serial.\+Serial(sys.\+argv\mbox{[}1\mbox{]}, 1000000)
+\item 
+tuple \hyperlink{namespacelampa__searchlight_a5cceb9bdddb36c29e04c12417ef9fae6}{lampa\+\_\+searchlight.\+fft\+\_\+lock} = threading.\+Lock()
+\item 
+list \hyperlink{namespacelampa__searchlight_a6daeccd8a70d973ec7333af4c9133798}{lampa\+\_\+searchlight.\+freq\+\_\+domain} = \mbox{[}0.\+0\mbox{]}
+\item 
+int \hyperlink{namespacelampa__searchlight_a894179ba51559cacb273879456b30c57}{lampa\+\_\+searchlight.\+freq\+\_\+domain\+\_\+count} = 0
+\item 
+tuple \hyperlink{namespacelampa__searchlight_a362df79c6f5d43093b80348f0c33870b}{lampa\+\_\+searchlight.\+light} = cball((1.\+0, 1.\+0, 1.\+0))
+\item 
+tuple \hyperlink{namespacelampa__searchlight_ad9d51346fe2599b20e8e4918dc84d244}{lampa\+\_\+searchlight.\+fft\+\_\+data} = get\+\_\+fft\+\_\+data()
+\item 
+tuple \hyperlink{namespacelampa__searchlight_a85205193fa9ba66c8f52ef135f489c4b}{lampa\+\_\+searchlight.\+a} = time.\+time()
+\item 
+tuple \hyperlink{namespacelampa__searchlight_a9299265ca5dfc9b51547c8e50db100af}{lampa\+\_\+searchlight.\+b} = time.\+time()
+\item 
+float \hyperlink{namespacelampa__searchlight_a881b6104fe08478fb089cbccc8114d08}{lampa\+\_\+searchlight.\+i} = 0.\+0
+\item 
+string \hyperlink{namespacelampa__searchlight_ac6bef964c5c2cbd736435d7b2ad29ed5}{lampa\+\_\+searchlight.\+data} = \textquotesingle{}\textquotesingle{}
+\item 
+tuple \hyperlink{namespacelampa__searchlight_ad8ff5999e3e1aa35feab8e317f2512dd}{lampa\+\_\+searchlight.\+dis} = abs(\hyperlink{sampling_8c_a1910d262855b71da353ed0d07a6c7823}{light.\+pos} -\/ led)
+\item 
+\hyperlink{namespacelampa__searchlight_aa8857984682eb8ddde904cdd002b8229}{lampa\+\_\+searchlight.\+r} = br$\ast$i
+\item 
+\hyperlink{namespacelampa__searchlight_aebfab5fcf0349602cb745b1796b817e6}{lampa\+\_\+searchlight.\+g} = bg$\ast$i
+\end{DoxyCompactItemize}

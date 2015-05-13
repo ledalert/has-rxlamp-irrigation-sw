@@ -1,0 +1,53 @@
+\hypertarget{gpio_8h}{}\section{src/gpio.h File Reference}
+\label{gpio_8h}\index{src/gpio.\+h@{src/gpio.\+h}}
+{\ttfamily \#include \char`\"{}hw.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$libopencm3/stm32/gpio.\+h$>$}\\*
+{\ttfamily \#include $<$libopencm3/stm32/rcc.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structgpio__port}{gpio\+\_\+port}
+\item 
+struct \hyperlink{structgpio__port__config}{gpio\+\_\+port\+\_\+config}
+\item 
+struct \hyperlink{structgpio__pin__config}{gpio\+\_\+pin\+\_\+config}
+\item 
+struct \hyperlink{structgpio__pin}{gpio\+\_\+pin}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gpio_8h_aca97b12f5f7cb902e8285dcde7ee9425}{\+\_\+\+G\+P\+I\+O\+\_\+\+H\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{gpio_8h_ac75279cf93c1946e67efa99e33d32569}{gpio\+\_\+pin\+\_\+init} (struct \hyperlink{structgpio__pin}{gpio\+\_\+pin} $\ast$pin, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} \hyperlink{structstate}{state})
+\item 
+void \hyperlink{gpio_8h_a15b8abcad7353c21ecd2f8bb0f5dee02}{gpio\+\_\+port\+\_\+init} (struct \hyperlink{structgpio__port}{gpio\+\_\+port} $\ast$pin, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} \hyperlink{structstate}{state})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{gpio_8h_aca97b12f5f7cb902e8285dcde7ee9425}{}\index{gpio.\+h@{gpio.\+h}!\+\_\+\+G\+P\+I\+O\+\_\+\+H\+\_\+@{\+\_\+\+G\+P\+I\+O\+\_\+\+H\+\_\+}}
+\index{\+\_\+\+G\+P\+I\+O\+\_\+\+H\+\_\+@{\+\_\+\+G\+P\+I\+O\+\_\+\+H\+\_\+}!gpio.\+h@{gpio.\+h}}
+\subsubsection[{\+\_\+\+G\+P\+I\+O\+\_\+\+H\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+G\+P\+I\+O\+\_\+\+H\+\_\+}\label{gpio_8h_aca97b12f5f7cb902e8285dcde7ee9425}
+
+
+\subsection{Function Documentation}
+\hypertarget{gpio_8h_ac75279cf93c1946e67efa99e33d32569}{}\index{gpio.\+h@{gpio.\+h}!gpio\+\_\+pin\+\_\+init@{gpio\+\_\+pin\+\_\+init}}
+\index{gpio\+\_\+pin\+\_\+init@{gpio\+\_\+pin\+\_\+init}!gpio.\+h@{gpio.\+h}}
+\subsubsection[{gpio\+\_\+pin\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void gpio\+\_\+pin\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf gpio\+\_\+pin} $\ast$}]{pin, }
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{gpio_8h_ac75279cf93c1946e67efa99e33d32569}
+\hypertarget{gpio_8h_a15b8abcad7353c21ecd2f8bb0f5dee02}{}\index{gpio.\+h@{gpio.\+h}!gpio\+\_\+port\+\_\+init@{gpio\+\_\+port\+\_\+init}}
+\index{gpio\+\_\+port\+\_\+init@{gpio\+\_\+port\+\_\+init}!gpio.\+h@{gpio.\+h}}
+\subsubsection[{gpio\+\_\+port\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void gpio\+\_\+port\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf gpio\+\_\+port} $\ast$}]{pin, }
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{gpio_8h_a15b8abcad7353c21ecd2f8bb0f5dee02}

@@ -1,0 +1,56 @@
+\hypertarget{time_8h}{}\section{src/time.h File Reference}
+\label{time_8h}\index{src/time.\+h@{src/time.\+h}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtm}{tm}
+\item 
+struct \hyperlink{structsw__timer__system__time}{sw\+\_\+timer\+\_\+system\+\_\+time}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{time_8h_af900e330dd6141d60b06a37630bbb086}{L\+E\+A\+P\+O\+C\+H}~(946684800\+L\+L + 86400$\ast$(31+29))
+\item 
+\#define \hyperlink{time_8h_ad12582857140762bf2a39614d05f3a27}{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+400\+Y}~(365$\ast$400 + 97)
+\item 
+\#define \hyperlink{time_8h_aa9dc1f7a73d6fd0a34361bc3cb85b91d}{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+100\+Y}~(365$\ast$100 + 24)
+\item 
+\#define \hyperlink{time_8h_a46ad88cd30c4b5546d27510f09840340}{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+4\+Y}~(365$\ast$4   + 1)
+\item 
+\#define \hyperlink{time_8h_a354e71285a1d883e7a45a1e6645b3a91}{\+\_\+\+T\+I\+M\+E\+\_\+\+H\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{time_8h_a5820d1723388d23f68df400cc4a6a065}{time\+\_\+tm\+\_\+from\+\_\+epoch} (struct \hyperlink{structtm}{tm} $\ast$result, int epoch)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{time_8h_a354e71285a1d883e7a45a1e6645b3a91}{}\index{time.\+h@{time.\+h}!\+\_\+\+T\+I\+M\+E\+\_\+\+H\+\_\+@{\+\_\+\+T\+I\+M\+E\+\_\+\+H\+\_\+}}
+\index{\+\_\+\+T\+I\+M\+E\+\_\+\+H\+\_\+@{\+\_\+\+T\+I\+M\+E\+\_\+\+H\+\_\+}!time.\+h@{time.\+h}}
+\subsubsection[{\+\_\+\+T\+I\+M\+E\+\_\+\+H\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+T\+I\+M\+E\+\_\+\+H\+\_\+}\label{time_8h_a354e71285a1d883e7a45a1e6645b3a91}
+\hypertarget{time_8h_aa9dc1f7a73d6fd0a34361bc3cb85b91d}{}\index{time.\+h@{time.\+h}!D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+100\+Y@{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+100\+Y}}
+\index{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+100\+Y@{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+100\+Y}!time.\+h@{time.\+h}}
+\subsubsection[{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+100\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+100\+Y~(365$\ast$100 + 24)}\label{time_8h_aa9dc1f7a73d6fd0a34361bc3cb85b91d}
+\hypertarget{time_8h_ad12582857140762bf2a39614d05f3a27}{}\index{time.\+h@{time.\+h}!D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+400\+Y@{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+400\+Y}}
+\index{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+400\+Y@{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+400\+Y}!time.\+h@{time.\+h}}
+\subsubsection[{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+400\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+400\+Y~(365$\ast$400 + 97)}\label{time_8h_ad12582857140762bf2a39614d05f3a27}
+\hypertarget{time_8h_a46ad88cd30c4b5546d27510f09840340}{}\index{time.\+h@{time.\+h}!D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+4\+Y@{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+4\+Y}}
+\index{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+4\+Y@{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+4\+Y}!time.\+h@{time.\+h}}
+\subsubsection[{D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+4\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+Y\+S\+\_\+\+P\+E\+R\+\_\+4\+Y~(365$\ast$4   + 1)}\label{time_8h_a46ad88cd30c4b5546d27510f09840340}
+\hypertarget{time_8h_af900e330dd6141d60b06a37630bbb086}{}\index{time.\+h@{time.\+h}!L\+E\+A\+P\+O\+C\+H@{L\+E\+A\+P\+O\+C\+H}}
+\index{L\+E\+A\+P\+O\+C\+H@{L\+E\+A\+P\+O\+C\+H}!time.\+h@{time.\+h}}
+\subsubsection[{L\+E\+A\+P\+O\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+A\+P\+O\+C\+H~(946684800\+L\+L + 86400$\ast$(31+29))}\label{time_8h_af900e330dd6141d60b06a37630bbb086}
+
+
+\subsection{Function Documentation}
+\hypertarget{time_8h_a5820d1723388d23f68df400cc4a6a065}{}\index{time.\+h@{time.\+h}!time\+\_\+tm\+\_\+from\+\_\+epoch@{time\+\_\+tm\+\_\+from\+\_\+epoch}}
+\index{time\+\_\+tm\+\_\+from\+\_\+epoch@{time\+\_\+tm\+\_\+from\+\_\+epoch}!time.\+h@{time.\+h}}
+\subsubsection[{time\+\_\+tm\+\_\+from\+\_\+epoch}]{\setlength{\rightskip}{0pt plus 5cm}int time\+\_\+tm\+\_\+from\+\_\+epoch (
+\begin{DoxyParamCaption}
+\item[{struct {\bf tm} $\ast$}]{result, }
+\item[{int}]{epoch}
+\end{DoxyParamCaption}
+)}\label{time_8h_a5820d1723388d23f68df400cc4a6a065}

@@ -1,0 +1,102 @@
+\hypertarget{namespacetest__lamp__2}{}\section{test\+\_\+lamp\+\_\+2 Namespace Reference}
+\label{namespacetest__lamp__2}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtest__lamp__2_1_1LED}{L\+E\+D}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacetest__lamp__2_a8a01a07fc540e7acbad7058d2f772c95}{send\+\_\+led\+\_\+data} (\hyperlink{namespacetest__lamp__2_a980a603f356850f41fe96b73cbe1c759}{data})
+\item 
+def \hyperlink{namespacetest__lamp__2_aea63f8556354db64a9a9a4c2b2867db9}{get\+\_\+cpu\+\_\+freq} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacetest__lamp__2_a589a584a123d57bac1e1f2b7103f583c}{s} = serial.\+Serial(\char`\"{}/dev/tty\+U\+S\+B0\char`\"{}, 1000000)
+\item 
+int \hyperlink{namespacetest__lamp__2_ab35fca949f5807e379fd240b1f552dbb}{freq} = 100
+\item 
+float \hyperlink{namespacetest__lamp__2_a06d775c6da2590ec490d13f7270b002b}{delay} = 1.\+0
+\item 
+string \hyperlink{namespacetest__lamp__2_a8bde3709dee4d6a3b8702bf533fa058c}{black} = \char`\"{}000000\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp__2_ac7d7d6234740e9f61a277ad4cb312dc5}{green} = \char`\"{}00\+F\+F00\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp__2_a17152f1d5cbd5d9abe0446163c599058}{red} = \char`\"{}F\+F0000\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp__2_ab3d38f2c4ee21e6f07f9d8dacef83a6c}{blue} = \char`\"{}0000\+F\+F\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp__2_a331b2516047417e2208f8485dc76c817}{white} = \char`\"{}F\+F\+F\+F\+F\+F\char`\"{}
+\item 
+tuple \hyperlink{namespacetest__lamp__2_a8a62cf9927e76408d02edd83a3999b21}{fifo} = list()
+\item 
+list \hyperlink{namespacetest__lamp__2_ade26824270e8518c4b82732d0cb1e38c}{Leds} = \mbox{[}\hyperlink{classtest__lamp__2_1_1LED}{L\+E\+D}() for l in range(42)\mbox{]}
+\item 
+float \hyperlink{namespacetest__lamp__2_a490769957edf0203bf54b6e8169f3b11}{main\+\_\+hue} = 0.\+0
+\item 
+tuple \hyperlink{namespacetest__lamp__2_aeb773a5375faaf37a8dd984b7c8c1570}{avg} = (sum(\mbox{[}v$\ast$$\ast$2 for v in \hyperlink{namespacetest__lamp__2_a8a62cf9927e76408d02edd83a3999b21}{fifo}\mbox{]}) / len(\hyperlink{namespacetest__lamp__2_a8a62cf9927e76408d02edd83a3999b21}{fifo}) )
+\item 
+string \hyperlink{namespacetest__lamp__2_a980a603f356850f41fe96b73cbe1c759}{data} = \textquotesingle{}\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacetest__lamp__2_aea63f8556354db64a9a9a4c2b2867db9}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!get\+\_\+cpu\+\_\+freq@{get\+\_\+cpu\+\_\+freq}}
+\index{get\+\_\+cpu\+\_\+freq@{get\+\_\+cpu\+\_\+freq}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{get\+\_\+cpu\+\_\+freq}]{\setlength{\rightskip}{0pt plus 5cm}def test\+\_\+lamp\+\_\+2.\+get\+\_\+cpu\+\_\+freq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacetest__lamp__2_aea63f8556354db64a9a9a4c2b2867db9}
+\hypertarget{namespacetest__lamp__2_a8a01a07fc540e7acbad7058d2f772c95}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!send\+\_\+led\+\_\+data@{send\+\_\+led\+\_\+data}}
+\index{send\+\_\+led\+\_\+data@{send\+\_\+led\+\_\+data}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{send\+\_\+led\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}def test\+\_\+lamp\+\_\+2.\+send\+\_\+led\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{}]{data}
+\end{DoxyParamCaption}
+)}\label{namespacetest__lamp__2_a8a01a07fc540e7acbad7058d2f772c95}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacetest__lamp__2_aeb773a5375faaf37a8dd984b7c8c1570}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!avg@{avg}}
+\index{avg@{avg}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{avg}]{\setlength{\rightskip}{0pt plus 5cm}tuple test\+\_\+lamp\+\_\+2.\+avg = (sum(\mbox{[}v$\ast$$\ast$2 for v in {\bf fifo}\mbox{]}) / len({\bf fifo}) )}\label{namespacetest__lamp__2_aeb773a5375faaf37a8dd984b7c8c1570}
+\hypertarget{namespacetest__lamp__2_a8bde3709dee4d6a3b8702bf533fa058c}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!black@{black}}
+\index{black@{black}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{black}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp\+\_\+2.\+black = \char`\"{}000000\char`\"{}}\label{namespacetest__lamp__2_a8bde3709dee4d6a3b8702bf533fa058c}
+\hypertarget{namespacetest__lamp__2_ab3d38f2c4ee21e6f07f9d8dacef83a6c}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!blue@{blue}}
+\index{blue@{blue}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{blue}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp\+\_\+2.\+blue = \char`\"{}0000\+F\+F\char`\"{}}\label{namespacetest__lamp__2_ab3d38f2c4ee21e6f07f9d8dacef83a6c}
+\hypertarget{namespacetest__lamp__2_a980a603f356850f41fe96b73cbe1c759}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!data@{data}}
+\index{data@{data}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp\+\_\+2.\+data = \textquotesingle{}\textquotesingle{}}\label{namespacetest__lamp__2_a980a603f356850f41fe96b73cbe1c759}
+\hypertarget{namespacetest__lamp__2_a06d775c6da2590ec490d13f7270b002b}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!delay@{delay}}
+\index{delay@{delay}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{delay}]{\setlength{\rightskip}{0pt plus 5cm}float test\+\_\+lamp\+\_\+2.\+delay = 1.\+0}\label{namespacetest__lamp__2_a06d775c6da2590ec490d13f7270b002b}
+\hypertarget{namespacetest__lamp__2_a8a62cf9927e76408d02edd83a3999b21}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!fifo@{fifo}}
+\index{fifo@{fifo}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{fifo}]{\setlength{\rightskip}{0pt plus 5cm}tuple test\+\_\+lamp\+\_\+2.\+fifo = list()}\label{namespacetest__lamp__2_a8a62cf9927e76408d02edd83a3999b21}
+\hypertarget{namespacetest__lamp__2_ab35fca949f5807e379fd240b1f552dbb}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!freq@{freq}}
+\index{freq@{freq}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{freq}]{\setlength{\rightskip}{0pt plus 5cm}int test\+\_\+lamp\+\_\+2.\+freq = 100}\label{namespacetest__lamp__2_ab35fca949f5807e379fd240b1f552dbb}
+\hypertarget{namespacetest__lamp__2_ac7d7d6234740e9f61a277ad4cb312dc5}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!green@{green}}
+\index{green@{green}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{green}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp\+\_\+2.\+green = \char`\"{}00\+F\+F00\char`\"{}}\label{namespacetest__lamp__2_ac7d7d6234740e9f61a277ad4cb312dc5}
+\hypertarget{namespacetest__lamp__2_ade26824270e8518c4b82732d0cb1e38c}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!Leds@{Leds}}
+\index{Leds@{Leds}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{Leds}]{\setlength{\rightskip}{0pt plus 5cm}list test\+\_\+lamp\+\_\+2.\+Leds = \mbox{[}{\bf L\+E\+D}() for l in range(42)\mbox{]}}\label{namespacetest__lamp__2_ade26824270e8518c4b82732d0cb1e38c}
+\hypertarget{namespacetest__lamp__2_a490769957edf0203bf54b6e8169f3b11}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!main\+\_\+hue@{main\+\_\+hue}}
+\index{main\+\_\+hue@{main\+\_\+hue}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{main\+\_\+hue}]{\setlength{\rightskip}{0pt plus 5cm}tuple test\+\_\+lamp\+\_\+2.\+main\+\_\+hue = 0.\+0}\label{namespacetest__lamp__2_a490769957edf0203bf54b6e8169f3b11}
+\hypertarget{namespacetest__lamp__2_a17152f1d5cbd5d9abe0446163c599058}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!red@{red}}
+\index{red@{red}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{red}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp\+\_\+2.\+red = \char`\"{}F\+F0000\char`\"{}}\label{namespacetest__lamp__2_a17152f1d5cbd5d9abe0446163c599058}
+\hypertarget{namespacetest__lamp__2_a589a584a123d57bac1e1f2b7103f583c}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!s@{s}}
+\index{s@{s}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{s}]{\setlength{\rightskip}{0pt plus 5cm}tuple test\+\_\+lamp\+\_\+2.\+s = serial.\+Serial(\char`\"{}/dev/tty\+U\+S\+B0\char`\"{}, 1000000)}\label{namespacetest__lamp__2_a589a584a123d57bac1e1f2b7103f583c}
+\hypertarget{namespacetest__lamp__2_a331b2516047417e2208f8485dc76c817}{}\index{test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}!white@{white}}
+\index{white@{white}!test\+\_\+lamp\+\_\+2@{test\+\_\+lamp\+\_\+2}}
+\subsubsection[{white}]{\setlength{\rightskip}{0pt plus 5cm}string test\+\_\+lamp\+\_\+2.\+white = \char`\"{}F\+F\+F\+F\+F\+F\char`\"{}}\label{namespacetest__lamp__2_a331b2516047417e2208f8485dc76c817}

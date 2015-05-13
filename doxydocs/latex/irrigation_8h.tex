@@ -1,0 +1,172 @@
+\hypertarget{irrigation_8h}{}\section{src/irrigation.h File Reference}
+\label{irrigation_8h}\index{src/irrigation.\+h@{src/irrigation.\+h}}
+
+
+Irrigation main include file.  
+
+
+{\ttfamily \#include \char`\"{}time.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\\*
+Include dependency graph for irrigation.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{irrigation_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{irrigation_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structirrigation__temperature__sample}{irrigation\+\_\+temperature\+\_\+sample}
+\begin{DoxyCompactList}\small\item\em This is a timestamped temperature sample. \end{DoxyCompactList}\item 
+struct \hyperlink{structirrigation__controller__status}{irrigation\+\_\+controller\+\_\+status}
+\item 
+struct \hyperlink{structirrigation__events}{irrigation\+\_\+events}
+\begin{DoxyCompactList}\small\item\em The event callback functions for the irrigation controller core. \end{DoxyCompactList}\item 
+struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller}
+\begin{DoxyCompactList}\small\item\em Holds everything related to the irrigation controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{irrigation_8h_a98a17dc46f65ba67eb9c004ea48a9c2d}{time\+\_\+delta}(a,  b)~((float)(a.\+epoch -\/ b.\+epoch) + (float)(a.\+ms -\/ b.\+ms) / 1000.\+0)
+\begin{DoxyCompactList}\small\item\em Calculates the time difference in seconds between two timestamps. \end{DoxyCompactList}\item 
+\hypertarget{irrigation_8h_a8bb330be5fe982be9c1c28e70515043d}{}\#define {\bfseries \+\_\+\+I\+R\+R\+I\+G\+A\+T\+I\+O\+N\+\_\+\+H\+\_\+}\label{irrigation_8h_a8bb330be5fe982be9c1c28e70515043d}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7}{irrigation\+\_\+status} \{ \\*
+\hyperlink{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a64e8c241885100a4c6ee0dde8c084093}{irrigation\+\_\+status\+\_\+\+R\+E\+B\+O\+O\+T} = -\/2, 
+\hyperlink{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a3d4b9190b0804578e02247c8cee11d8c}{irrigation\+\_\+status\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D} = -\/1, 
+\hyperlink{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a0961e0972792be7ffcb4bf7aa64d4017}{irrigation\+\_\+status\+\_\+\+I\+N\+I\+T}, 
+\hyperlink{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a0421b2d42223b25611688b6d2fe2d6e1}{irrigation\+\_\+status\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E}, 
+\\*
+\hyperlink{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a1138583e9263588b98c16578bed06987}{irrigation\+\_\+status\+\_\+\+M\+E\+A\+S\+U\+R\+E}
+ \}
+\begin{DoxyCompactList}\small\item\em This is the state of the irrigation controller. \end{DoxyCompactList}\item 
+enum \hyperlink{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6}{moisture\+\_\+sensor\+\_\+state} \{ \hyperlink{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6ad3f6b80b71bad74ea52dda2f31231cc3}{moisture\+\_\+sensor\+\_\+heating}, 
+\hyperlink{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6a7e57547ef4980c1af315fd9937c976f0}{moisture\+\_\+sensor\+\_\+cooling}, 
+\hyperlink{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6a4460d045ceb966a377b72d2825606fbd}{moisture\+\_\+sensor\+\_\+t1}, 
+{\bfseries moisture\+\_\+sensor\+\_\+t2}
+ \}
+\begin{DoxyCompactList}\small\item\em This is the state of the moisture sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__state__init_gaeca2f683660bf42f5258acd6aac353d0}{state\+\_\+init\+\_\+enter} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em Reset all variables in the controller this state uses. \end{DoxyCompactList}\item 
+void \hyperlink{group__state__init_ga5b5f5a7ec8534a643fb599efdee6ed4f}{state\+\_\+init\+\_\+run} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em We will make a heart beat ramp for the status L\+E\+D while we wait for initial delay to complete. \end{DoxyCompactList}\item 
+void \hyperlink{group__state__init_ga52863e306edb45d15c12acdecb7e5555}{state\+\_\+init\+\_\+exit} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em Nothing has do be done before we leave this state. \end{DoxyCompactList}\item 
+void \hyperlink{group__state__validate_gac0d41d4685bd461b3a613f6320405b79}{state\+\_\+validate\+\_\+enter} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em We set up the validation timer and init the maximum and minim temperatured. \end{DoxyCompactList}\item 
+void \hyperlink{group__state__validate_gaec38509b93f8a850919aa7a36e543ed5}{state\+\_\+validate\+\_\+run} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em We have the heart beat L\+E\+D status and we update the minimum and maximum values while we continue to sample sensor data. \end{DoxyCompactList}\item 
+void \hyperlink{group__state__validate_gac480e756742ffd9acd9bd21ac1e8885c}{state\+\_\+validate\+\_\+exit} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em Nothing has to be done when we exit this state. \end{DoxyCompactList}\item 
+\hypertarget{group__state__reboot_gab0e3409fa69ff96792cb5a768928a545}{}void {\bfseries state\+\_\+reboot\+\_\+enter} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{group__state__reboot_gab0e3409fa69ff96792cb5a768928a545}
+
+\item 
+\hypertarget{group__state__reboot_ga23cf1ecfb670c7c6c253a40705aa5caf}{}void {\bfseries state\+\_\+reboot\+\_\+run} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{group__state__reboot_ga23cf1ecfb670c7c6c253a40705aa5caf}
+
+\item 
+\hypertarget{group__state__reboot_gafbcdeb4b017f4350fb6ff51df410228b}{}void {\bfseries state\+\_\+reboot\+\_\+exit} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{group__state__reboot_gafbcdeb4b017f4350fb6ff51df410228b}
+
+\item 
+\hypertarget{group__state__measure_ga24a42892ba25be220bff68fc151e0be7}{}void {\bfseries state\+\_\+measure\+\_\+enter} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{group__state__measure_ga24a42892ba25be220bff68fc151e0be7}
+
+\item 
+\hypertarget{group__state__measure_ga410776694bde81bde92a0b6b178ac015}{}void {\bfseries state\+\_\+measure\+\_\+run} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{group__state__measure_ga410776694bde81bde92a0b6b178ac015}
+
+\item 
+\hypertarget{group__state__measure_ga0f85f8645f5311e776e85a3697517266}{}void {\bfseries state\+\_\+measure\+\_\+exit} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{group__state__measure_ga0f85f8645f5311e776e85a3697517266}
+
+\item 
+\hypertarget{irrigation_8h_a6440cc6e50bc4445698e203198648185}{}void {\bfseries status\+\_\+color} (int r, int g, int b)\label{irrigation_8h_a6440cc6e50bc4445698e203198648185}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Irrigation main include file. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{irrigation_8h_a98a17dc46f65ba67eb9c004ea48a9c2d}{}\index{irrigation.\+h@{irrigation.\+h}!time\+\_\+delta@{time\+\_\+delta}}
+\index{time\+\_\+delta@{time\+\_\+delta}!irrigation.\+h@{irrigation.\+h}}
+\subsubsection[{time\+\_\+delta}]{\setlength{\rightskip}{0pt plus 5cm}\#define time\+\_\+delta(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~((float)(a.\+epoch -\/ b.\+epoch) + (float)(a.\+ms -\/ b.\+ms) / 1000.\+0)}\label{irrigation_8h_a98a17dc46f65ba67eb9c004ea48a9c2d}
+
+
+Calculates the time difference in seconds between two timestamps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Time event A \\
+\hline
+{\em b} & Time event B\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a -\/ b 
+\end{DoxyReturn}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7}{}\index{irrigation.\+h@{irrigation.\+h}!irrigation\+\_\+status@{irrigation\+\_\+status}}
+\index{irrigation\+\_\+status@{irrigation\+\_\+status}!irrigation.\+h@{irrigation.\+h}}
+\subsubsection[{irrigation\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf irrigation\+\_\+status}}\label{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7}
+
+
+This is the state of the irrigation controller. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{irrigation\+\_\+status\+\_\+\+R\+E\+B\+O\+O\+T@{irrigation\+\_\+status\+\_\+\+R\+E\+B\+O\+O\+T}!irrigation.\+h@{irrigation.\+h}}\index{irrigation.\+h@{irrigation.\+h}!irrigation\+\_\+status\+\_\+\+R\+E\+B\+O\+O\+T@{irrigation\+\_\+status\+\_\+\+R\+E\+B\+O\+O\+T}}\item[{\em 
+\hypertarget{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a64e8c241885100a4c6ee0dde8c084093}{}irrigation\+\_\+status\+\_\+\+R\+E\+B\+O\+O\+T\label{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a64e8c241885100a4c6ee0dde8c084093}
+}]If something goes terribly wrong we can set this to pending state and force a reboot. \index{irrigation\+\_\+status\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{irrigation\+\_\+status\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}!irrigation.\+h@{irrigation.\+h}}\index{irrigation.\+h@{irrigation.\+h}!irrigation\+\_\+status\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{irrigation\+\_\+status\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}}\item[{\em 
+\hypertarget{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a3d4b9190b0804578e02247c8cee11d8c}{}irrigation\+\_\+status\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D\label{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a3d4b9190b0804578e02247c8cee11d8c}
+}]This is the default sate but it is also used for the pending state when no pending state is set. \index{irrigation\+\_\+status\+\_\+\+I\+N\+I\+T@{irrigation\+\_\+status\+\_\+\+I\+N\+I\+T}!irrigation.\+h@{irrigation.\+h}}\index{irrigation.\+h@{irrigation.\+h}!irrigation\+\_\+status\+\_\+\+I\+N\+I\+T@{irrigation\+\_\+status\+\_\+\+I\+N\+I\+T}}\item[{\em 
+\hypertarget{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a0961e0972792be7ffcb4bf7aa64d4017}{}irrigation\+\_\+status\+\_\+\+I\+N\+I\+T\label{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a0961e0972792be7ffcb4bf7aa64d4017}
+}]Initialize the system. \index{irrigation\+\_\+status\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E@{irrigation\+\_\+status\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E}!irrigation.\+h@{irrigation.\+h}}\index{irrigation.\+h@{irrigation.\+h}!irrigation\+\_\+status\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E@{irrigation\+\_\+status\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E}}\item[{\em 
+\hypertarget{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a0421b2d42223b25611688b6d2fe2d6e1}{}irrigation\+\_\+status\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E\label{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a0421b2d42223b25611688b6d2fe2d6e1}
+}]Validate the sensors. \index{irrigation\+\_\+status\+\_\+\+M\+E\+A\+S\+U\+R\+E@{irrigation\+\_\+status\+\_\+\+M\+E\+A\+S\+U\+R\+E}!irrigation.\+h@{irrigation.\+h}}\index{irrigation.\+h@{irrigation.\+h}!irrigation\+\_\+status\+\_\+\+M\+E\+A\+S\+U\+R\+E@{irrigation\+\_\+status\+\_\+\+M\+E\+A\+S\+U\+R\+E}}\item[{\em 
+\hypertarget{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a1138583e9263588b98c16578bed06987}{}irrigation\+\_\+status\+\_\+\+M\+E\+A\+S\+U\+R\+E\label{irrigation_8h_ac40bd72ec6942e213e454ebcacc92dc7a1138583e9263588b98c16578bed06987}
+}]Measure soil water content. \end{description}
+\end{Desc}
+\hypertarget{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6}{}\index{irrigation.\+h@{irrigation.\+h}!moisture\+\_\+sensor\+\_\+state@{moisture\+\_\+sensor\+\_\+state}}
+\index{moisture\+\_\+sensor\+\_\+state@{moisture\+\_\+sensor\+\_\+state}!irrigation.\+h@{irrigation.\+h}}
+\subsubsection[{moisture\+\_\+sensor\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf moisture\+\_\+sensor\+\_\+state}}\label{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6}
+
+
+This is the state of the moisture sensor. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{moisture\+\_\+sensor\+\_\+heating@{moisture\+\_\+sensor\+\_\+heating}!irrigation.\+h@{irrigation.\+h}}\index{irrigation.\+h@{irrigation.\+h}!moisture\+\_\+sensor\+\_\+heating@{moisture\+\_\+sensor\+\_\+heating}}\item[{\em 
+\hypertarget{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6ad3f6b80b71bad74ea52dda2f31231cc3}{}moisture\+\_\+sensor\+\_\+heating\label{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6ad3f6b80b71bad74ea52dda2f31231cc3}
+}]The sensor is heating up. \index{moisture\+\_\+sensor\+\_\+cooling@{moisture\+\_\+sensor\+\_\+cooling}!irrigation.\+h@{irrigation.\+h}}\index{irrigation.\+h@{irrigation.\+h}!moisture\+\_\+sensor\+\_\+cooling@{moisture\+\_\+sensor\+\_\+cooling}}\item[{\em 
+\hypertarget{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6a7e57547ef4980c1af315fd9937c976f0}{}moisture\+\_\+sensor\+\_\+cooling\label{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6a7e57547ef4980c1af315fd9937c976f0}
+}]The sensor is cooling down. \index{moisture\+\_\+sensor\+\_\+t1@{moisture\+\_\+sensor\+\_\+t1}!irrigation.\+h@{irrigation.\+h}}\index{irrigation.\+h@{irrigation.\+h}!moisture\+\_\+sensor\+\_\+t1@{moisture\+\_\+sensor\+\_\+t1}}\item[{\em 
+\hypertarget{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6a4460d045ceb966a377b72d2825606fbd}{}moisture\+\_\+sensor\+\_\+t1\label{irrigation_8h_a9891f6b3b37611d2aebdb8601acdf6c6a4460d045ceb966a377b72d2825606fbd}
+}]\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]t1 and t2 are not used for the moment \end{DoxyRefDesc}
+\end{description}
+\end{Desc}

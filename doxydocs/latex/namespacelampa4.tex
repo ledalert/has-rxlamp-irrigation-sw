@@ -1,0 +1,154 @@
+\hypertarget{namespacelampa4}{}\section{lampa4 Namespace Reference}
+\label{namespacelampa4}\index{lampa4@{lampa4}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlampa4_1_1cball}{cball}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacelampa4_a302ab3acaa65ffa45cd4113f8bdf5a6f}{get\+\_\+avg} (samples, bar1, bar2)
+\item 
+def \hyperlink{namespacelampa4_afd96591ceedfb79781d917a91760592e}{get\+\_\+top} (samples, bar1, bar2)
+\item 
+def \hyperlink{namespacelampa4_adea0ce009717aaea638affbb7b7860cb}{process\+\_\+audio} ()
+\item 
+def \hyperlink{namespacelampa4_ac033591ccd7b5c401328e4ff91a88288}{get\+\_\+fft\+\_\+data} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacelampa4_afcee0cb8e2f362c76be874971642e643}{s} = serial.\+Serial(sys.\+argv\mbox{[}1\mbox{]}, 1000000)
+\item 
+float \hyperlink{namespacelampa4_ab7c57ff13fd458647c91f06273313483}{max\+\_\+hue} = 1.\+0
+\item 
+tuple \hyperlink{namespacelampa4_a81b2d75595cdc20eb54c714c56bfd08f}{fft\+\_\+lock} = threading.\+Lock()
+\item 
+list \hyperlink{namespacelampa4_a369a8a502d6759251af2acd22c697570}{freq\+\_\+domain} = \mbox{[}0.\+0\mbox{]}
+\item 
+int \hyperlink{namespacelampa4_a58a7d2d077bc3d30265e199521b68f65}{freq\+\_\+domain\+\_\+count} = 0
+\item 
+tuple \hyperlink{namespacelampa4_a961cb8be928e4a946445985d96c435c4}{balls} = set()
+\item 
+int \hyperlink{namespacelampa4_a95eb3600d592e7afc11601b525431042}{max\+\_\+balls} = 0
+\item 
+float \hyperlink{namespacelampa4_abef701f3b350dc684c18349419f0d6f3}{max\+\_\+heat} = 1.\+0
+\item 
+float \hyperlink{namespacelampa4_a9dd69141d6b812cd877ac90a67624691}{hue\+\_\+displacement} = 0.\+0
+\item 
+tuple \hyperlink{namespacelampa4_a3b522b28f99168d8af9b8909e20143a7}{fft\+\_\+data} = \hyperlink{namespacelampa4_ac033591ccd7b5c401328e4ff91a88288}{get\+\_\+fft\+\_\+data}()
+\item 
+float \hyperlink{namespacelampa4_aa1a8ba53cf446fec1b46e2dc8a9dcf15}{i} = 0.\+0
+\item 
+tuple \hyperlink{namespacelampa4_a67965ded9d0d78e4f7e769861b4960d6}{mid} = \hyperlink{namespacelampa4_afd96591ceedfb79781d917a91760592e}{get\+\_\+top}(\hyperlink{namespacelampa4_a3b522b28f99168d8af9b8909e20143a7}{fft\+\_\+data}, 140, 170)
+\item 
+tuple \hyperlink{namespacelampa4_a9b2d9b19816e848a68cbc261d8ded396}{high} = \hyperlink{namespacelampa4_afd96591ceedfb79781d917a91760592e}{get\+\_\+top}(\hyperlink{namespacelampa4_a3b522b28f99168d8af9b8909e20143a7}{fft\+\_\+data}, 250, 255)
+\item 
+tuple \hyperlink{namespacelampa4_aeb667c7d17ba0999dad7c1f3d3aa6d7a}{a} = random.\+random()
+\item 
+tuple \hyperlink{namespacelampa4_a1403f4237df39099e047bd2696eeb0d6}{ball} = \hyperlink{classlampa4_1_1cball}{cball}(\hyperlink{structcolor}{color} = (1.\+0, 1.\+0, 0.\+0), \hyperlink{sampling_8c_a1910d262855b71da353ed0d07a6c7823}{pos}=\hyperlink{classv3_1_1vec3}{v3.\+vec3}(x=math.\+sin(\hyperlink{namespacelampa4_aeb667c7d17ba0999dad7c1f3d3aa6d7a}{a})$\ast$\hyperlink{namespacecalc__lamp_a9fae0936f2cfe1102b12afe7d72667a6}{calc\+\_\+lamp.\+helix\+\_\+radius} , y=math.\+cos(\hyperlink{namespacelampa4_aeb667c7d17ba0999dad7c1f3d3aa6d7a}{a})$\ast$\hyperlink{namespacecalc__lamp_a9fae0936f2cfe1102b12afe7d72667a6}{calc\+\_\+lamp.\+helix\+\_\+radius} , z =-\/50) )
+\item 
+tuple \hyperlink{namespacelampa4_a12e9ce59aed9709c1a7681120d90ef56}{to\+\_\+remove} = set()
+\item 
+string \hyperlink{namespacelampa4_abb87e1fb3487af72f4e3d54fbfefb295}{data} = \textquotesingle{}\textquotesingle{}
+\item 
+float \hyperlink{namespacelampa4_a93128f48d4412f365a71aa12b3994732}{heat} = 0.\+0
+\item 
+tuple \hyperlink{namespacelampa4_a345d6af3f00d4c0b0aa2b9f3fc73d853}{dis} = abs(\hyperlink{sampling_8c_a1910d262855b71da353ed0d07a6c7823}{ball.\+pos} -\/ led)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacelampa4_a302ab3acaa65ffa45cd4113f8bdf5a6f}{}\index{lampa4@{lampa4}!get\+\_\+avg@{get\+\_\+avg}}
+\index{get\+\_\+avg@{get\+\_\+avg}!lampa4@{lampa4}}
+\subsubsection[{get\+\_\+avg}]{\setlength{\rightskip}{0pt plus 5cm}def lampa4.\+get\+\_\+avg (
+\begin{DoxyParamCaption}
+\item[{}]{samples, }
+\item[{}]{bar1, }
+\item[{}]{bar2}
+\end{DoxyParamCaption}
+)}\label{namespacelampa4_a302ab3acaa65ffa45cd4113f8bdf5a6f}
+\hypertarget{namespacelampa4_ac033591ccd7b5c401328e4ff91a88288}{}\index{lampa4@{lampa4}!get\+\_\+fft\+\_\+data@{get\+\_\+fft\+\_\+data}}
+\index{get\+\_\+fft\+\_\+data@{get\+\_\+fft\+\_\+data}!lampa4@{lampa4}}
+\subsubsection[{get\+\_\+fft\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}def lampa4.\+get\+\_\+fft\+\_\+data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacelampa4_ac033591ccd7b5c401328e4ff91a88288}
+\hypertarget{namespacelampa4_afd96591ceedfb79781d917a91760592e}{}\index{lampa4@{lampa4}!get\+\_\+top@{get\+\_\+top}}
+\index{get\+\_\+top@{get\+\_\+top}!lampa4@{lampa4}}
+\subsubsection[{get\+\_\+top}]{\setlength{\rightskip}{0pt plus 5cm}def lampa4.\+get\+\_\+top (
+\begin{DoxyParamCaption}
+\item[{}]{samples, }
+\item[{}]{bar1, }
+\item[{}]{bar2}
+\end{DoxyParamCaption}
+)}\label{namespacelampa4_afd96591ceedfb79781d917a91760592e}
+\hypertarget{namespacelampa4_adea0ce009717aaea638affbb7b7860cb}{}\index{lampa4@{lampa4}!process\+\_\+audio@{process\+\_\+audio}}
+\index{process\+\_\+audio@{process\+\_\+audio}!lampa4@{lampa4}}
+\subsubsection[{process\+\_\+audio}]{\setlength{\rightskip}{0pt plus 5cm}def lampa4.\+process\+\_\+audio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacelampa4_adea0ce009717aaea638affbb7b7860cb}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacelampa4_aeb667c7d17ba0999dad7c1f3d3aa6d7a}{}\index{lampa4@{lampa4}!a@{a}}
+\index{a@{a}!lampa4@{lampa4}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+a = random.\+random()}\label{namespacelampa4_aeb667c7d17ba0999dad7c1f3d3aa6d7a}
+\hypertarget{namespacelampa4_a1403f4237df39099e047bd2696eeb0d6}{}\index{lampa4@{lampa4}!ball@{ball}}
+\index{ball@{ball}!lampa4@{lampa4}}
+\subsubsection[{ball}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+ball = {\bf cball}({\bf color} = (1.\+0, 1.\+0, 0.\+0), {\bf pos}={\bf v3.\+vec3}(x=math.\+sin({\bf a})$\ast${\bf calc\+\_\+lamp.\+helix\+\_\+radius} , y=math.\+cos({\bf a})$\ast${\bf calc\+\_\+lamp.\+helix\+\_\+radius} , z =-\/50) )}\label{namespacelampa4_a1403f4237df39099e047bd2696eeb0d6}
+\hypertarget{namespacelampa4_a961cb8be928e4a946445985d96c435c4}{}\index{lampa4@{lampa4}!balls@{balls}}
+\index{balls@{balls}!lampa4@{lampa4}}
+\subsubsection[{balls}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+balls = set()}\label{namespacelampa4_a961cb8be928e4a946445985d96c435c4}
+\hypertarget{namespacelampa4_abb87e1fb3487af72f4e3d54fbfefb295}{}\index{lampa4@{lampa4}!data@{data}}
+\index{data@{data}!lampa4@{lampa4}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}string lampa4.\+data = \textquotesingle{}\textquotesingle{}}\label{namespacelampa4_abb87e1fb3487af72f4e3d54fbfefb295}
+\hypertarget{namespacelampa4_a345d6af3f00d4c0b0aa2b9f3fc73d853}{}\index{lampa4@{lampa4}!dis@{dis}}
+\index{dis@{dis}!lampa4@{lampa4}}
+\subsubsection[{dis}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+dis = abs({\bf ball.\+pos} -\/ led)}\label{namespacelampa4_a345d6af3f00d4c0b0aa2b9f3fc73d853}
+\hypertarget{namespacelampa4_a3b522b28f99168d8af9b8909e20143a7}{}\index{lampa4@{lampa4}!fft\+\_\+data@{fft\+\_\+data}}
+\index{fft\+\_\+data@{fft\+\_\+data}!lampa4@{lampa4}}
+\subsubsection[{fft\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+fft\+\_\+data = {\bf get\+\_\+fft\+\_\+data}()}\label{namespacelampa4_a3b522b28f99168d8af9b8909e20143a7}
+\hypertarget{namespacelampa4_a81b2d75595cdc20eb54c714c56bfd08f}{}\index{lampa4@{lampa4}!fft\+\_\+lock@{fft\+\_\+lock}}
+\index{fft\+\_\+lock@{fft\+\_\+lock}!lampa4@{lampa4}}
+\subsubsection[{fft\+\_\+lock}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+fft\+\_\+lock = threading.\+Lock()}\label{namespacelampa4_a81b2d75595cdc20eb54c714c56bfd08f}
+\hypertarget{namespacelampa4_a369a8a502d6759251af2acd22c697570}{}\index{lampa4@{lampa4}!freq\+\_\+domain@{freq\+\_\+domain}}
+\index{freq\+\_\+domain@{freq\+\_\+domain}!lampa4@{lampa4}}
+\subsubsection[{freq\+\_\+domain}]{\setlength{\rightskip}{0pt plus 5cm}list lampa4.\+freq\+\_\+domain = \mbox{[}0.\+0\mbox{]}}\label{namespacelampa4_a369a8a502d6759251af2acd22c697570}
+\hypertarget{namespacelampa4_a58a7d2d077bc3d30265e199521b68f65}{}\index{lampa4@{lampa4}!freq\+\_\+domain\+\_\+count@{freq\+\_\+domain\+\_\+count}}
+\index{freq\+\_\+domain\+\_\+count@{freq\+\_\+domain\+\_\+count}!lampa4@{lampa4}}
+\subsubsection[{freq\+\_\+domain\+\_\+count}]{\setlength{\rightskip}{0pt plus 5cm}int lampa4.\+freq\+\_\+domain\+\_\+count = 0}\label{namespacelampa4_a58a7d2d077bc3d30265e199521b68f65}
+\hypertarget{namespacelampa4_a93128f48d4412f365a71aa12b3994732}{}\index{lampa4@{lampa4}!heat@{heat}}
+\index{heat@{heat}!lampa4@{lampa4}}
+\subsubsection[{heat}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+heat = 0.\+0}\label{namespacelampa4_a93128f48d4412f365a71aa12b3994732}
+\hypertarget{namespacelampa4_a9b2d9b19816e848a68cbc261d8ded396}{}\index{lampa4@{lampa4}!high@{high}}
+\index{high@{high}!lampa4@{lampa4}}
+\subsubsection[{high}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+high = {\bf get\+\_\+top}({\bf fft\+\_\+data}, 250, 255)}\label{namespacelampa4_a9b2d9b19816e848a68cbc261d8ded396}
+\hypertarget{namespacelampa4_a9dd69141d6b812cd877ac90a67624691}{}\index{lampa4@{lampa4}!hue\+\_\+displacement@{hue\+\_\+displacement}}
+\index{hue\+\_\+displacement@{hue\+\_\+displacement}!lampa4@{lampa4}}
+\subsubsection[{hue\+\_\+displacement}]{\setlength{\rightskip}{0pt plus 5cm}float lampa4.\+hue\+\_\+displacement = 0.\+0}\label{namespacelampa4_a9dd69141d6b812cd877ac90a67624691}
+\hypertarget{namespacelampa4_aa1a8ba53cf446fec1b46e2dc8a9dcf15}{}\index{lampa4@{lampa4}!i@{i}}
+\index{i@{i}!lampa4@{lampa4}}
+\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+i = 0.\+0}\label{namespacelampa4_aa1a8ba53cf446fec1b46e2dc8a9dcf15}
+\hypertarget{namespacelampa4_a95eb3600d592e7afc11601b525431042}{}\index{lampa4@{lampa4}!max\+\_\+balls@{max\+\_\+balls}}
+\index{max\+\_\+balls@{max\+\_\+balls}!lampa4@{lampa4}}
+\subsubsection[{max\+\_\+balls}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+max\+\_\+balls = 0}\label{namespacelampa4_a95eb3600d592e7afc11601b525431042}
+\hypertarget{namespacelampa4_abef701f3b350dc684c18349419f0d6f3}{}\index{lampa4@{lampa4}!max\+\_\+heat@{max\+\_\+heat}}
+\index{max\+\_\+heat@{max\+\_\+heat}!lampa4@{lampa4}}
+\subsubsection[{max\+\_\+heat}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+max\+\_\+heat = 1.\+0}\label{namespacelampa4_abef701f3b350dc684c18349419f0d6f3}
+\hypertarget{namespacelampa4_ab7c57ff13fd458647c91f06273313483}{}\index{lampa4@{lampa4}!max\+\_\+hue@{max\+\_\+hue}}
+\index{max\+\_\+hue@{max\+\_\+hue}!lampa4@{lampa4}}
+\subsubsection[{max\+\_\+hue}]{\setlength{\rightskip}{0pt plus 5cm}float lampa4.\+max\+\_\+hue = 1.\+0}\label{namespacelampa4_ab7c57ff13fd458647c91f06273313483}
+\hypertarget{namespacelampa4_a67965ded9d0d78e4f7e769861b4960d6}{}\index{lampa4@{lampa4}!mid@{mid}}
+\index{mid@{mid}!lampa4@{lampa4}}
+\subsubsection[{mid}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+mid = {\bf get\+\_\+top}({\bf fft\+\_\+data}, 140, 170)}\label{namespacelampa4_a67965ded9d0d78e4f7e769861b4960d6}
+\hypertarget{namespacelampa4_afcee0cb8e2f362c76be874971642e643}{}\index{lampa4@{lampa4}!s@{s}}
+\index{s@{s}!lampa4@{lampa4}}
+\subsubsection[{s}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+s = serial.\+Serial(sys.\+argv\mbox{[}1\mbox{]}, 1000000)}\label{namespacelampa4_afcee0cb8e2f362c76be874971642e643}
+\hypertarget{namespacelampa4_a12e9ce59aed9709c1a7681120d90ef56}{}\index{lampa4@{lampa4}!to\+\_\+remove@{to\+\_\+remove}}
+\index{to\+\_\+remove@{to\+\_\+remove}!lampa4@{lampa4}}
+\subsubsection[{to\+\_\+remove}]{\setlength{\rightskip}{0pt plus 5cm}tuple lampa4.\+to\+\_\+remove = set()}\label{namespacelampa4_a12e9ce59aed9709c1a7681120d90ef56}

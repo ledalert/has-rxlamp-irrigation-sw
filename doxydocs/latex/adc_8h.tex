@@ -1,0 +1,48 @@
+\hypertarget{adc_8h}{}\section{src/adc.h File Reference}
+\label{adc_8h}\index{src/adc.\+h@{src/adc.\+h}}
+{\ttfamily \#include \char`\"{}hw.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$libopencm3/stm32/adc.\+h$>$}\\*
+{\ttfamily \#include $<$libopencm3/stm32/dma.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structadc__config}{adc\+\_\+config}
+\item 
+struct \hyperlink{structadc}{adc}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{adc_8h_aa58c717539ff7ab391bc0ef93cd7f726}{\+\_\+\+A\+D\+C\+\_\+\+H\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{adc_8h_a1c6689c4974ca47f5e316799961c1bab}{adc\+\_\+init} (struct \hyperlink{structadc}{adc} $\ast$\hyperlink{structadc}{adc}, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} \hyperlink{structstate}{state})
+\item 
+void \hyperlink{adc_8h_ada0028bb1d8d2d158dbcdd17601f54bb}{adc\+\_\+begin\+\_\+sampling} (struct \hyperlink{structadc}{adc} $\ast$\hyperlink{structadc}{adc})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{adc_8h_aa58c717539ff7ab391bc0ef93cd7f726}{}\index{adc.\+h@{adc.\+h}!\+\_\+\+A\+D\+C\+\_\+\+H\+\_\+@{\+\_\+\+A\+D\+C\+\_\+\+H\+\_\+}}
+\index{\+\_\+\+A\+D\+C\+\_\+\+H\+\_\+@{\+\_\+\+A\+D\+C\+\_\+\+H\+\_\+}!adc.\+h@{adc.\+h}}
+\subsubsection[{\+\_\+\+A\+D\+C\+\_\+\+H\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+A\+D\+C\+\_\+\+H\+\_\+}\label{adc_8h_aa58c717539ff7ab391bc0ef93cd7f726}
+
+
+\subsection{Function Documentation}
+\hypertarget{adc_8h_ada0028bb1d8d2d158dbcdd17601f54bb}{}\index{adc.\+h@{adc.\+h}!adc\+\_\+begin\+\_\+sampling@{adc\+\_\+begin\+\_\+sampling}}
+\index{adc\+\_\+begin\+\_\+sampling@{adc\+\_\+begin\+\_\+sampling}!adc.\+h@{adc.\+h}}
+\subsubsection[{adc\+\_\+begin\+\_\+sampling}]{\setlength{\rightskip}{0pt plus 5cm}void adc\+\_\+begin\+\_\+sampling (
+\begin{DoxyParamCaption}
+\item[{struct {\bf adc} $\ast$}]{adc}
+\end{DoxyParamCaption}
+)}\label{adc_8h_ada0028bb1d8d2d158dbcdd17601f54bb}
+\hypertarget{adc_8h_a1c6689c4974ca47f5e316799961c1bab}{}\index{adc.\+h@{adc.\+h}!adc\+\_\+init@{adc\+\_\+init}}
+\index{adc\+\_\+init@{adc\+\_\+init}!adc.\+h@{adc.\+h}}
+\subsubsection[{adc\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void adc\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf adc} $\ast$}]{adc, }
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{adc_8h_a1c6689c4974ca47f5e316799961c1bab}

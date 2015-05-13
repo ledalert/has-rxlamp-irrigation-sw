@@ -1,0 +1,41 @@
+\hypertarget{adc_8c}{}\section{src/adc.c File Reference}
+\label{adc_8c}\index{src/adc.\+c@{src/adc.\+c}}
+{\ttfamily \#include \char`\"{}adc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$libopencm3/cm3/nvic.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{adc_8c_a1c6689c4974ca47f5e316799961c1bab}{adc\+\_\+init} (struct \hyperlink{structadc}{adc} $\ast$\hyperlink{structadc}{adc}, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} \hyperlink{structstate}{state})
+\item 
+void \hyperlink{adc_8c_ada0028bb1d8d2d158dbcdd17601f54bb}{adc\+\_\+begin\+\_\+sampling} (struct \hyperlink{structadc}{adc} $\ast$\hyperlink{structadc}{adc})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static struct \hyperlink{structadc}{adc} $\ast$ \hyperlink{adc_8c_afb3b2b082f473dc9b02f36c3d5fd9296}{adc1} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{adc_8c_ada0028bb1d8d2d158dbcdd17601f54bb}{}\index{adc.\+c@{adc.\+c}!adc\+\_\+begin\+\_\+sampling@{adc\+\_\+begin\+\_\+sampling}}
+\index{adc\+\_\+begin\+\_\+sampling@{adc\+\_\+begin\+\_\+sampling}!adc.\+c@{adc.\+c}}
+\subsubsection[{adc\+\_\+begin\+\_\+sampling}]{\setlength{\rightskip}{0pt plus 5cm}void adc\+\_\+begin\+\_\+sampling (
+\begin{DoxyParamCaption}
+\item[{struct {\bf adc} $\ast$}]{adc}
+\end{DoxyParamCaption}
+)}\label{adc_8c_ada0028bb1d8d2d158dbcdd17601f54bb}
+\hypertarget{adc_8c_a1c6689c4974ca47f5e316799961c1bab}{}\index{adc.\+c@{adc.\+c}!adc\+\_\+init@{adc\+\_\+init}}
+\index{adc\+\_\+init@{adc\+\_\+init}!adc.\+c@{adc.\+c}}
+\subsubsection[{adc\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void adc\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf adc} $\ast$}]{adc, }
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{adc_8c_a1c6689c4974ca47f5e316799961c1bab}
+
+
+\subsection{Variable Documentation}
+\hypertarget{adc_8c_afb3b2b082f473dc9b02f36c3d5fd9296}{}\index{adc.\+c@{adc.\+c}!adc1@{adc1}}
+\index{adc1@{adc1}!adc.\+c@{adc.\+c}}
+\subsubsection[{adc1}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf adc}$\ast$ adc1 = 0\hspace{0.3cm}{\ttfamily [static]}}\label{adc_8c_afb3b2b082f473dc9b02f36c3d5fd9296}

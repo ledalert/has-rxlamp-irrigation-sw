@@ -1,0 +1,51 @@
+\hypertarget{test__lamp_8py}{}\section{python\+\_\+scripts/test\+\_\+lamp.py File Reference}
+\label{test__lamp_8py}\index{python\+\_\+scripts/test\+\_\+lamp.\+py@{python\+\_\+scripts/test\+\_\+lamp.\+py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacetest__lamp}{test\+\_\+lamp}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacetest__lamp_a41c0903d93b79eca9987ad89a509a165}{test\+\_\+lamp.\+send\+\_\+led\+\_\+data} (data)
+\item 
+def \hyperlink{namespacetest__lamp_a0392456bb3af216fb2ddf1f848b47085}{test\+\_\+lamp.\+get\+\_\+cpu\+\_\+freq} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacetest__lamp_a2a800f9adfbfa469a4512743d36bd781}{test\+\_\+lamp.\+s} = serial.\+Serial(\char`\"{}/dev/tty\+U\+S\+B0\char`\"{}, 1000000)
+\item 
+int \hyperlink{namespacetest__lamp_a96ed73138b4ac9b56fa6756621f158ae}{test\+\_\+lamp.\+freq} = 100
+\item 
+float \hyperlink{namespacetest__lamp_ae5d1a14ec1ec8e97cf8938be9386e507}{test\+\_\+lamp.\+delay} = 1.\+0
+\item 
+string \hyperlink{namespacetest__lamp_a3fcd0129cd517124f65cc0cb7173ebdd}{test\+\_\+lamp.\+black} = \char`\"{}000000\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp_a51fd2448d3bc03744f0811a13cbaa0ef}{test\+\_\+lamp.\+green} = \char`\"{}00\+F\+F00\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp_a1bbf62187c72933bcb170bb50c8566cf}{test\+\_\+lamp.\+red} = \char`\"{}F\+F0000\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp_a7f447446745812eae2674efdeb1a94ed}{test\+\_\+lamp.\+blue} = \char`\"{}0000\+F\+F\char`\"{}
+\item 
+string \hyperlink{namespacetest__lamp_aa06530574bc0e50eb9bf9cb94cb98d95}{test\+\_\+lamp.\+white} = \char`\"{}F\+F\+F\+F\+F\+F\char`\"{}
+\item 
+tuple \hyperlink{namespacetest__lamp_a3f074fe7b6f4e5692ca115354c4b282f}{test\+\_\+lamp.\+fifo} = list()
+\item 
+float \hyperlink{namespacetest__lamp_a065ccc382a9d2863201219bfa7e22130}{test\+\_\+lamp.\+pos} = 0.\+0
+\item 
+tuple \hyperlink{namespacetest__lamp_a2154c1290fae45d62099a61e2f9a811d}{test\+\_\+lamp.\+avg} = (sum(\mbox{[}v$\ast$$\ast$2 for v in fifo\mbox{]}) / len(fifo) )
+\item 
+int \hyperlink{namespacetest__lamp_a2dddcdd03c4015181b84d4e48ef0d678}{test\+\_\+lamp.\+a} = 11
+\item 
+int \hyperlink{namespacetest__lamp_ae1d972cb1f7453e75b2d00c0b8dcddaa}{test\+\_\+lamp.\+ss} = avg/20000
+\item 
+tuple \hyperlink{namespacetest__lamp_ad2879a9a1a10baabf94f89a5342c30b4}{test\+\_\+lamp.\+b} = int(\hyperlink{sampling_8c_a1910d262855b71da353ed0d07a6c7823}{pos} \% float(a))
+\item 
+tuple \hyperlink{namespacetest__lamp_af861b03726bd4fc04350abc65413da17}{test\+\_\+lamp.\+c} = (b+3)
+\item 
+string \hyperlink{namespacetest__lamp_a3bbaeee85014b3f126907a5f2437d3a5}{test\+\_\+lamp.\+data} = \textquotesingle{}\textquotesingle{}
+\item 
+tuple \hyperlink{namespacetest__lamp_a9b344035322439e65e32b1f0f633b250}{test\+\_\+lamp.\+n} = int(21+math.\+sin(time.\+time()$\ast$5)$\ast$21)
+\end{DoxyCompactItemize}

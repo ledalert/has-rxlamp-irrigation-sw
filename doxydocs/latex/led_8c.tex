@@ -1,0 +1,63 @@
+\hypertarget{led_8c}{}\section{src/led.c File Reference}
+\label{led_8c}\index{src/led.\+c@{src/led.\+c}}
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{led_8c_afff02e827e484a90d3c80fbf07d5de00}{process\+\_\+buffer} ()
+\item 
+void \hyperlink{led_8c_a0ff0af05e0b6d1a3696ece790bcf4e94}{send\+\_\+led\+\_\+buffer} ()
+\item 
+void \hyperlink{led_8c_aea5c230675ad01c8e1e3a872bcfb8c76}{send\+\_\+led\+\_\+buffer\+\_\+blocking} ()
+\item 
+void \hyperlink{led_8c_a7f441c8c23a94b22053efce51fb704b7}{set\+\_\+indicator\+\_\+rgb} (int r, int g, int b)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static volatile uint8\+\_\+t \hyperlink{led_8c_a2df6fdaeb8f5a5002282cdf05413eed1}{led\+\_\+output\+\_\+buf} \mbox{[}\hyperlink{led_8h_acd1631035be7926b6340994792bd7119}{N\+U\+M\+B\+E\+R\+\_\+\+L\+E\+D\+S} $\ast$24+1\mbox{]}
+\item 
+static volatile struct \hyperlink{structcolor}{color} \hyperlink{led_8c_a677ff314738e79240a90d816962851c1}{led\+\_\+input\+\_\+buf} \mbox{[}\hyperlink{led_8h_acd1631035be7926b6340994792bd7119}{N\+U\+M\+B\+E\+R\+\_\+\+L\+E\+D\+S}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{led_8c_afff02e827e484a90d3c80fbf07d5de00}{}\index{led.\+c@{led.\+c}!process\+\_\+buffer@{process\+\_\+buffer}}
+\index{process\+\_\+buffer@{process\+\_\+buffer}!led.\+c@{led.\+c}}
+\subsubsection[{process\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}void process\+\_\+buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{led_8c_afff02e827e484a90d3c80fbf07d5de00}
+\hypertarget{led_8c_a0ff0af05e0b6d1a3696ece790bcf4e94}{}\index{led.\+c@{led.\+c}!send\+\_\+led\+\_\+buffer@{send\+\_\+led\+\_\+buffer}}
+\index{send\+\_\+led\+\_\+buffer@{send\+\_\+led\+\_\+buffer}!led.\+c@{led.\+c}}
+\subsubsection[{send\+\_\+led\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}void send\+\_\+led\+\_\+buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{led_8c_a0ff0af05e0b6d1a3696ece790bcf4e94}
+\hypertarget{led_8c_aea5c230675ad01c8e1e3a872bcfb8c76}{}\index{led.\+c@{led.\+c}!send\+\_\+led\+\_\+buffer\+\_\+blocking@{send\+\_\+led\+\_\+buffer\+\_\+blocking}}
+\index{send\+\_\+led\+\_\+buffer\+\_\+blocking@{send\+\_\+led\+\_\+buffer\+\_\+blocking}!led.\+c@{led.\+c}}
+\subsubsection[{send\+\_\+led\+\_\+buffer\+\_\+blocking}]{\setlength{\rightskip}{0pt plus 5cm}void send\+\_\+led\+\_\+buffer\+\_\+blocking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{led_8c_aea5c230675ad01c8e1e3a872bcfb8c76}
+\hypertarget{led_8c_a7f441c8c23a94b22053efce51fb704b7}{}\index{led.\+c@{led.\+c}!set\+\_\+indicator\+\_\+rgb@{set\+\_\+indicator\+\_\+rgb}}
+\index{set\+\_\+indicator\+\_\+rgb@{set\+\_\+indicator\+\_\+rgb}!led.\+c@{led.\+c}}
+\subsubsection[{set\+\_\+indicator\+\_\+rgb}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+indicator\+\_\+rgb (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}\label{led_8c_a7f441c8c23a94b22053efce51fb704b7}
+
+
+\subsection{Variable Documentation}
+\hypertarget{led_8c_a677ff314738e79240a90d816962851c1}{}\index{led.\+c@{led.\+c}!led\+\_\+input\+\_\+buf@{led\+\_\+input\+\_\+buf}}
+\index{led\+\_\+input\+\_\+buf@{led\+\_\+input\+\_\+buf}!led.\+c@{led.\+c}}
+\subsubsection[{led\+\_\+input\+\_\+buf}]{\setlength{\rightskip}{0pt plus 5cm}volatile struct {\bf color} led\+\_\+input\+\_\+buf\mbox{[}{\bf N\+U\+M\+B\+E\+R\+\_\+\+L\+E\+D\+S}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{led_8c_a677ff314738e79240a90d816962851c1}
+\hypertarget{led_8c_a2df6fdaeb8f5a5002282cdf05413eed1}{}\index{led.\+c@{led.\+c}!led\+\_\+output\+\_\+buf@{led\+\_\+output\+\_\+buf}}
+\index{led\+\_\+output\+\_\+buf@{led\+\_\+output\+\_\+buf}!led.\+c@{led.\+c}}
+\subsubsection[{led\+\_\+output\+\_\+buf}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t led\+\_\+output\+\_\+buf\mbox{[}{\bf N\+U\+M\+B\+E\+R\+\_\+\+L\+E\+D\+S} $\ast$24+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{led_8c_a2df6fdaeb8f5a5002282cdf05413eed1}

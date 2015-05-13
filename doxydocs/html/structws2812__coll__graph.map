@@ -1,0 +1,12 @@
+<map id="ws2812" name="ws2812">
+<area shape="rect" id="node2" href="$structws2812__rgb.html" title="ws2812_rgb" alt="" coords="5,363,104,389"/>
+<area shape="rect" id="node3" href="$structws2812__config.html" title="ws2812_config" alt="" coords="128,363,243,389"/>
+<area shape="rect" id="node4" href="$structgpio__pin.html" title="gpio_pin" alt="" coords="87,273,161,300"/>
+<area shape="rect" id="node5" href="$structgpio__pin__config.html" title="gpio_pin_config" alt="" coords="39,184,159,211"/>
+<area shape="rect" id="node6" href="$structgpio__port.html" title="gpio_port" alt="" coords="57,95,140,121"/>
+<area shape="rect" id="node7" href="$structgpio__port__config.html" title="gpio_port_config" alt="" coords="35,5,162,32"/>
+<area shape="rect" id="node8" href="$structtimer__ccr.html" title="timer_ccr" alt="" coords="191,273,273,300"/>
+<area shape="rect" id="node9" href="$structtimer__ccr__config.html" title="timer_ccr_config" alt="" coords="183,184,310,211"/>
+<area shape="rect" id="node10" href="$structtimer.html" title="timer" alt="" coords="219,95,275,121"/>
+<area shape="rect" id="node11" href="$structtimer__config.html" title="timer_config" alt="" coords="196,5,297,32"/>
+</map>

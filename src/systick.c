@@ -1,35 +1,20 @@
 #include "systick.h"
+#include <libopencm3/cm3/systick.h>
+#include <libopencm3/stm32/rcc.h>
 
-void sys_tick_handler(void) {
-	if (ms_time_delay) {
-		ms_time_delay--;
+
+void systick_init(struct systick* systick, enum hw_init_state state) {
+	if (state == HW_INIT_PRE_NVIC) {
+		systick_set_clocksource(STK_CSR_CLKSOURCE_AHB);
+		systick_set_reload(rcc_apb1_frequency / systick->configuration->frequency - 1);
 	}
 
-	if (cooloff_timer != -1) {
-		cooloff_timer++;
-	}
-	
-	if (++mscounter == 1000) {
-		mscounter = 0;
-		system_time++;
-		
+	if (state == HW_INIT_NVIC) {
+		systick_interrupt_enable();		
 	}
 
-	adc_sample();
+	if (state == HW_INIT_POST_INIT) {
+		systick_counter_enable();
 
-}
-
-void sleep_ms(int t) {
-	ms_time_delay = t;	while (ms_time_delay);
-}
-
-
-void init_systick() {
-	ms_time_delay=0;
-	systick_set_clocksource(STK_CSR_CLKSOURCE_AHB);
-	systick_set_reload(24000-1);  // 1 kHz
-	systick_interrupt_enable();
-	systick_counter_enable();
-
-
+	}
 }

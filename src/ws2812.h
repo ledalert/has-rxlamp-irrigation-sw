@@ -28,6 +28,8 @@ struct ws2812_rgb {
 
 void ws2812_init(struct ws2812* led, enum hw_init_state state);
 void ws2812_update(struct ws2812* led);
+void ws2812_set_led(struct ws2812* led, int index, int r, int g, int b);
+void ws2812_update_blocking(struct ws2812* led);
 
 #define _WS2812_H_
 #endif

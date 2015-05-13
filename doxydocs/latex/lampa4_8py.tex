@@ -1,0 +1,64 @@
+\hypertarget{lampa4_8py}{}\section{python\+\_\+scripts/lampa4.py File Reference}
+\label{lampa4_8py}\index{python\+\_\+scripts/lampa4.\+py@{python\+\_\+scripts/lampa4.\+py}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlampa4_1_1cball}{lampa4.\+cball}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelampa4}{lampa4}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacelampa4_a302ab3acaa65ffa45cd4113f8bdf5a6f}{lampa4.\+get\+\_\+avg} (samples, bar1, bar2)
+\item 
+def \hyperlink{namespacelampa4_afd96591ceedfb79781d917a91760592e}{lampa4.\+get\+\_\+top} (samples, bar1, bar2)
+\item 
+def \hyperlink{namespacelampa4_adea0ce009717aaea638affbb7b7860cb}{lampa4.\+process\+\_\+audio} ()
+\item 
+def \hyperlink{namespacelampa4_ac033591ccd7b5c401328e4ff91a88288}{lampa4.\+get\+\_\+fft\+\_\+data} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacelampa4_afcee0cb8e2f362c76be874971642e643}{lampa4.\+s} = serial.\+Serial(sys.\+argv\mbox{[}1\mbox{]}, 1000000)
+\item 
+float \hyperlink{namespacelampa4_ab7c57ff13fd458647c91f06273313483}{lampa4.\+max\+\_\+hue} = 1.\+0
+\item 
+tuple \hyperlink{namespacelampa4_a81b2d75595cdc20eb54c714c56bfd08f}{lampa4.\+fft\+\_\+lock} = threading.\+Lock()
+\item 
+list \hyperlink{namespacelampa4_a369a8a502d6759251af2acd22c697570}{lampa4.\+freq\+\_\+domain} = \mbox{[}0.\+0\mbox{]}
+\item 
+int \hyperlink{namespacelampa4_a58a7d2d077bc3d30265e199521b68f65}{lampa4.\+freq\+\_\+domain\+\_\+count} = 0
+\item 
+tuple \hyperlink{namespacelampa4_a961cb8be928e4a946445985d96c435c4}{lampa4.\+balls} = set()
+\item 
+int \hyperlink{namespacelampa4_a95eb3600d592e7afc11601b525431042}{lampa4.\+max\+\_\+balls} = 0
+\item 
+float \hyperlink{namespacelampa4_abef701f3b350dc684c18349419f0d6f3}{lampa4.\+max\+\_\+heat} = 1.\+0
+\item 
+float \hyperlink{namespacelampa4_a9dd69141d6b812cd877ac90a67624691}{lampa4.\+hue\+\_\+displacement} = 0.\+0
+\item 
+tuple \hyperlink{namespacelampa4_a3b522b28f99168d8af9b8909e20143a7}{lampa4.\+fft\+\_\+data} = get\+\_\+fft\+\_\+data()
+\item 
+float \hyperlink{namespacelampa4_aa1a8ba53cf446fec1b46e2dc8a9dcf15}{lampa4.\+i} = 0.\+0
+\item 
+tuple \hyperlink{namespacelampa4_a67965ded9d0d78e4f7e769861b4960d6}{lampa4.\+mid} = get\+\_\+top(fft\+\_\+data, 140, 170)
+\item 
+tuple \hyperlink{namespacelampa4_a9b2d9b19816e848a68cbc261d8ded396}{lampa4.\+high} = get\+\_\+top(fft\+\_\+data, 250, 255)
+\item 
+tuple \hyperlink{namespacelampa4_aeb667c7d17ba0999dad7c1f3d3aa6d7a}{lampa4.\+a} = random.\+random()
+\item 
+tuple \hyperlink{namespacelampa4_a1403f4237df39099e047bd2696eeb0d6}{lampa4.\+ball} = cball(\hyperlink{structcolor}{color} = (1.\+0, 1.\+0, 0.\+0), \hyperlink{sampling_8c_a1910d262855b71da353ed0d07a6c7823}{pos}=\hyperlink{classv3_1_1vec3}{v3.\+vec3}(x=math.\+sin(a)$\ast$\hyperlink{namespacecalc__lamp_a9fae0936f2cfe1102b12afe7d72667a6}{calc\+\_\+lamp.\+helix\+\_\+radius} , y=math.\+cos(a)$\ast$\hyperlink{namespacecalc__lamp_a9fae0936f2cfe1102b12afe7d72667a6}{calc\+\_\+lamp.\+helix\+\_\+radius} , z =-\/50) )
+\item 
+tuple \hyperlink{namespacelampa4_a12e9ce59aed9709c1a7681120d90ef56}{lampa4.\+to\+\_\+remove} = set()
+\item 
+string \hyperlink{namespacelampa4_abb87e1fb3487af72f4e3d54fbfefb295}{lampa4.\+data} = \textquotesingle{}\textquotesingle{}
+\item 
+float \hyperlink{namespacelampa4_a93128f48d4412f365a71aa12b3994732}{lampa4.\+heat} = 0.\+0
+\item 
+tuple \hyperlink{namespacelampa4_a345d6af3f00d4c0b0aa2b9f3fc73d853}{lampa4.\+dis} = abs(\hyperlink{sampling_8c_a1910d262855b71da353ed0d07a6c7823}{ball.\+pos} -\/ led)
+\end{DoxyCompactItemize}

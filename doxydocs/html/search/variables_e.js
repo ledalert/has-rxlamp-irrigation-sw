@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['r',['r',['../structcolor.html#a7293811e057a838135d916809d231b05',1,'color::r()'],['../structws2812__rgb.html#accf7188c624788256477c2e4ee54515b',1,'ws2812_rgb::r()'],['../namespacelampa.html#a33feca73448b5b010b10a585af4dc6ba',1,'lampa.r()'],['../namespacelampa2.html#a4ec3a7d05530e959b5ed5f4eb3e037c9',1,'lampa2.r()'],['../namespacelampa__searchlight.html#aa8857984682eb8ddde904cdd002b8229',1,'lampa_searchlight.r()']]],
+  ['radians_5fper_5fled',['radians_per_led',['../namespacecalc__lamp.html#a293f8c6e4a3571865e0d87bdaeb52aec',1,'calc_lamp']]],
+  ['radius',['radius',['../classlampa3_1_1cball.html#a6af41e5c82a7caccd638fc14e3caf3f9',1,'lampa3.cball.radius()'],['../classlampa4_1_1cball.html#a7bbf2f00f17d07a52b090055433c720a',1,'lampa4.cball.radius()'],['../classlampa__searchlight_1_1cball.html#ac788a56d2a2abdc72149844f00b2fa8a',1,'lampa_searchlight.cball.radius()']]],
+  ['rcc',['rcc',['../structgpio__port__config.html#a00cb058b3750f38e4b3c5be01e9b0f25',1,'gpio_port_config::rcc()'],['../structtimer__config.html#a1591c4486ebf07c8ac73e69acbbbbc3a',1,'timer_config::rcc()'],['../structusart__config.html#a5362ef6b4daf5a9e2722c9c4e167e9ed',1,'usart_config::rcc()']]],
+  ['rd',['RD',['../namespacecalc__lamp.html#a24423a34de7058a469e65e72013909e3',1,'calc_lamp']]],
+  ['red',['RED',['../classcolour_1_1HSL.html#aeeb08d5ae80e34d8e7dcbd4e8df43ace',1,'colour.HSL.RED()'],['../namespacetest__lamp.html#a1bbf62187c72933bcb170bb50c8566cf',1,'test_lamp.red()'],['../namespacetest__lamp__2.html#a17152f1d5cbd5d9abe0446163c599058',1,'test_lamp_2.red()']]],
+  ['reg',['reg',['../structtimer__ccr__config.html#a3876bca410f69a23790a94f8eb9d73f8',1,'timer_ccr_config']]],
+  ['reload',['reload',['../structtimer.html#af0cf0d2403679e91e1dd266ad60e421c',1,'timer']]],
+  ['report_5fcurrent_5ftemperature',['report_current_temperature',['../structirrigation__events.html#a47b81edd52377b4c4e1ed512b830e237',1,'irrigation_events']]],
+  ['report_5fmeasurement_5fdata',['report_measurement_data',['../structirrigation__events.html#add396df12f986fff177801aa022c35f2',1,'irrigation_events']]],
+  ['report_5fmsg_5fnote',['report_msg_note',['../structirrigation__events.html#aae13c04da50716a2433bebd672d129e2',1,'irrigation_events']]],
+  ['report_5fsensor_5ffluctuations',['report_sensor_fluctuations',['../structirrigation__events.html#a41db6d6a624689abdb7be82425ff0b02',1,'irrigation_events']]],
+  ['report_5fsensor_5fmalfunction',['report_sensor_malfunction',['../structirrigation__events.html#abafd6872889e6e54648653f690e61ec6',1,'irrigation_events']]],
+  ['report_5fvalidation_5ftemperatures',['report_validation_temperatures',['../structirrigation__events.html#acc5d9d31cce6888cab54d32463470f07',1,'irrigation_events']]],
+  ['rgb',['rgb',['../classcolour_1_1Color.html#a673b09c77450396516798614b6c8d319',1,'colour.Color.rgb()'],['../namespacecolour.html#a0e3297b74ebafaa89d8af0d18f547afe',1,'colour.RGB()']]],
+  ['rgb_5fequivalence',['RGB_equivalence',['../namespacecolour.html#a875f4229391153785064cb3c99096339',1,'colour']]],
+  ['rgb_5fto_5fcolor_5fnames',['RGB_TO_COLOR_NAMES',['../namespacecolour.html#af7d83e368add5ddec7fda18fc150f958',1,'colour']]],
+  ['run',['run',['../structstate.html#a64a1989f8b49bc262c04323be37d1d8c',1,'state']]],
+  ['rx_5fpin',['rx_pin',['../structusart__config.html#afb0c0a9281bba234d1b7282fd5661826',1,'usart_config']]]
+];

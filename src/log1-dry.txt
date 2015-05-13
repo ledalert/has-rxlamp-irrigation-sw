@@ -1,0 +1,83 @@
+$ python python_scripts/scat.py /dev/ttyUSB0
+2015-01-01 00:00:00.000>  System starting
+2015-01-01 00:00:00.000>  Entering state Init
+2015-01-01 00:00:06.001>  Exiting state Init
+2015-01-01 00:00:06.001>  Entering state Validate temperature sensor
+2015-01-01 00:00:11.002>  Temperature Validation Report:
+        Minimum:  22.726°C      Maximum:  22.782°C      ΔT: 0.056°C
+2015-01-01 00:00:11.004>  Exiting state Validate temperature sensor
+2015-01-01 00:00:11.004>  Entering state Measure soil water content
+2015-01-01 00:00:11.004>  Note: Heater started
+2015-01-01 00:00:12.003>  Current Sensor Temperature: 22.739°C
+2015-01-01 00:00:13.004>  Current Sensor Temperature: 22.845°C
+2015-01-01 00:00:14.005>  Current Sensor Temperature: 23.007°C
+2015-01-01 00:00:15.006>  Current Sensor Temperature: 23.204°C
+2015-01-01 00:00:16.007>  Current Sensor Temperature: 23.430°C
+2015-01-01 00:00:17.008>  Current Sensor Temperature: 23.676°C
+2015-01-01 00:00:18.009>  Current Sensor Temperature: 23.941°C
+2015-01-01 00:00:19.010>  Current Sensor Temperature: 24.223°C
+2015-01-01 00:00:20.011>  Current Sensor Temperature: 24.516°C
+2015-01-01 00:00:21.002>  Note: Heater stopped
+2015-01-01 00:00:21.012>  Current Sensor Temperature: 24.811°C
+2015-01-01 00:00:22.013>  Current Sensor Temperature: 25.049°C
+2015-01-01 00:00:23.014>  Current Sensor Temperature: 25.203°C
+2015-01-01 00:00:24.015>  Current Sensor Temperature: 25.316°C
+2015-01-01 00:00:25.016>  Current Sensor Temperature: 25.406°C
+2015-01-01 00:00:26.017>  Current Sensor Temperature: 25.470°C
+2015-01-01 00:00:27.018>  Current Sensor Temperature: 25.511°C
+2015-01-01 00:00:28.019>  Current Sensor Temperature: 25.533°C
+2015-01-01 00:00:29.020>  Current Sensor Temperature: 25.538°C
+2015-01-01 00:00:30.021>  Current Sensor Temperature: 25.528°C
+2015-01-01 00:00:31.022>  Current Sensor Temperature: 25.506°C
+2015-01-01 00:00:32.023>  Current Sensor Temperature: 25.477°C
+2015-01-01 00:00:33.024>  Current Sensor Temperature: 25.440°C
+2015-01-01 00:00:34.025>  Current Sensor Temperature: 25.398°C
+2015-01-01 00:00:35.026>  Current Sensor Temperature: 25.354°C
+2015-01-01 00:00:36.027>  Current Sensor Temperature: 25.304°C
+2015-01-01 00:00:37.028>  Current Sensor Temperature: 25.250°C
+2015-01-01 00:00:38.029>  Current Sensor Temperature: 25.197°C
+2015-01-01 00:00:39.030>  Current Sensor Temperature: 25.141°C
+2015-01-01 00:00:40.031>  Current Sensor Temperature: 25.084°C
+2015-01-01 00:00:41.032>  Current Sensor Temperature: 25.026°C
+2015-01-01 00:00:42.033>  Current Sensor Temperature: 24.968°C
+2015-01-01 00:00:43.034>  Current Sensor Temperature: 24.912°C
+2015-01-01 00:00:44.035>  Current Sensor Temperature: 24.855°C
+2015-01-01 00:00:45.036>  Current Sensor Temperature: 24.798°C
+2015-01-01 00:00:46.037>  Current Sensor Temperature: 24.742°C
+2015-01-01 00:00:47.038>  Current Sensor Temperature: 24.685°C
+2015-01-01 00:00:48.039>  Current Sensor Temperature: 24.629°C
+2015-01-01 00:00:49.040>  Current Sensor Temperature: 24.573°C
+2015-01-01 00:00:50.041>  Current Sensor Temperature: 24.521°C
+2015-01-01 00:00:51.042>  Current Sensor Temperature: 24.466°C
+2015-01-01 00:00:52.043>  Current Sensor Temperature: 24.414°C
+2015-01-01 00:00:53.044>  Current Sensor Temperature: 24.361°C
+2015-01-01 00:00:54.045>  Current Sensor Temperature: 24.311°C
+2015-01-01 00:00:55.046>  Current Sensor Temperature: 24.262°C
+2015-01-01 00:00:56.047>  Current Sensor Temperature: 24.212°C
+2015-01-01 00:00:57.048>  Current Sensor Temperature: 24.164°C
+2015-01-01 00:00:58.049>  Current Sensor Temperature: 24.116°C
+2015-01-01 00:00:59.050>  Current Sensor Temperature: 24.070°C
+2015-01-01 00:01:00.051>  Current Sensor Temperature: 24.025°C
+2015-01-01 00:01:01.052>  Current Sensor Temperature: 23.982°C
+2015-01-01 00:01:02.053>  Current Sensor Temperature: 23.939°C
+2015-01-01 00:01:03.054>  Current Sensor Temperature: 23.897°C
+2015-01-01 00:01:04.055>  Current Sensor Temperature: 23.855°C
+2015-01-01 00:01:05.056>  Current Sensor Temperature: 23.812°C
+2015-01-01 00:01:06.057>  Current Sensor Temperature: 23.772°C
+2015-01-01 00:01:07.058>  Current Sensor Temperature: 23.733°C
+2015-01-01 00:01:08.059>  Current Sensor Temperature: 23.694°C
+2015-01-01 00:01:09.060>  Current Sensor Temperature: 23.655°C
+2015-01-01 00:01:10.061>  Current Sensor Temperature: 23.620°C
+2015-01-01 00:01:11.062>  Current Sensor Temperature: 23.580°C
+2015-01-01 00:01:12.063>  Current Sensor Temperature: 23.543°C
+2015-01-01 00:01:13.064>  Current Sensor Temperature: 23.508°C
+2015-01-01 00:01:14.065>  Current Sensor Temperature: 23.473°C
+2015-01-01 00:01:15.066>  Current Sensor Temperature: 23.441°C
+2015-01-01 00:01:16.067>  Current Sensor Temperature: 23.408°C
+2015-01-01 00:01:17.068>  Current Sensor Temperature: 23.373°C
+2015-01-01 00:01:18.069>  Current Sensor Temperature: 23.340°C
+2015-01-01 00:01:19.070>  Current Sensor Temperature: 23.310°C
+2015-01-01 00:01:20.071>  Current Sensor Temperature: 23.280°C
+2015-01-01 00:01:21.024>  Measurement complete.
+        ∑(|ΔTemperature|) = 10.706°C    Time: ∑(ΔTime) = 69.995°C       Change: ∑(|ΔTemperature|)/∑(ΔTime) = 0.152°C/S
+2015-01-01 00:01:21.027>  Exiting state Measure soil water content

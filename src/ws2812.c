@@ -1,27 +1,17 @@
 #include "ws2812.h"
 
-#define DEFAULT(value, default) value = value ? value : default
-
-//debug
-void uart_send_data(volatile void* data, int length);
-void DEBUG_PRINT_HEX(int value);
-#define DEBUG_PRINT(msg) uart_send_data(msg, sizeof(msg)-1);
-
 
 
 void ws2812_configure_timer(struct ws2812* led) {
-	DEBUG_PRINT("Configuring timer for ws2812\n");
-	DEFAULT(led->configuration->ccr->configuration->timer->configuration->auto_reload, rcc_apb1_frequency / led->configuration->frequency);
+	DEFAULT(led->configuration->ccr->configuration->timer->configuration->auto_reload, rcc_apb1_frequency / led->configuration->frequency - 1);
 }
 
 void ws2812_configure_gpio(struct ws2812* led) {
-	DEBUG_PRINT("Configuring GPIO for ws2812\n");
 	DEFAULT(led->configuration->pin->configuration->mode, GPIO_MODE_OUTPUT_2_MHZ);
 	DEFAULT(led->configuration->pin->configuration->configuration, GPIO_CNF_OUTPUT_ALTFN_OPENDRAIN);
 }
 
 void ws2812_set_defaults(struct ws2812* led) {
-	DEBUG_PRINT("Configuring ws2812\n");
 	DEFAULT(led->configuration->frequency, 800000);
 	DEFAULT(led->configuration->bit0, 6);
 	DEFAULT(led->configuration->bit1, 14);
@@ -54,8 +44,6 @@ void ws2812_init(struct ws2812* led, enum hw_init_state state) {
 
 void ws2812_process_buffer(struct ws2812* led) {
 
-	DEBUG_PRINT("processing ws2812 buffer\n");
-
 	volatile uint8_t* ptr=led->pwm_buffer;
 	for (int l=0;l<led->led_count;l++) {
 
@@ -71,21 +59,19 @@ void ws2812_process_buffer(struct ws2812* led) {
 void ws2812_update(struct ws2812* led) {
 
 	ws2812_process_buffer(led);
-
-	DEBUG_PRINT("sending data to ws2812 using register ");
-	DEBUG_PRINT_HEX((uint32_t)led->configuration->ccr->configuration->reg);
-
-	DEBUG_PRINT(" buffer ");
-	DEBUG_PRINT_HEX((uint32_t)led->pwm_buffer);
-
-	DEBUG_PRINT(" number of LED ");
-	DEBUG_PRINT_HEX((uint32_t)led->led_count);
-	DEBUG_PRINT("\n")
-
 	dma1_transmit_8_32((uint32_t) led->pwm_buffer, (uint32_t) led->configuration->ccr->configuration->reg, 24*led->led_count+1, led->configuration->ccr->configuration->dma_channel);
-	DEBUG_PRINT("Activating dma\n");
-
 	TIM_DIER(led->configuration->ccr->configuration->timer->configuration->timer) |= led->configuration->ccr->configuration->dma_enable_flag;
 
-	DEBUG_PRINT("DMA Activated\n");
+}
+
+//Todo: support for different DMA
+void ws2812_update_blocking(struct ws2812* led) {
+	ws2812_update(led);
+	while (!dma_get_interrupt_flag(DMA1, led->configuration->ccr->configuration->dma_channel, DMA_TCIF));
+	TIM_DIER(led->configuration->ccr->configuration->timer->configuration->timer) &= ~led->configuration->ccr->configuration->dma_enable_flag;
+}
+
+
+void ws2812_set_led(struct ws2812* led, int index, int r, int g, int b) {
+	led->led_buffer[index] = (struct ws2812_rgb) {r, g, b};
 }

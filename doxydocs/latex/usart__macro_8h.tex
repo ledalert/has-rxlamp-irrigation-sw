@@ -1,0 +1,60 @@
+\hypertarget{usart__macro_8h}{}\section{src/usart\+\_\+macro.h File Reference}
+\label{usart__macro_8h}\index{src/usart\+\_\+macro.\+h@{src/usart\+\_\+macro.\+h}}
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usart__macro_8h_a2d29cc8a99909b90adf6f50c82ff2f37}{U\+S\+A\+R\+T\+\_\+\+T\+X\+O\+N\+L\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name,  Usart,  Usart\+\_\+\+Rcc,  Baudrate,  Databits,  Parity,  Stopbits,  Flowcontrol,  T\+X\+Pin\+\_\+\+Port,  T\+X\+Pin\+\_\+\+Pin)
+\item 
+\#define \hyperlink{usart__macro_8h_a16db80b3de545c6de81da706d1dd2aba}{\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usart__macro_8h_a16db80b3de545c6de81da706d1dd2aba}{}\index{usart\+\_\+macro.\+h@{usart\+\_\+macro.\+h}!\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+@{\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+}}
+\index{\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+@{\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+}!usart\+\_\+macro.\+h@{usart\+\_\+macro.\+h}}
+\subsubsection[{\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+}\label{usart__macro_8h_a16db80b3de545c6de81da706d1dd2aba}
+\hypertarget{usart__macro_8h_a2d29cc8a99909b90adf6f50c82ff2f37}{}\index{usart\+\_\+macro.\+h@{usart\+\_\+macro.\+h}!U\+S\+A\+R\+T\+\_\+\+T\+X\+O\+N\+L\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{U\+S\+A\+R\+T\+\_\+\+T\+X\+O\+N\+L\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}}
+\index{U\+S\+A\+R\+T\+\_\+\+T\+X\+O\+N\+L\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{U\+S\+A\+R\+T\+\_\+\+T\+X\+O\+N\+L\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}!usart\+\_\+macro.\+h@{usart\+\_\+macro.\+h}}
+\subsubsection[{U\+S\+A\+R\+T\+\_\+\+T\+X\+O\+N\+L\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+A\+R\+T\+\_\+\+T\+X\+O\+N\+L\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Usart, }
+\item[{}]{Usart\+\_\+\+Rcc, }
+\item[{}]{Baudrate, }
+\item[{}]{Databits, }
+\item[{}]{Parity, }
+\item[{}]{Stopbits, }
+\item[{}]{Flowcontrol, }
+\item[{}]{T\+X\+Pin\+\_\+\+Port, }
+\item[{}]{T\+X\+Pin\+\_\+\+Pin}
+\end{DoxyParamCaption}
+)}\label{usart__macro_8h_a2d29cc8a99909b90adf6f50c82ff2f37}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\(\backslash\)
+struct \hyperlink{structgpio__pin__config}{gpio\_pin\_config} Name##\_txpin\_config = \{\(\backslash\)
+    .\hyperlink{structgpio__pin__config_a72fc1227f3fab0d1e2485d8f4bed6dbc}{port} = TXPin\_Port,\(\backslash\)
+    .pin = TXPin\_Pin,\(\backslash\)
+\};\(\backslash\)
+\(\backslash\)
+struct \hyperlink{structgpio__pin}{gpio\_pin} Name##\_txpin = \{\(\backslash\)
+    .\hyperlink{structgpio__pin_acb6a2426999aa0f3e40d37a02f791e75}{configuration} = &Name##\_txpin\_config,\(\backslash\)
+\};\(\backslash\)
+\(\backslash\)
+struct \hyperlink{structusart__config}{usart\_config} Name##\_config = \{\(\backslash\)
+    .\hyperlink{structusart__config_a7057d1e4e59d4cb6f002cace870fa34b}{usart} = Usart,\(\backslash\)
+    .rcc = Usart\_Rcc,\(\backslash\)
+    .tx\_pin = &Name##\_txpin,\(\backslash\)
+    .baudrate = Baudrate,\(\backslash\)
+    .databits = Databits,\(\backslash\)
+    .parity = Parity,\(\backslash\)
+    .stopbits = Stopbits,\(\backslash\)
+    .flowcontrol = Flowcontrol,\(\backslash\)
+    .mode = USART\_MODE\_TX,\(\backslash\)
+\};\(\backslash\)
+\(\backslash\)
+struct \hyperlink{structusart}{usart} Name = \{\(\backslash\)
+    .\hyperlink{structusart_a42f49f07a75c1ec44a8a1e04e08a760c}{configuration} = &Name##\_config,\(\backslash\)
+\};
+\end{DoxyCode}

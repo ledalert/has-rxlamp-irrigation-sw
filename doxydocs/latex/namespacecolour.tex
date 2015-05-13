@@ -1,0 +1,477 @@
+\hypertarget{namespacecolour}{}\section{colour Namespace Reference}
+\label{namespacecolour}\index{colour@{colour}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcolour_1_1C__HEX}{C\+\_\+\+H\+E\+X}
+\item 
+class \hyperlink{classcolour_1_1C__RGB}{C\+\_\+\+R\+G\+B}
+\item 
+class \hyperlink{classcolour_1_1Color}{Color}
+\begin{DoxyCompactList}\small\item\em All purpose object. \end{DoxyCompactList}\item 
+class \hyperlink{classcolour_1_1HSL}{H\+S\+L}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacecolour_addc80d0ed1260fc29d85da0a87e839f2}{hsl2rgb} (hsl)
+\begin{DoxyCompactList}\small\item\em Convertion function. \end{DoxyCompactList}\item 
+def \hyperlink{namespacecolour_aa40a4592b35b3c69d656c00cf4814fee}{rgb2hsl} (rgb)
+\begin{DoxyCompactList}\small\item\em Chromatic data... \end{DoxyCompactList}\item 
+def \hyperlink{namespacecolour_a2f09d350147b947d6132a6a600a98237}{\+\_\+hue2rgb} (v1, v2, v\+H)
+\item 
+def \hyperlink{namespacecolour_a65e930f43529c0034eeeae58b366f805}{rgb2hex}
+\item 
+def \hyperlink{namespacecolour_acf33cb42fb72c6ed287f82b78d302558}{hex2rgb} (str\+\_\+rgb)
+\item 
+def \hyperlink{namespacecolour_aa0c2229171d31dc54467b5a0772a32fd}{hex2web} (hex)
+\item 
+def \hyperlink{namespacecolour_a5ea9eb352df7e5700013fa3a90900d7f}{web2hex}
+\item 
+def \hyperlink{namespacecolour_abf7ee06f8083a3579bc2562974cb7332}{color\+\_\+scale} (begin\+\_\+hsl, end\+\_\+hsl, nb)
+\item 
+def \hyperlink{namespacecolour_a60552e6a5ebf924698dd9ba0f7cbd963}{R\+G\+B\+\_\+color\+\_\+picker} (obj)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classcolour_1_1Color}{Color} Pickers. \end{DoxyCompactList}\item 
+def \hyperlink{namespacecolour_aa31b702d88f49865f4bcad85aa709363}{hash\+\_\+or\+\_\+str} (obj)
+\item 
+def \hyperlink{namespacecolour_aeb48782548179b2f488fbf820d49a8a3}{make\+\_\+color\+\_\+factory} (kwargs\+\_\+defaults)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{namespacecolour_af2a4d2191193cc67e779a8f8f7f4eee3}{F\+L\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R} = 0.\+0000005
+\begin{DoxyCompactList}\small\item\em Some Constants. \end{DoxyCompactList}\item 
+dictionary \hyperlink{namespacecolour_af7d83e368add5ddec7fda18fc150f958}{R\+G\+B\+\_\+\+T\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+S}
+\item 
+tuple \hyperlink{namespacecolour_a57060f3bcb9159b355ef227f92f930c5}{C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+O\+\_\+\+R\+G\+B}
+\begin{DoxyCompactList}\small\item\em Building inverse relation. \end{DoxyCompactList}\item 
+tuple \hyperlink{namespacecolour_ae4a86e3c28f0ebb79e51c566a1158fe3}{L\+O\+N\+G\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R} = re.\+compile(r\textquotesingle{}$^\wedge$\#\mbox{[}0-\/9a-\/f\+A-\/\+F\mbox{]}\{6\}\$\textquotesingle{})
+\item 
+tuple \hyperlink{namespacecolour_a82379003713538cfd6135bb378d1efd8}{S\+H\+O\+R\+T\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R} = re.\+compile(r\textquotesingle{}$^\wedge$\#\mbox{[}0-\/9a-\/f\+A-\/\+F\mbox{]}\{3\}\$\textquotesingle{})
+\item 
+tuple \hyperlink{namespacecolour_a0e3297b74ebafaa89d8af0d18f547afe}{R\+G\+B} = \hyperlink{classcolour_1_1C__RGB}{C\+\_\+\+R\+G\+B}()
+\item 
+tuple \hyperlink{namespacecolour_ad515125b83fe560379560056f4d88801}{H\+E\+X} = \hyperlink{classcolour_1_1C__HEX}{C\+\_\+\+H\+E\+X}()
+\item 
+\hyperlink{namespacecolour_a875f4229391153785064cb3c99096339}{R\+G\+B\+\_\+equivalence} = c2.\+hex\+\_\+l
+\item 
+\hyperlink{namespacecolour_a05409af0388e5b27e95fee4137e636d5}{H\+S\+L\+\_\+equivalence} = c2.\+\_\+hsl
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacecolour_a2f09d350147b947d6132a6a600a98237}{}\index{colour@{colour}!\+\_\+hue2rgb@{\+\_\+hue2rgb}}
+\index{\+\_\+hue2rgb@{\+\_\+hue2rgb}!colour@{colour}}
+\subsubsection[{\+\_\+hue2rgb}]{\setlength{\rightskip}{0pt plus 5cm}def colour.\+\_\+hue2rgb (
+\begin{DoxyParamCaption}
+\item[{}]{v1, }
+\item[{}]{v2, }
+\item[{}]{v\+H}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{namespacecolour_a2f09d350147b947d6132a6a600a98237}
+\begin{DoxyVerb}Private helper function (Do not call directly)
+
+:param vH: rotation around the chromatic circle (between 0..1)\end{DoxyVerb}
+ \hypertarget{namespacecolour_abf7ee06f8083a3579bc2562974cb7332}{}\index{colour@{colour}!color\+\_\+scale@{color\+\_\+scale}}
+\index{color\+\_\+scale@{color\+\_\+scale}!colour@{colour}}
+\subsubsection[{color\+\_\+scale}]{\setlength{\rightskip}{0pt plus 5cm}def colour.\+color\+\_\+scale (
+\begin{DoxyParamCaption}
+\item[{}]{begin\+\_\+hsl, }
+\item[{}]{end\+\_\+hsl, }
+\item[{}]{nb}
+\end{DoxyParamCaption}
+)}\label{namespacecolour_abf7ee06f8083a3579bc2562974cb7332}
+\begin{DoxyVerb}Returns a list of nb color HSL tuples between begin_hsl and end_hsl
+
+>>> from colour import color_scale
+
+>>> [rgb2hex(hsl2rgb(hsl)) for hsl in color_scale((0, 1, 0.5),
+...                                               (1, 1, 0.5), 3)]
+['#f00', '#0f0', '#00f', '#f00']
+
+>>> [rgb2hex(hsl2rgb(hsl))
+...  for hsl in color_scale((0, 0, 0),
+...                         (0, 0, 1),
+...                         15)]  # doctest: +ELLIPSIS
+['#000', '#111', '#222', ..., '#ccc', '#ddd', '#eee', '#fff']\end{DoxyVerb}
+ \hypertarget{namespacecolour_aa31b702d88f49865f4bcad85aa709363}{}\index{colour@{colour}!hash\+\_\+or\+\_\+str@{hash\+\_\+or\+\_\+str}}
+\index{hash\+\_\+or\+\_\+str@{hash\+\_\+or\+\_\+str}!colour@{colour}}
+\subsubsection[{hash\+\_\+or\+\_\+str}]{\setlength{\rightskip}{0pt plus 5cm}def colour.\+hash\+\_\+or\+\_\+str (
+\begin{DoxyParamCaption}
+\item[{}]{obj}
+\end{DoxyParamCaption}
+)}\label{namespacecolour_aa31b702d88f49865f4bcad85aa709363}
+\hypertarget{namespacecolour_acf33cb42fb72c6ed287f82b78d302558}{}\index{colour@{colour}!hex2rgb@{hex2rgb}}
+\index{hex2rgb@{hex2rgb}!colour@{colour}}
+\subsubsection[{hex2rgb}]{\setlength{\rightskip}{0pt plus 5cm}def colour.\+hex2rgb (
+\begin{DoxyParamCaption}
+\item[{}]{str\+\_\+rgb}
+\end{DoxyParamCaption}
+)}\label{namespacecolour_acf33cb42fb72c6ed287f82b78d302558}
+\begin{DoxyVerb}Transform hex RGB representation to RGB tuple
+
+:param str_rgb: 3 hex char or 6 hex char string representation
+:rtype: RGB 3-uple of float between 0 and 1
+
+>>> from colour import hex2rgb
+
+>>> hex2rgb('#00ff00')
+(0.0, 1.0, 0.0)
+
+>>> hex2rgb('#0f0')
+(0.0, 1.0, 0.0)
+
+>>> hex2rgb('#aaa')  # doctest: +ELLIPSIS
+(0.66..., 0.66..., 0.66...)
+
+>>> hex2rgb('#aa')  # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+ValueError: Invalid value '#aa' provided for rgb color.\end{DoxyVerb}
+ \hypertarget{namespacecolour_aa0c2229171d31dc54467b5a0772a32fd}{}\index{colour@{colour}!hex2web@{hex2web}}
+\index{hex2web@{hex2web}!colour@{colour}}
+\subsubsection[{hex2web}]{\setlength{\rightskip}{0pt plus 5cm}def colour.\+hex2web (
+\begin{DoxyParamCaption}
+\item[{}]{hex}
+\end{DoxyParamCaption}
+)}\label{namespacecolour_aa0c2229171d31dc54467b5a0772a32fd}
+\begin{DoxyVerb}Converts HEX representation to WEB
+
+:param rgb: 3 hex char or 6 hex char string representation
+:rtype: web string representation (human readable if possible)
+
+WEB representation uses X11 rgb.txt to define convertion
+between RGB and english color names.
+
+Usage
+=====
+
+>>> from colour import hex2web
+
+>>> hex2web('#ff0000')
+'red'
+
+>>> hex2web('#aaaaaa')
+'#aaa'
+
+>>> hex2web('#abc')
+'#abc'
+
+>>> hex2web('#acacac')
+'#acacac'\end{DoxyVerb}
+ \hypertarget{namespacecolour_addc80d0ed1260fc29d85da0a87e839f2}{}\index{colour@{colour}!hsl2rgb@{hsl2rgb}}
+\index{hsl2rgb@{hsl2rgb}!colour@{colour}}
+\subsubsection[{hsl2rgb}]{\setlength{\rightskip}{0pt plus 5cm}def colour.\+hsl2rgb (
+\begin{DoxyParamCaption}
+\item[{}]{hsl}
+\end{DoxyParamCaption}
+)}\label{namespacecolour_addc80d0ed1260fc29d85da0a87e839f2}
+
+
+Convertion function. 
+
+\begin{DoxyVerb}Convert HSL representation towards RGB
+
+:param h: Hue, position around the chromatic circle (h=1 equiv h=0)
+:param s: Saturation, color saturation (0=full gray, 1=full color)
+:param l: Ligthness, Overhaul lightness (0=full black, 1=full white)
+:rtype: 3-uple for RGB values in float between 0 and 1
+
+Hue, Saturation, Range from Lightness is a float between 0 and 1
+
+Note that Hue can be set to any value but as it is a rotation
+around the chromatic circle, any value above 1 or below 0 can
+be expressed by a value between 0 and 1 (Note that h=0 is equiv
+to h=1).
+
+This algorithm came from:
+http://www.easyrgb.com/index.php?X=MATH&H=19#text19
+
+Here are some quick notion of HSL to RGB convertion:
+
+>>> from colour import hsl2rgb
+
+With a lightness put at 0, RGB is always rgbblack
+
+>>> hsl2rgb((0.0, 0.0, 0.0))
+(0.0, 0.0, 0.0)
+>>> hsl2rgb((0.5, 0.0, 0.0))
+(0.0, 0.0, 0.0)
+>>> hsl2rgb((0.5, 0.5, 0.0))
+(0.0, 0.0, 0.0)
+
+Same for lightness put at 1, RGB is always rgbwhite
+
+>>> hsl2rgb((0.0, 0.0, 1.0))
+(1.0, 1.0, 1.0)
+>>> hsl2rgb((0.5, 0.0, 1.0))
+(1.0, 1.0, 1.0)
+>>> hsl2rgb((0.5, 0.5, 1.0))
+(1.0, 1.0, 1.0)
+
+With saturation put at 0, the RGB should be equal to Lightness:
+
+>>> hsl2rgb((0.0, 0.0, 0.25))
+(0.25, 0.25, 0.25)
+>>> hsl2rgb((0.5, 0.0, 0.5))
+(0.5, 0.5, 0.5)
+>>> hsl2rgb((0.5, 0.0, 0.75))
+(0.75, 0.75, 0.75)
+
+With saturation put at 1, and lightness put to 0.5, we can find
+normal full red, green, blue colors:
+
+>>> hsl2rgb((0 , 1.0, 0.5))
+(1.0, 0.0, 0.0)
+>>> hsl2rgb((1 , 1.0, 0.5))
+(1.0, 0.0, 0.0)
+>>> hsl2rgb((1.0/3 , 1.0, 0.5))
+(0.0, 1.0, 0.0)
+>>> hsl2rgb((2.0/3 , 1.0, 0.5))
+(0.0, 0.0, 1.0)
+
+Of course:
+>>> hsl2rgb((0.0, 2.0, 0.5))  # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+ValueError: Saturation must be between 0 and 1.
+
+And:
+>>> hsl2rgb((0.0, 0.0, 1.5))  # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+ValueError: Lightness must be between 0 and 1.\end{DoxyVerb}
+ \hypertarget{namespacecolour_aeb48782548179b2f488fbf820d49a8a3}{}\index{colour@{colour}!make\+\_\+color\+\_\+factory@{make\+\_\+color\+\_\+factory}}
+\index{make\+\_\+color\+\_\+factory@{make\+\_\+color\+\_\+factory}!colour@{colour}}
+\subsubsection[{make\+\_\+color\+\_\+factory}]{\setlength{\rightskip}{0pt plus 5cm}def colour.\+make\+\_\+color\+\_\+factory (
+\begin{DoxyParamCaption}
+\item[{}]{kwargs\+\_\+defaults}
+\end{DoxyParamCaption}
+)}\label{namespacecolour_aeb48782548179b2f488fbf820d49a8a3}
+\hypertarget{namespacecolour_a65e930f43529c0034eeeae58b366f805}{}\index{colour@{colour}!rgb2hex@{rgb2hex}}
+\index{rgb2hex@{rgb2hex}!colour@{colour}}
+\subsubsection[{rgb2hex}]{\setlength{\rightskip}{0pt plus 5cm}def colour.\+rgb2hex (
+\begin{DoxyParamCaption}
+\item[{}]{rgb, }
+\item[{}]{force\+\_\+long = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}\label{namespacecolour_a65e930f43529c0034eeeae58b366f805}
+\begin{DoxyVerb}Transform RGB tuple to hex RGB representation
+
+:param rgb: RGB 3-uple of float between 0 and 1
+:rtype: 3 hex char or 6 hex char string representation
+
+Usage
+-----
+
+>>> from colour import rgb2hex
+
+>>> rgb2hex((0.0,1.0,0.0))
+'#0f0'
+
+Rounding try to be as natural as possible:
+
+>>> rgb2hex((0.0,0.999999,1.0))
+'#0ff'
+
+And if not possible, the 6 hex char representation is used:
+
+>>> rgb2hex((0.23,1.0,1.0))
+'#3bffff'
+
+>>> rgb2hex((0.0,0.999999,1.0), force_long=True)
+'#00ffff'\end{DoxyVerb}
+ \hypertarget{namespacecolour_aa40a4592b35b3c69d656c00cf4814fee}{}\index{colour@{colour}!rgb2hsl@{rgb2hsl}}
+\index{rgb2hsl@{rgb2hsl}!colour@{colour}}
+\subsubsection[{rgb2hsl}]{\setlength{\rightskip}{0pt plus 5cm}def colour.\+rgb2hsl (
+\begin{DoxyParamCaption}
+\item[{}]{rgb}
+\end{DoxyParamCaption}
+)}\label{namespacecolour_aa40a4592b35b3c69d656c00cf4814fee}
+
+
+Chromatic data... 
+
+\begin{DoxyVerb}Convert RGB representation towards HSL
+
+:param r: Red amount (float between 0 and 1)
+:param g: Green amount (float between 0 and 1)
+:param b: Blue amount (float between 0 and 1)
+:rtype: 3-uple for HSL values in float between 0 and 1
+
+This algorithm came from:
+http://www.easyrgb.com/index.php?X=MATH&H=19#text19
+
+Here are some quick notion of RGB to HSL convertion:
+
+>>> from colour import rgb2hsl
+
+Note that if red amount is equal to green and blue, then you
+should have a gray value (from black to white).
+
+
+>>> rgb2hsl((1.0, 1.0, 1.0))  # doctest: +ELLIPSIS
+(..., 0.0, 1.0)
+>>> rgb2hsl((0.5, 0.5, 0.5))  # doctest: +ELLIPSIS
+(..., 0.0, 0.5)
+>>> rgb2hsl((0.0, 0.0, 0.0))  # doctest: +ELLIPSIS
+(..., 0.0, 0.0)
+
+If only one color is different from the others, it defines the
+direct Hue:
+
+>>> rgb2hsl((0.5, 0.5, 1.0))  # doctest: +ELLIPSIS
+(0.66..., 1.0, 0.75)
+>>> rgb2hsl((0.2, 0.1, 0.1))  # doctest: +ELLIPSIS
+(0.0, 0.33..., 0.15...)
+
+Having only one value set, you can check that:
+
+>>> rgb2hsl((1.0, 0.0, 0.0))
+(0.0, 1.0, 0.5)
+>>> rgb2hsl((0.0, 1.0, 0.0))  # doctest: +ELLIPSIS
+(0.33..., 1.0, 0.5)
+>>> rgb2hsl((0.0, 0.0, 1.0))  # doctest: +ELLIPSIS
+(0.66..., 1.0, 0.5)
+
+Of course:
+>>> rgb2hsl((0.0, 2.0, 0.5))  # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+ValueError: Green must be between 0 and 1. You provided 2.0.
+
+And:
+>>> rgb2hsl((0.0, 0.0, 1.5))  # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+ValueError: Blue must be between 0 and 1. You provided 1.5.\end{DoxyVerb}
+ \hypertarget{namespacecolour_a60552e6a5ebf924698dd9ba0f7cbd963}{}\index{colour@{colour}!R\+G\+B\+\_\+color\+\_\+picker@{R\+G\+B\+\_\+color\+\_\+picker}}
+\index{R\+G\+B\+\_\+color\+\_\+picker@{R\+G\+B\+\_\+color\+\_\+picker}!colour@{colour}}
+\subsubsection[{R\+G\+B\+\_\+color\+\_\+picker}]{\setlength{\rightskip}{0pt plus 5cm}def colour.\+R\+G\+B\+\_\+color\+\_\+picker (
+\begin{DoxyParamCaption}
+\item[{}]{obj}
+\end{DoxyParamCaption}
+)}\label{namespacecolour_a60552e6a5ebf924698dd9ba0f7cbd963}
+
+
+\hyperlink{classcolour_1_1Color}{Color} Pickers. 
+
+\begin{DoxyVerb}Build a color representation from the string representation of an object
+
+This allows to quickly get a color from some data, with the
+additional benefit that the color will be the same as long as the
+(string representation of the) data is the same::
+
+    >>> from colour import RGB_color_picker, Color
+
+Same inputs produce the same result::
+
+    >>> RGB_color_picker("Something") == RGB_color_picker("Something")
+    True
+
+... but different inputs produce different colors::
+
+    >>> RGB_color_picker("Something") != RGB_color_picker("Something else")
+    True
+
+In any case, we still get a ``Color`` object::
+
+    >>> isinstance(RGB_color_picker("Something"), Color)
+    True\end{DoxyVerb}
+ \hypertarget{namespacecolour_a5ea9eb352df7e5700013fa3a90900d7f}{}\index{colour@{colour}!web2hex@{web2hex}}
+\index{web2hex@{web2hex}!colour@{colour}}
+\subsubsection[{web2hex}]{\setlength{\rightskip}{0pt plus 5cm}def colour.\+web2hex (
+\begin{DoxyParamCaption}
+\item[{}]{web, }
+\item[{}]{force\+\_\+long = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}\label{namespacecolour_a5ea9eb352df7e5700013fa3a90900d7f}
+\begin{DoxyVerb}Converts WEB representation to HEX
+
+:param rgb: web string representation (human readable if possible)
+:rtype: 3 hex char or 6 hex char string representation
+
+WEB representation uses X11 rgb.txt to define convertion
+between RGB and english color names.
+
+Usage
+=====
+
+>>> from colour import web2hex
+
+>>> web2hex('red')
+'#f00'
+
+>>> web2hex('#aaa')
+'#aaa'
+
+>>> web2hex('#foo')  # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+AttributeError: '#foo' is not in web format. Need 3 or 6 hex digit.
+
+>>> web2hex('#aaa', force_long=True)
+'#aaaaaa'
+
+>>> web2hex('#aaaaaa')
+'#aaaaaa'
+
+>>> web2hex('#aaaa')  # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+AttributeError: '#aaaa' is not in web format. Need 3 or 6 hex digit.
+
+>>> web2hex('pinky')  # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+ValueError: 'pinky' is not a recognized color.
+
+And color names are case insensitive:
+
+>>> Color('RED')
+<Color red>\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\hypertarget{namespacecolour_a57060f3bcb9159b355ef227f92f930c5}{}\index{colour@{colour}!C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+O\+\_\+\+R\+G\+B@{C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+O\+\_\+\+R\+G\+B}}
+\index{C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+O\+\_\+\+R\+G\+B@{C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+O\+\_\+\+R\+G\+B}!colour@{colour}}
+\subsubsection[{C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+O\+\_\+\+R\+G\+B}]{\setlength{\rightskip}{0pt plus 5cm}tuple colour.\+C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+O\+\_\+\+R\+G\+B}\label{namespacecolour_a57060f3bcb9159b355ef227f92f930c5}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = dict(
+2     (name.lower(), rgb)
+3     \textcolor{keywordflow}{for} rgb, names \textcolor{keywordflow}{in} RGB\_TO\_COLOR\_NAMES.items()
+4     \textcolor{keywordflow}{for} name \textcolor{keywordflow}{in} names)
+\end{DoxyCode}
+
+
+Building inverse relation. 
+
+\hypertarget{namespacecolour_af2a4d2191193cc67e779a8f8f7f4eee3}{}\index{colour@{colour}!F\+L\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R@{F\+L\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R}}
+\index{F\+L\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R@{F\+L\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R}!colour@{colour}}
+\subsubsection[{F\+L\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}float colour.\+F\+L\+O\+A\+T\+\_\+\+E\+R\+R\+O\+R = 0.\+0000005}\label{namespacecolour_af2a4d2191193cc67e779a8f8f7f4eee3}
+
+
+Some Constants. 
+
+Soften inequalities and some rounding issue based on float \hypertarget{namespacecolour_ad515125b83fe560379560056f4d88801}{}\index{colour@{colour}!H\+E\+X@{H\+E\+X}}
+\index{H\+E\+X@{H\+E\+X}!colour@{colour}}
+\subsubsection[{H\+E\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple colour.\+H\+E\+X = {\bf C\+\_\+\+H\+E\+X}()}\label{namespacecolour_ad515125b83fe560379560056f4d88801}
+\hypertarget{namespacecolour_a05409af0388e5b27e95fee4137e636d5}{}\index{colour@{colour}!H\+S\+L\+\_\+equivalence@{H\+S\+L\+\_\+equivalence}}
+\index{H\+S\+L\+\_\+equivalence@{H\+S\+L\+\_\+equivalence}!colour@{colour}}
+\subsubsection[{H\+S\+L\+\_\+equivalence}]{\setlength{\rightskip}{0pt plus 5cm}colour.\+H\+S\+L\+\_\+equivalence = c2.\+\_\+hsl}\label{namespacecolour_a05409af0388e5b27e95fee4137e636d5}
+\hypertarget{namespacecolour_ae4a86e3c28f0ebb79e51c566a1158fe3}{}\index{colour@{colour}!L\+O\+N\+G\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R@{L\+O\+N\+G\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R}}
+\index{L\+O\+N\+G\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R@{L\+O\+N\+G\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R}!colour@{colour}}
+\subsubsection[{L\+O\+N\+G\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}tuple colour.\+L\+O\+N\+G\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R = re.\+compile(r\textquotesingle{}$^\wedge$\#\mbox{[}0-\/9a-\/f\+A-\/\+F\mbox{]}\{6\}\$\textquotesingle{})}\label{namespacecolour_ae4a86e3c28f0ebb79e51c566a1158fe3}
+\hypertarget{namespacecolour_a0e3297b74ebafaa89d8af0d18f547afe}{}\index{colour@{colour}!R\+G\+B@{R\+G\+B}}
+\index{R\+G\+B@{R\+G\+B}!colour@{colour}}
+\subsubsection[{R\+G\+B}]{\setlength{\rightskip}{0pt plus 5cm}tuple colour.\+R\+G\+B = {\bf C\+\_\+\+R\+G\+B}()}\label{namespacecolour_a0e3297b74ebafaa89d8af0d18f547afe}
+\hypertarget{namespacecolour_a875f4229391153785064cb3c99096339}{}\index{colour@{colour}!R\+G\+B\+\_\+equivalence@{R\+G\+B\+\_\+equivalence}}
+\index{R\+G\+B\+\_\+equivalence@{R\+G\+B\+\_\+equivalence}!colour@{colour}}
+\subsubsection[{R\+G\+B\+\_\+equivalence}]{\setlength{\rightskip}{0pt plus 5cm}colour.\+R\+G\+B\+\_\+equivalence = c2.\+hex\+\_\+l}\label{namespacecolour_a875f4229391153785064cb3c99096339}
+\hypertarget{namespacecolour_af7d83e368add5ddec7fda18fc150f958}{}\index{colour@{colour}!R\+G\+B\+\_\+\+T\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+S@{R\+G\+B\+\_\+\+T\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+S}}
+\index{R\+G\+B\+\_\+\+T\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+S@{R\+G\+B\+\_\+\+T\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+S}!colour@{colour}}
+\subsubsection[{R\+G\+B\+\_\+\+T\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}dictionary colour.\+R\+G\+B\+\_\+\+T\+O\+\_\+\+C\+O\+L\+O\+R\+\_\+\+N\+A\+M\+E\+S}\label{namespacecolour_af7d83e368add5ddec7fda18fc150f958}
+\hypertarget{namespacecolour_a82379003713538cfd6135bb378d1efd8}{}\index{colour@{colour}!S\+H\+O\+R\+T\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R@{S\+H\+O\+R\+T\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R}}
+\index{S\+H\+O\+R\+T\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R@{S\+H\+O\+R\+T\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R}!colour@{colour}}
+\subsubsection[{S\+H\+O\+R\+T\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}tuple colour.\+S\+H\+O\+R\+T\+\_\+\+H\+E\+X\+\_\+\+C\+O\+L\+O\+R = re.\+compile(r\textquotesingle{}$^\wedge$\#\mbox{[}0-\/9a-\/f\+A-\/\+F\mbox{]}\{3\}\$\textquotesingle{})}\label{namespacecolour_a82379003713538cfd6135bb378d1efd8}

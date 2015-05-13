@@ -1,0 +1,56 @@
+\hypertarget{calc__lamp_8py}{}\section{python\+\_\+scripts/calc\+\_\+lamp.py File Reference}
+\label{calc__lamp_8py}\index{python\+\_\+scripts/calc\+\_\+lamp.\+py@{python\+\_\+scripts/calc\+\_\+lamp.\+py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacecalc__lamp}{calc\+\_\+lamp}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{namespacecalc__lamp_a67f8a48b282bb1df37dbef674da6c70c}{calc\+\_\+lamp.\+S} = 18.\+5
+\item 
+int \hyperlink{namespacecalc__lamp_ad2861843e3b50107a862fff119d14706}{calc\+\_\+lamp.\+C\+P1} = 0
+\item 
+int \hyperlink{namespacecalc__lamp_a7fc1ee52891484d78fe8e1387481ab35}{calc\+\_\+lamp.\+C\+P2} = 33
+\item 
+int \hyperlink{namespacecalc__lamp_aa57e6acb391a62bc6a5e0e2b0583b523}{calc\+\_\+lamp.\+C\+P12\+H\+D} = 66
+\item 
+int \hyperlink{namespacecalc__lamp_a61c0b95cbaf24598117340c745f06cb5}{calc\+\_\+lamp.\+L} = 14
+\item 
+\hyperlink{namespacecalc__lamp_a24423a34de7058a469e65e72013909e3}{calc\+\_\+lamp.\+R\+D} = C\+P2\+\_\+\+R\+O\+W-\/C\+P1\+\_\+\+R\+O\+W
+\item 
+\hyperlink{namespacecalc__lamp_a9fcf41a6d23f2cb5a91b8f0662ade78e}{calc\+\_\+lamp.\+N} = C\+P2\+\_\+\+I\+D-\/C\+P1\+\_\+\+I\+D
+\item 
+tuple \hyperlink{namespacecalc__lamp_aa3ded2a7a642f31bc04b9a2390e87f2c}{calc\+\_\+lamp.\+leds\+\_\+per\+\_\+turn} = float(N)
+\item 
+tuple \hyperlink{namespacecalc__lamp_aae862acf48d47d29de10038c66c88186}{calc\+\_\+lamp.\+height\+\_\+per\+\_\+turn} = float(C\+P12\+H\+D)
+\item 
+tuple \hyperlink{namespacecalc__lamp_a9992b66c8618f2824a778cc98e6e95b3}{calc\+\_\+lamp.\+helix\+\_\+circumferance} = float(S)
+\item 
+\hyperlink{namespacecalc__lamp_a4c2cdb9deaceccbc732e80467c88f8fa}{calc\+\_\+lamp.\+helix\+\_\+diameter} = helix\+\_\+circumferance/math.\+pi
+\item 
+float \hyperlink{namespacecalc__lamp_a9fae0936f2cfe1102b12afe7d72667a6}{calc\+\_\+lamp.\+helix\+\_\+radius} = helix\+\_\+diameter/2.\+0
+\item 
+tuple \hyperlink{namespacecalc__lamp_a16e8ac2cfa1d3f1b02d7699fb1f0e5d0}{calc\+\_\+lamp.\+helix\+\_\+turns} = float(L-\/1)
+\item 
+\hyperlink{namespacecalc__lamp_ab2143c5488cff230353890b72615d7b4}{calc\+\_\+lamp.\+helix\+\_\+height} = helix\+\_\+turns$\ast$height\+\_\+per\+\_\+turn
+\item 
+\hyperlink{namespacecalc__lamp_a99c3d189f142019bc22c5e7bdda8ddaf}{calc\+\_\+lamp.\+height\+\_\+per\+\_\+led} = height\+\_\+per\+\_\+turn/leds\+\_\+per\+\_\+turn
+\item 
+float \hyperlink{namespacecalc__lamp_a293f8c6e4a3571865e0d87bdaeb52aec}{calc\+\_\+lamp.\+radians\+\_\+per\+\_\+led} = math.\+pi$\ast$2.\+0
+\item 
+tuple \hyperlink{namespacecalc__lamp_af715266869242410b2fe465651871054}{calc\+\_\+lamp.\+led\+\_\+list} = list()
+\item 
+tuple \hyperlink{namespacecalc__lamp_a6988f889f4e66771a6f9370d1b8bc9b1}{calc\+\_\+lamp.\+led\+\_\+box} = \hyperlink{classv3_1_1box3}{v3.\+box3}()
+\item 
+\hyperlink{namespacecalc__lamp_a82aeed2e966856f51d4f4f92b77e2ec6}{calc\+\_\+lamp.\+angle} = led$\ast$radians\+\_\+per\+\_\+led
+\item 
+tuple \hyperlink{namespacecalc__lamp_aa8ac454a435aa87a128701d48e86b265}{calc\+\_\+lamp.\+x} = math.\+sin(angle)
+\item 
+tuple \hyperlink{namespacecalc__lamp_ace4756a004516f85bd3e10ec64c6f56e}{calc\+\_\+lamp.\+y} = math.\+cos(angle)
+\item 
+\hyperlink{namespacecalc__lamp_a3b8d6def1fba2f531a1c3cb590dd0bc7}{calc\+\_\+lamp.\+z} = led$\ast$height\+\_\+per\+\_\+led
+\item 
+tuple \hyperlink{namespacecalc__lamp_a7cb8bc15da13759da2aa07dc77cf13fe}{calc\+\_\+lamp.\+pos} = \hyperlink{classv3_1_1vec3}{v3.\+vec3}(x, y, z)
+\end{DoxyCompactItemize}

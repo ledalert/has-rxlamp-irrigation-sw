@@ -1,0 +1,63 @@
+\hypertarget{timer_8h}{}\section{src/timer.h File Reference}
+\label{timer_8h}\index{src/timer.\+h@{src/timer.\+h}}
+{\ttfamily \#include \char`\"{}hw.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$libopencm3/stm32/timer.\+h$>$}\\*
+{\ttfamily \#include $<$libopencm3/stm32/rcc.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtimer__ccr}{timer\+\_\+ccr}
+\item 
+struct \hyperlink{structtimer__ccr__config}{timer\+\_\+ccr\+\_\+config}
+\item 
+struct \hyperlink{structtimer__config}{timer\+\_\+config}
+\item 
+struct \hyperlink{structtimer}{timer}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{timer_8h_a80af63ee0cf37ec5ef19ace87744ad82}{\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{timer_8h_a995539ac62815c22bad2313f304865b5}{timer\+\_\+ccr\+\_\+init} (struct \hyperlink{structtimer__ccr}{timer\+\_\+ccr} $\ast$ccr, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} \hyperlink{structstate}{state})
+\item 
+void \hyperlink{timer_8h_a1e33eb6cb5bd4bd99416edbb25790760}{timer\+\_\+init} (struct \hyperlink{structtimer}{timer} $\ast$\hyperlink{structtimer}{timer}, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} \hyperlink{structstate}{state})
+\item 
+void \hyperlink{timer_8h_a734417848b07d1d04bca5e224f13e319}{timer\+\_\+ccr\+\_\+set} (struct \hyperlink{structtimer__ccr}{timer\+\_\+ccr} $\ast$ccr, uint32\+\_\+t value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{timer_8h_a80af63ee0cf37ec5ef19ace87744ad82}{}\index{timer.\+h@{timer.\+h}!\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+@{\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+}}
+\index{\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+@{\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+}!timer.\+h@{timer.\+h}}
+\subsubsection[{\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+}\label{timer_8h_a80af63ee0cf37ec5ef19ace87744ad82}
+
+
+\subsection{Function Documentation}
+\hypertarget{timer_8h_a995539ac62815c22bad2313f304865b5}{}\index{timer.\+h@{timer.\+h}!timer\+\_\+ccr\+\_\+init@{timer\+\_\+ccr\+\_\+init}}
+\index{timer\+\_\+ccr\+\_\+init@{timer\+\_\+ccr\+\_\+init}!timer.\+h@{timer.\+h}}
+\subsubsection[{timer\+\_\+ccr\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void timer\+\_\+ccr\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf timer\+\_\+ccr} $\ast$}]{ccr, }
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{timer_8h_a995539ac62815c22bad2313f304865b5}
+\hypertarget{timer_8h_a734417848b07d1d04bca5e224f13e319}{}\index{timer.\+h@{timer.\+h}!timer\+\_\+ccr\+\_\+set@{timer\+\_\+ccr\+\_\+set}}
+\index{timer\+\_\+ccr\+\_\+set@{timer\+\_\+ccr\+\_\+set}!timer.\+h@{timer.\+h}}
+\subsubsection[{timer\+\_\+ccr\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}void timer\+\_\+ccr\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf timer\+\_\+ccr} $\ast$}]{ccr, }
+\item[{uint32\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}\label{timer_8h_a734417848b07d1d04bca5e224f13e319}
+\hypertarget{timer_8h_a1e33eb6cb5bd4bd99416edbb25790760}{}\index{timer.\+h@{timer.\+h}!timer\+\_\+init@{timer\+\_\+init}}
+\index{timer\+\_\+init@{timer\+\_\+init}!timer.\+h@{timer.\+h}}
+\subsubsection[{timer\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void timer\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf timer} $\ast$}]{timer, }
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{timer_8h_a1e33eb6cb5bd4bd99416edbb25790760}
