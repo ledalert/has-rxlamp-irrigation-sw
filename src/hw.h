@@ -9,6 +9,9 @@
 
 #ifndef _HW_H_
 
+/*! Sets a value if the value evaluates to false
+ 	@param value Variable to check and possibly set 
+ 	@param default Default value if value was 0 */
 #define DEFAULT(value, default) value = value ? value : default
 
 

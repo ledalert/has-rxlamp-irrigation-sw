@@ -1,23 +1,38 @@
+/*! \file ws2812.c
+    \brief Implementation of WS2812 HAL
+ 
+*/
 #include "ws2812.h"
 
 
-
-void ws2812_configure_timer(struct ws2812* led) {
+/*! Apply default configuration to the timer 
+	@param led Bus to use
+*/
+	void ws2812_configure_timer(struct ws2812* led) {
 	DEFAULT(led->configuration->ccr->configuration->timer->configuration->auto_reload, rcc_apb1_frequency / led->configuration->frequency - 1);
 }
 
+/*! Apply default configuration to GPIO 
+	@param led Bus to use
+*/
 void ws2812_configure_gpio(struct ws2812* led) {
 	DEFAULT(led->configuration->pin->configuration->mode, GPIO_MODE_OUTPUT_2_MHZ);
 	DEFAULT(led->configuration->pin->configuration->configuration, GPIO_CNF_OUTPUT_ALTFN_OPENDRAIN);
 }
 
+/*! Apply default configration to ws2812 
+	@param led Bus to use
+*/
 void ws2812_set_defaults(struct ws2812* led) {
 	DEFAULT(led->configuration->frequency, 800000);
 	DEFAULT(led->configuration->bit0, 6);
 	DEFAULT(led->configuration->bit1, 14);
 }
 
-
+/*! Initiate ws2812 bus to state 
+	@param led Bus to init
+	@param state New HW state
+*/
 void ws2812_init(struct ws2812* led, enum hw_init_state state) {
 
 	if (state == HW_INIT_PRE_NVIC) {

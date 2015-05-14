@@ -1,3 +1,7 @@
+/*! \file gpio.c
+    \brief GPIO HAL implementation
+ 
+*/
 #include "gpio.h"
 
 

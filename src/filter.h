@@ -1,11 +1,17 @@
+/*! \file filter.h
+    \brief Filter functions for filtering sensor data
+ 
+*/
 #ifndef _FILTER_H_
 #include <stdint.h>
 
+/*! A valid range for samples */
 struct filter_sample_range {
 	int min;
 	int max;
 };
 
+/*! RMS filter configuration and state */
 struct filter_rms {
 	volatile uint32_t* buffer;
 	uint32_t size;								//Size of the buffer

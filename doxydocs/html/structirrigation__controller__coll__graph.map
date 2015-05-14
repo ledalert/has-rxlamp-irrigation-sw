@@ -1,6 +1,0 @@
-<map id="irrigation_controller" name="irrigation_controller">
-<area shape="rect" id="node2" href="$structirrigation__events.html" title="The event callback functions for the irrigation controller core. " alt="" coords="5,267,133,294"/>
-<area shape="rect" id="node3" href="$structirrigation__controller__status.html" title="irrigation_controller\l_status" alt="" coords="158,260,303,301"/>
-<area shape="rect" id="node4" href="$structsw__timer__system__time.html" title="sw_timer_system_time" alt="" coords="99,5,269,32"/>
-<area shape="rect" id="node5" href="$structirrigation__temperature__sample.html" title="This is a timestamped temperature sample. " alt="" coords="261,96,427,137"/>
-</map>

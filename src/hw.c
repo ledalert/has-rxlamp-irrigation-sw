@@ -1,7 +1,11 @@
+/*! \file hw.c
+    \brief HAL main control
+ 
+*/
 #include "hw.h"
 // #include "pump.h"
 // #include "moisture_sensor.h"
-#include "led.h"
+//#include "led.h"
 // #include "uart.h"
 
 // #include <libopencm3/stm32/timer.h>

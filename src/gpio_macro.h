@@ -1,3 +1,7 @@
+/*! \file gpio_macro.h
+    \brief Helper macros for GPIO
+ 
+*/
 #ifndef _GPIO_MACRO_H_
 
 #define GPIO_PORT_INSTANCE(Name, Port, Rcc)\

@@ -1,3 +1,7 @@
+/*! \file timer.h
+    \brief Timer HAL include file
+ 
+*/
 #ifndef _TIMER_H_
 
 #include "hw.h"

@@ -145,6 +145,8 @@ void dma1_channel1_isr(void) {
 
 
 
+/*! Set color of indicator LED
+@todo Move this to the events API */
 void status_color(int r, int g, int b) {
 	ws2812_set_led(&StatusLED, 0, LED_Gamma[r], LED_Gamma[g], LED_Gamma[b]);
 	ws2812_update_blocking(&StatusLED);
@@ -282,6 +284,8 @@ void status_color(int r, int g, int b) {
 
 // }
 
+
+/*! Send broken down time using blocking/polling (no dma/irq) */
 void usart_blocking_tm(struct usart* usart, struct sw_timer_system_time* tm) {
 	struct tm res;
 	time_tm_from_epoch(&res, tm->epoch);	
@@ -331,6 +335,7 @@ struct state* get_state(enum irrigation_status status) {
 }
 
 
+/*! @copydoc irrigation_events::report_current_temperature */
 void report_current_temperature(struct irrigation_controller* controller) {
 	usart_blocking_tm(&Serial, &controller->status.iteration_time);
 	usart_blocking_str(&Serial, ">  Current Sensor Temperature: ");
@@ -338,6 +343,7 @@ void report_current_temperature(struct irrigation_controller* controller) {
 	usart_blocking_str(&Serial, "°C\n");
 }
 
+/*! @copydoc irrigation_events::report_validation_temperatures */
 void report_validation_temperatures(struct irrigation_controller* controller) {
 	usart_blocking_tm(&Serial, &controller->status.iteration_time);
 	usart_blocking_str(&Serial, ">  Temperature Validation Report:\n\tMinimum:  ");
@@ -349,16 +355,19 @@ void report_validation_temperatures(struct irrigation_controller* controller) {
 	usart_blocking_str(&Serial, "°C\n");
 }
 
+/*! @copydoc irrigation_events::report_sensor_malfunction */
 void report_sensor_malfunction(struct irrigation_controller* controller) {
 	usart_blocking_tm(&Serial, &controller->status.iteration_time);
 	usart_blocking_str(&Serial, ">  ERROR! Temperature sensor offline\n");
 }
 
+/*! @copydoc irrigation_events::report_sensor_fluctuations */
 void report_sensor_fluctuations(struct irrigation_controller* controller) {
 	usart_blocking_tm(&Serial, &controller->status.iteration_time);
 	usart_blocking_str(&Serial, ">  Warning! Temperature sensor is fluctuating\n");
 }
 
+/*! @copydoc irrigation_events::report_msg_note */
 void report_msg_note(struct irrigation_controller* controller, char* msg) {
 	usart_blocking_tm(&Serial, &controller->status.iteration_time);
 	usart_blocking_str(&Serial, ">  Note: ");
@@ -366,6 +375,7 @@ void report_msg_note(struct irrigation_controller* controller, char* msg) {
 	usart_blocking_str(&Serial, "\n");
 }
 
+/*! @copydoc irrigation_events::report_measurement_data */
 void report_measurement_data(struct irrigation_controller* controller, char* msg) {
 	usart_blocking_tm(&Serial, &controller->status.iteration_time);
 	usart_blocking_str(&Serial, ">  Measurement complete.\n\t∑(|ΔTemperature|) = ");
@@ -377,7 +387,7 @@ void report_measurement_data(struct irrigation_controller* controller, char* msg
 	usart_blocking_str(&Serial, "°C/S\n");
 }
 
-
+/*! This is the main irrigation controller state */
 struct irrigation_controller ic = {
 	.events = {
 		.report_validation_temperatures = report_validation_temperatures,

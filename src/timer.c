@@ -1,6 +1,12 @@
+/*! \file timer.c
+    \brief Timer HAL implementation
+ 
+*/
 #include "timer.h"
 
-
+/*! Upgrade timer_ccr state and init hardware  */
+/*! @todo Add more CCR-channels */
+/*! @todo Only upgrade state if needed */
 void timer_ccr_init(struct timer_ccr* ccr, enum hw_init_state state) {
 
 	timer_init(ccr->configuration->timer, state);
@@ -51,10 +57,12 @@ void timer_ccr_init(struct timer_ccr* ccr, enum hw_init_state state) {
 
 }
 
+/*! Set CCR value of timer_ccr */
 void timer_ccr_set(struct timer_ccr* ccr, uint32_t value) {
 	*ccr->configuration->reg = value;
 }
 
+/*! Upgrade timer_init state and init hardware  */
 void timer_init(struct timer* timer, enum hw_init_state state) {
 	timer->state = state;
 	switch (state) {
@@ -76,7 +84,7 @@ void timer_init(struct timer* timer, enum hw_init_state state) {
 			TIM_EGR(timer->configuration->timer) = TIM_EGR_UG;
 
 			if (timer->configuration->timer == TIM1) {
-				TIM_BDTR(timer->configuration->timer) |= TIM_BDTR_MOE; //Advanced timer have master output enable
+				TIM_BDTR(timer->configuration->timer) |= TIM_BDTR_MOE; /* Advanced timer have master output enable */ 
 			}
 			
 			/* ARR reload enable */

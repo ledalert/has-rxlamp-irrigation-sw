@@ -1,3 +1,7 @@
+/*! \file gpio.h
+    \brief GPIO HAL includes
+ 
+*/
 #ifndef _GPIO_H_
 #include "hw.h"
 #include <libopencm3/stm32/gpio.h>

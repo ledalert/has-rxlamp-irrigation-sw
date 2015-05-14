@@ -1,3 +1,7 @@
+/*! \file dma.h
+    \brief DMA includes
+ 
+*/
 #ifndef _DMA_H_
 
 #include <libopencm3/stm32/dma.h>

@@ -1,3 +1,7 @@
+/*! \file adc.h
+    \brief ADC HAL include
+ 
+*/
 #ifndef _ADC_H_
 #include "hw.h"
 #include <libopencm3/stm32/adc.h>

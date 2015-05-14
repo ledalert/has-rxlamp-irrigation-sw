@@ -1,5 +1,0 @@
-<map id="gpio_pin" name="gpio_pin">
-<area shape="rect" id="node2" href="$structgpio__pin__config.html" title="gpio_pin_config" alt="" coords="9,184,129,211"/>
-<area shape="rect" id="node3" href="$structgpio__port.html" title="gpio_port" alt="" coords="27,95,110,121"/>
-<area shape="rect" id="node4" href="$structgpio__port__config.html" title="gpio_port_config" alt="" coords="5,5,132,32"/>
-</map>

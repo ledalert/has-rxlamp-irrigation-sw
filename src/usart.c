@@ -1,6 +1,11 @@
+/*! \file usart.c
+    \brief USART HAL driver
+ 
+*/
 #include "uart.h"
 #include <math.h>
 
+/*! Configure USART to default values */
 void usart_set_defaults(struct usart* usart) {
 	DEFAULT(usart->configuration->baudrate, 115200);
 	DEFAULT(usart->configuration->databits, 8);
@@ -12,7 +17,7 @@ void usart_set_defaults(struct usart* usart) {
 
 
 
-
+/*! Configure USART GPIO default values */
 void usart_configure_gpio(struct usart* usart) {
 	if (usart->configuration->tx_pin) {
 		DEFAULT(usart->configuration->tx_pin->configuration->mode, GPIO_MODE_OUTPUT_2_MHZ);
@@ -25,8 +30,8 @@ void usart_configure_gpio(struct usart* usart) {
 }
 
 
-//TODO: Check if we are inited already
-
+/*! Init usart device
+	@todo Check if we are inited already	*/
 void usart_init(struct usart* usart, enum hw_init_state state) {
 
 	if (state == HW_INIT_RCC) {
@@ -59,6 +64,7 @@ void usart_init(struct usart* usart, enum hw_init_state state) {
 
 }
 
+/*! Send data using blocking/polling method (no IRQ nor DMA) */
 void usart_blocking_send(struct usart* usart, volatile void* data, int length) {
 
 	uint8_t* ptr = (uint8_t*)data;
@@ -69,6 +75,7 @@ void usart_blocking_send(struct usart* usart, volatile void* data, int length) {
 
 }
 
+/*! Send zero terminated string using blocking/polling method (no IRQ nor DMA) */
 void usart_blocking_strz(struct usart* usart, volatile char* ptr) {
 	while(*ptr) {
 		usart_send_blocking(usart->configuration->usart, *ptr++);
@@ -76,6 +83,7 @@ void usart_blocking_strz(struct usart* usart, volatile char* ptr) {
 
 }
 
+/*! Send formatted integer using blocking/polling method (no IRQ nor DMA) */
 void usart_blocking_int(struct usart* usart, int data) {
 	int div = 1000000000;
 	int num;
@@ -96,6 +104,10 @@ void usart_blocking_int(struct usart* usart, int data) {
 	}
 }
 
+/*! Send a formatted int with zeropadding using blocking/polling method (no IRQ nor DMA)
+	@param usart Pointer to USART device 
+	@param data Integer value to format and send
+	@param dp Number of digits to use */
 void usart_blocking_int_zp(struct usart* usart, int data, int dp) {
 	int div = pow(10, dp-1);
 	int num;
@@ -110,27 +122,12 @@ void usart_blocking_int_zp(struct usart* usart, int data, int dp) {
 	}
 }
 
-
+/*! Send a formatted float using blocking/polling method (no IRQ nor DMA) 
+	@param usart Pointer to USART device 
+	@param data Floating point value to format and send */
 void usart_blocking_float(struct usart* usart, float data) {
 
 	usart_blocking_int(usart, (int)data);
 	usart_send_blocking(usart->configuration->usart, '.');
 	usart_blocking_int_zp(usart, (int)(fabs(data)*1000) % 1000, 3);
-
-	// if (data) {
-	// 	float l10 = floor(log10f(fabs(data)));
-	// 	float n = data / powf(10.0, l10);
-	// 	usart_send_blocking(usart->configuration->usart, '0' + ((int)floor(n)));
-	// 	usart_send_blocking(usart->configuration->usart, '.');
-	// 	usart_send_blocking(usart->configuration->usart, '0' + ((int)floor(n*10.0)) % 10);
-	// 	usart_send_blocking(usart->configuration->usart, '0' + ((int)floor(n*100.0)) % 10);
-	// 	usart_send_blocking(usart->configuration->usart, '0' + ((int)floor(n*1000.0)) % 10);
-	// 	usart_send_blocking(usart->configuration->usart, 'E');
-	// 	usart_send_blocking(usart->configuration->usart, l10 > 0 ? '+' : '-');
-	// 	usart_blocking_int(usart, (int)l10);
-
-
-	// } else {
-	// 	usart_blocking_str(usart, "0.000");		
-	// }
 }

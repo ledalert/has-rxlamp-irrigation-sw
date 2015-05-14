@@ -1,3 +1,7 @@
+/*! \file usart_macro.h
+    \brief Helper macros for USART
+ 
+*/
 #ifndef _USART_MACRO_H_
 #include "uart.h"
 

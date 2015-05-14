@@ -3,15 +3,25 @@
  
 */
 #include "irrigation.h"
+
+/*! Measure state enter
+
+	The following things are done in this function	
+
+ */
 void state_measure_enter(struct irrigation_controller* controller) {
 
+
+	/*! @li It is asserted that the last soil temperature is no older than 10 mS */
 	if (time_delta(controller->status.iteration_time, controller->status.soil_temperature.timestamp) > 0.01) {
 		controller->events.report_sensor_malfunction(controller);
 		controller->pending_state = irrigation_status_REBOOT;
 	}
 
+	/*! @li last_soil_sample is set to soil_temperature */
 	controller->status.last_soil_sample = controller->status.soil_temperature;
 
+	/*! @li Initializing variables used in run state */
 	controller->status.heating_time=0;
 	controller->status.sensor_state = moisture_sensor_heating;	
 	controller->status.periodic_temp_report = 0;
@@ -27,6 +37,7 @@ void state_measure_enter(struct irrigation_controller* controller) {
 	// 	controller->pending_state = irrigation_status_REBOOT;
 	// }
 
+	/*! @li Report that heater was started */
 	controller->events.report_msg_note(controller, "Heater started");
 
 }

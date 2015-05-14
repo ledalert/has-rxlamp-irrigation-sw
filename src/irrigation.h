@@ -21,7 +21,7 @@
 /*! This is the state of the irrigation controller */
 enum irrigation_status {
 	irrigation_status_REBOOT = -2,			/*!< If something goes terribly wrong we can set this to pending state and force a reboot */
-	irrigation_status_UNDEFINED = -1,		/*!< This is the default sate but it is also used for the pending state when no pending state is set */
+	irrigation_status_UNDEFINED = -1,		/*!< This is the default state but it is also used for the pending state when no pending state is set */
 
 	irrigation_status_INIT,					/*!< Initialize the system */
 	irrigation_status_VALIDATE,				/*!< Validate the sensors */

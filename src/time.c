@@ -1,7 +1,28 @@
+/*! \file time.c
+    \brief Time keeping and conversation functions
+ 
+*/
 #include "time.h"
 
 
 
+
+
+/* 2000-03-01 (mod 400 year, immediately after feb29 */
+#define LEAPOCH (946684800LL + 86400*(31+29))
+
+#define DAYS_PER_400Y (365*400 + 97)
+#define DAYS_PER_100Y (365*100 + 24)
+#define DAYS_PER_4Y   (365*4   + 1)
+
+/*! Convert epoch time to struct tm
+
+	Based on http://git.musl-libc.org/cgit/musl/tree/src/time/__secs_to_tm.c 
+
+	@param tm Pointer to target struct tm
+	@param t Epoch time
+	@returns 0 on success
+	*/
 
 int time_tm_from_epoch(struct tm* tm, int t) {	
 	long long days, secs;

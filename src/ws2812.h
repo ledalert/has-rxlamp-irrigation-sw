@@ -1,29 +1,36 @@
+/*! \file ws2812.h
+    \brief WS2812 HAL include file
+ 
+*/
 #ifndef _WS2812_H_
 
 #include "gpio.h"
 #include "timer.h"
 #include "dma.h"
 
+/*! Configuration for WS2812 */
 struct ws2812_config {
-	struct timer_ccr* ccr;
-	struct gpio_pin* pin;
-	uint32_t frequency;
-	uint32_t bit0;
-	uint32_t bit1;
+	struct timer_ccr* ccr;	/*!< What CCR to use */
+	struct gpio_pin* pin;	/*!< What GPIO pin to use */
+	uint32_t frequency;		/*!< Frequency of data, defaults to 800kHz */
+	uint32_t bit0;			/*!< Length of bit 0 for PWM */
+	uint32_t bit1;			/*!< Length of bit 1 for PWM */
 };
 
+/*! WS2812 Instance */
 struct ws2812 {
-	struct ws2812_config* configuration;
-	struct ws2812_rgb* led_buffer;		//N
-	uint8_t* pwm_buffer;				//24 * N + 1
-	enum hw_init_state state;
-	int led_count;
+	struct ws2812_config* configuration;		/*!< Pointer to configuration */
+	struct ws2812_rgb* led_buffer;				/*!< Pointer to LED array @note This should contain as many elements as there are LEDs */
+	uint8_t* pwm_buffer;						/*!< Pointer to buffer for PWM data @note This should contain 24 * N + 1 elements where N is number of LEDs */
+	enum hw_init_state state;					/*!< Device state */
+	int led_count;								/*!< Number of LEDs connected to the bus */
 };
 
+/*! 24 bit color */
 struct ws2812_rgb {
-	uint8_t r;
-	uint8_t g;
-	uint8_t b;
+	uint8_t r;	/*!< Red 0-255 */
+	uint8_t g;	/*!< Green 0-255 */
+	uint8_t b;	/*!< Blue 0-255 */
 };
 
 void ws2812_init(struct ws2812* led, enum hw_init_state state);

@@ -1,11 +1,16 @@
+/*! \file uart.h
+    \brief UART HAL Include file
+ 
+*/
 #ifndef _UART_H_
 
 #include "gpio.h"
 #include <libopencm3/stm32/usart.h>
 
+/*! Send string literal using blocking/polling (no dma or irq) */
 #define usart_blocking_str(uart, str) usart_blocking_send(uart, str, sizeof(str)-1)
 
-
+/*! Usart configuration */
 struct usart_config {
 	struct gpio_pin* rx_pin;
 	struct gpio_pin* tx_pin;
@@ -20,6 +25,7 @@ struct usart_config {
 	uint32_t flowcontrol;
 };
 
+/*! Usart */
 struct usart {
 	struct usart_config* configuration;
 };
