@@ -73,8 +73,10 @@ struct irrigation_events {
 	void (*report_sensor_fluctuations)(struct irrigation_controller*);		/*!< Report that sensordata fluctuates */
 	void (*report_current_temperature)(struct irrigation_controller*);		/*!< Reports current temperature */
 	void (*report_measurement_data)(struct irrigation_controller*);			/*!< Report water content data */
-	void (*report_msg_note)(struct irrigation_controller*, char* msg);		/*!< Generic note as a string, used for debugging */
+	void (*report_msg_note)(struct irrigation_controller*, char*);		/*!< Generic note as a string, used for debugging */
 };
+
+
 
 /*! Holds everything related to the irrigation controller */
 struct irrigation_controller {

@@ -3,8 +3,8 @@
  
 */
 #ifndef _UART_H_
-
 #include "gpio.h"
+#include "time.h"
 #include <libopencm3/stm32/usart.h>
 
 /*! Send string literal using blocking/polling (no dma or irq) */
@@ -37,5 +37,6 @@ void usart_blocking_float(struct usart* usart, float data);
 void usart_blocking_int(struct usart* usart, int data);
 void usart_blocking_int_zp(struct usart* usart, int data, int dp);
 void usart_blocking_strz(struct usart* usart, volatile char* data);
+void usart_blocking_tm(struct usart* usart, struct sw_timer_system_time* tm);
 #define _UART_H_
 #endif

@@ -7,33 +7,34 @@
 #include "hw.h"
 #include <libopencm3/stm32/timer.h>
 #include <libopencm3/stm32/rcc.h>
+#include "dma.h"
 
-
-struct timer_ccr {
-	struct timer_ccr_config* configuration;
-	enum hw_init_state state;
-};
+struct timer;
 
 struct timer_ccr_config {
 	struct timer* timer;
 	enum tim_oc_id channel;
-	uint32_t start_ccr;
+	struct dma_channel_config* dma;
 	volatile uint32_t* reg;
-	uint32_t dma_channel;
-	uint32_t dma_enable_flag;
+
 };
+
+struct timer_ccr {
+	struct timer_ccr_config* configuration;
+	enum hw_init_state state;
+	uint32_t ccr;
+};
+
 
 struct timer_config {
 	uint32_t timer;
 	uint32_t rcc;
-	uint32_t dma_rcc;
-	uint32_t auto_reload;
 };
 
 struct timer {
 	struct timer_config* configuration;
 	enum hw_init_state state;
-	uint32_t reload;
+	uint32_t auto_reload;
 };
 
 

@@ -21,7 +21,7 @@ struct ws2812_config {
 struct ws2812 {
 	struct ws2812_config* configuration;		/*!< Pointer to configuration */
 	struct ws2812_rgb* led_buffer;				/*!< Pointer to LED array @note This should contain as many elements as there are LEDs */
-	uint8_t* pwm_buffer;						/*!< Pointer to buffer for PWM data @note This should contain 24 * N + 1 elements where N is number of LEDs */
+	volatile uint8_t* pwm_buffer;				/*!< Pointer to buffer for PWM data @note This should contain 24 * N + 1 elements where N is number of LEDs */
 	enum hw_init_state state;					/*!< Device state */
 	int led_count;								/*!< Number of LEDs connected to the bus */
 };

@@ -5,11 +5,15 @@
 #include "ws2812.h"
 
 
+
+
+
+
 /*! Apply default configuration to the timer 
 	@param led Bus to use
 */
-	void ws2812_configure_timer(struct ws2812* led) {
-	DEFAULT(led->configuration->ccr->configuration->timer->configuration->auto_reload, rcc_apb1_frequency / led->configuration->frequency - 1);
+void ws2812_configure_timer(struct ws2812* led) {
+	DEFAULT(led->configuration->ccr->configuration->timer->auto_reload, rcc_apb1_frequency / led->configuration->frequency - 1);
 }
 
 /*! Apply default configuration to GPIO 
@@ -34,6 +38,7 @@ void ws2812_set_defaults(struct ws2812* led) {
 	@param state New HW state
 */
 void ws2812_init(struct ws2812* led, enum hw_init_state state) {
+
 
 	if (state == HW_INIT_PRE_NVIC) {
 		ws2812_configure_timer(led);
@@ -67,6 +72,7 @@ void ws2812_process_buffer(struct ws2812* led) {
 		for (int bit=7;bit>=0;bit--) { *ptr++ = led->led_buffer[l].b & (1 << bit) ? led->configuration->bit1 : led->configuration->bit0; }
 
 	}
+ 	*ptr = 0;	//Set last value to 0
 
 }
 
@@ -74,16 +80,16 @@ void ws2812_process_buffer(struct ws2812* led) {
 void ws2812_update(struct ws2812* led) {
 
 	ws2812_process_buffer(led);
-	dma1_transmit_8_32((uint32_t) led->pwm_buffer, (uint32_t) led->configuration->ccr->configuration->reg, 24*led->led_count+1, led->configuration->ccr->configuration->dma_channel);
-	TIM_DIER(led->configuration->ccr->configuration->timer->configuration->timer) |= led->configuration->ccr->configuration->dma_enable_flag;
+	dma_channel_send(led->configuration->ccr->configuration->dma, led->pwm_buffer, 24 * led->led_count + 1);
+	// dma1_transmit_8_32((uint32_t) led->pwm_buffer, (uint32_t) led->configuration->ccr->configuration->reg, 24*led->led_count+1, led->configuration->ccr->configuration->dma_channel);
+	// TIM_DIER(led->configuration->ccr->configuration->timer->configuration->timer) |= led->configuration->ccr->configuration->dma_enable_flag;
 
 }
 
 //Todo: support for different DMA
 void ws2812_update_blocking(struct ws2812* led) {
-	ws2812_update(led);
-	while (!dma_get_interrupt_flag(DMA1, led->configuration->ccr->configuration->dma_channel, DMA_TCIF));
-	TIM_DIER(led->configuration->ccr->configuration->timer->configuration->timer) &= ~led->configuration->ccr->configuration->dma_enable_flag;
+	ws2812_process_buffer(led);
+	dma_channel_send_blocking(led->configuration->ccr->configuration->dma, led->pwm_buffer, 24 * led->led_count + 1);
 }
 
 

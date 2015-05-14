@@ -11,8 +11,11 @@ void usart_set_defaults(struct usart* usart) {
 	DEFAULT(usart->configuration->databits, 8);
 	DEFAULT(usart->configuration->parity, USART_PARITY_NONE);
 	DEFAULT(usart->configuration->stopbits, USART_STOPBITS_1);
-	DEFAULT(usart->configuration->mode, USART_MODE_RX);
 	DEFAULT(usart->configuration->flowcontrol, USART_FLOWCONTROL_NONE);
+	DEFAULT(usart->configuration->mode, 
+		(usart->configuration->rx_pin ? USART_MODE_RX : 0)
+		| (usart->configuration->tx_pin ? USART_MODE_TX : 0)
+	);
 }
 
 
@@ -131,3 +134,25 @@ void usart_blocking_float(struct usart* usart, float data) {
 	usart_send_blocking(usart->configuration->usart, '.');
 	usart_blocking_int_zp(usart, (int)(fabs(data)*1000) % 1000, 3);
 }
+
+
+/*! Send broken down time using blocking/polling (no dma/irq) */
+void usart_blocking_tm(struct usart* usart, struct sw_timer_system_time* tm) {
+	struct tm res;
+	time_tm_from_epoch(&res, tm->epoch);	
+	usart_blocking_int(usart, res.tm_year+1900);
+	usart_blocking_str(usart, "-");
+	usart_blocking_int_zp(usart, res.tm_mon + 1, 2);
+	usart_blocking_str(usart, "-");
+	usart_blocking_int_zp(usart, res.tm_mday, 2);
+	usart_blocking_str(usart, " ");
+
+	usart_blocking_int_zp(usart, res.tm_hour, 2);
+	usart_blocking_str(usart, ":");
+	usart_blocking_int_zp(usart, res.tm_min, 2);
+	usart_blocking_str(usart, ":");
+	usart_blocking_int_zp(usart, res.tm_sec, 2);
+	usart_blocking_str(usart, ".");
+	usart_blocking_int_zp(usart, tm->ms, 3);
+}
+
