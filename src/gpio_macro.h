@@ -4,6 +4,13 @@
 */
 #ifndef _GPIO_MACRO_H_
 
+/*! Declares a new GPIO port 
+	@param Name Variable name
+	@portbasep{Port}
+	@rccp{Rcc}
+	@returns
+		struct gpio_port Name
+*/
 #define GPIO_PORT_INSTANCE(Name, Port, Rcc)\
 struct gpio_port Name = {\
 	.configuration = &((struct gpio_port_config){\
@@ -12,6 +19,17 @@ struct gpio_port Name = {\
 	}),\
 };
 
+/*! Declares a new GPIO pin and GPIO pin config
+	@param Name Variable name
+	@portp{Port}
+	@pinmodep{Mode}
+	@pinconfp{Configuration}	
+	@pinnop{Pin}
+	@returns
+		struct gpio_pin_config Name_config \n
+		struct gpio_pin Name
+
+*/
 #define GPIO_PIN_INSTANCE(Name, Port, Mode, Configuration, Pin)\
 struct gpio_pin_config Name##_config = {\
 	.port = Port,\

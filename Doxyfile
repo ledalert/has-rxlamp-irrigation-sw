@@ -228,7 +228,13 @@ TAB_SIZE               = 4
 # "Side Effects:". You can put \n's in the value part of an alias to insert
 # newlines.
 
-ALIASES                =
+ALIASES                = 
+ALIASES += portbasep{1}="@param \1 The GPIO port base address"
+ALIASES += portp{1}="@param \1 Pointer to struct gpio_port to use"
+ALIASES += rccp{1}="@param \1 The RCC index"
+ALIASES += pinmodep{1}="@param \1 The GPIO pin mode"
+ALIASES += pinconfp{1}="@param \1 The GPIO pin configuration"
+ALIASES += pinnop{1}="@param \1 The GPIO pin mask"
 
 # This tag can be used to specify a number of word-keyword mappings (TCL only).
 # A mapping has the form "name=value". For example adding "class=itcl::class"

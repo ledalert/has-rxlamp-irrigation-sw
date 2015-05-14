@@ -2,6 +2,13 @@
     \brief Irrigation controller main file
  
  	@todo	systick, adc, moisture sensor, pwm output, filter
+ 	@todo   explain port and rcc better
+
+	@mainpage Irrigation Controller
+	@section index_sec Index
+
+	@li main.c Main file
+
 
 */
 
