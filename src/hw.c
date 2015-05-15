@@ -14,6 +14,7 @@
 
 
 
+/*! Call hw_init_state with all states to go trough */
 void hw_init() {
 	hw_init_state(HW_INIT_RCC);
 	hw_init_state(HW_INIT_GPIO);

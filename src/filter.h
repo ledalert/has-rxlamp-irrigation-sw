@@ -14,11 +14,11 @@ struct filter_sample_range {
 /*! RMS filter configuration and state */
 struct filter_rms {
 	volatile uint32_t* buffer;
-	uint32_t size;								//Size of the buffer
-	int pos;								//Current position of the buffer
-	uint32_t count;								//Count of samples in buffer, used to determine if data is filtered yet
-	uint32_t sqsum;								//Total square sum of samples		(If you use 12 bit samples, the square take up to 24 bits, this means you get 8 bits left, so max filter length is 256!)
-	int invalid_samples_streak;				//Used for detecting sensor malfunction
+	uint32_t size;								/*!< Size of the buffer */
+	int pos;									/*!< Current position of the buffer */
+	uint32_t count;								/*!< Count of samples in buffer, used to determine if data is filtered yet */
+	uint32_t sqsum;								/*!< Total square sum of samples @note If you use 12 bit samples, the square take up to 24 bits, this means you get 8 bits left, so max filter length is 256!*/
+	int invalid_samples_streak;					/*!< Used for detecting sensor malfunction */
 	struct filter_sample_range valid_range;
 };
 

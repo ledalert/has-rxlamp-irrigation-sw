@@ -112,7 +112,13 @@ void usart_blocking_int(struct usart* usart, int data) {
 	@param data Integer value to format and send
 	@param dp Number of digits to use */
 void usart_blocking_int_zp(struct usart* usart, int data, int dp) {
-	int div = pow(10, dp-1);
+
+	/*! pow() takes like 4kb of flash so avoid it here since we are just working with integers anyway */
+	int div = 1;
+	for(int i=0; i<dp-1; i++) {
+		div*=10;
+	}
+
 	int num;
 	if (data < 0) {
 		usart_send_blocking(usart->configuration->usart, '-');

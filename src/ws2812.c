@@ -61,7 +61,7 @@ void ws2812_init(struct ws2812* led, enum hw_init_state state) {
 
 }
 
-
+/*! Process LED buffer */
 void ws2812_process_buffer(struct ws2812* led) {
 
 	volatile uint8_t* ptr=led->pwm_buffer;
@@ -76,7 +76,7 @@ void ws2812_process_buffer(struct ws2812* led) {
 
 }
 
-
+/*! Send data to LEDs */
 void ws2812_update(struct ws2812* led) {
 
 	ws2812_process_buffer(led);
@@ -86,13 +86,13 @@ void ws2812_update(struct ws2812* led) {
 
 }
 
-//Todo: support for different DMA
+/*! Send data to LEDs, wait for completion */
 void ws2812_update_blocking(struct ws2812* led) {
 	ws2812_process_buffer(led);
 	dma_channel_send_blocking(led->configuration->ccr->configuration->dma, led->pwm_buffer, 24 * led->led_count + 1);
 }
 
-
+/*! Set LED buffer index to color r, g, b (0-255) */
 void ws2812_set_led(struct ws2812* led, int index, int r, int g, int b) {
 	led->led_buffer[index] = (struct ws2812_rgb) {r, g, b};
 }

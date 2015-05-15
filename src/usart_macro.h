@@ -6,7 +6,7 @@
 #include "uart.h"
 
 
-//USART_8N1(Serial, USART1, RCC_USART1, 921600, 0, &Serial_tx);
+/*! Create usart, configured with 8 data bits, 1 stop bit, no parity */
 #define USART_8N1(Name, Usart, Rcc, Baudrate, Rx_pin, Tx_pin) \
 	\
 	struct usart_config Name##_config = {\

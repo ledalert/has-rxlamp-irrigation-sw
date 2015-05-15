@@ -1,7 +1,8 @@
 SHELL=bash
 #Project settings
 PROJECT_NAME = rxlamp_pump
-SOURCES = main.c hw.c ws2812.c gpio.c timer.c dma.c usart.c systick.c adc.c filter.c time.c state_init.c state_validate.c state_reboot.c state_measure.c
+SOURCES = main.c hw.c ws2812.c gpio.c timer.c dma.c usart.c systick.c adc.c filter.c time.c
+# state_init.c state_validate.c state_reboot.c state_measure.c
 BUILD_DIR = build/
 
 OBJECTS = $(SOURCES:%.c=$(BUILD_DIR)%.o)
@@ -54,16 +55,17 @@ $(BUILD_DIR):
 
 $(TARGET_ELF): $(BUILD_DIR) $(LIBS) $(OBJECTS) $(LINK_SCRIPT)
 	$(CC) $(OBJECTS) $(CFLAGS) $(LINK_FLAGS) -o $(TARGET_ELF) 2> >(python cleanup.py)
+	$(SIZE) $(TARGET_ELF)
 
 $(OBJECTS): $(BUILD_DIR)%.o: %.c
 	$(CC) -c $(CFLAGS) $(INCLUDE_PATHS) $^ -o $@ 2> >(python cleanup.py)
 
 $(LINK_SCRIPT): libopencm3_stm32f1.a
 
-libopencm3_stm32f1.a: lib/libopencm3/.git
+libopencm3_stm32f1.a: lib/libopencm3/Makefile
 	cd lib/libopencm3; $(MAKE) lib/stm32/f1
 
-lib/libopencm3/.git:
+lib/libopencm3/Makefile:
 	cd lib/libopencm3; git submodule init
 	cd lib/libopencm3; git submodule update
 

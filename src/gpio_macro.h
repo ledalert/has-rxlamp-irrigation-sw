@@ -42,6 +42,7 @@ struct gpio_pin Name = {\
 	.configuration = &Name##_config,\
 };
 
+/*! Create GPIO pin with no configuration */
 #define GPIO_PIN_NOCONF(Name, Port, Pin) GPIO_PIN_INSTANCE(Name, Port, 0, 0, Pin)
 
 

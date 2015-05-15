@@ -48,21 +48,7 @@ TIMER_NOCONF(StatusLED_timer, TIM1, RCC_TIM1);
 DMA_CHANNEL_NOCONF(StatusLED_dma, &Dma, DMA_CHANNEL6);
 TIMER_CCR_NOCONF(StatusLED_pwm, &StatusLED_timer, TIM_OC3N, &StatusLED_dma);
 
-struct ws2812_config StatusLED_config = {
-	.ccr = &StatusLED_pwm,
-	.pin = &StatusLED_pin,	
-};
-
-struct ws2812_rgb StatusLED_buf[1];
-volatile uint8_t StatusLED_pwmbuf[1*24+1];
-
-struct ws2812 StatusLED = {
-	.configuration = &StatusLED_config,
-	.led_buffer = StatusLED_buf,
-	.pwm_buffer = StatusLED_pwmbuf,
-	.led_count = 1,
-};
-
+WS2812_SIMPLE_CONF(StatusLED, &StatusLED_pin, &StatusLED_pwm, 1);
 
 
 SYSTICK_AUTO_CONFIG(Systick, 1000);
@@ -70,9 +56,11 @@ SYSTICK_AUTO_CONFIG(Systick, 1000);
 GAMMA_LUT_8_8_E_INSTANCE(LED_Gamma);
 
 
-volatile int sleep_ms = 0;
+volatile int sleep_ms = 0;	/*!< Holds number of ms to sleep, counts down in sys_tick_handler() */
 volatile int NTC_filtered_value = -1;
 
+
+/*! Init hardware */
 void hw_init_state(enum hw_init_state state) {
 	//Init hardware
 	ws2812_init(&StatusLED, state);
@@ -85,7 +73,7 @@ void hw_init_state(enum hw_init_state state) {
 volatile struct sw_timer_system_time system_time = {1420070400, 0};
 volatile bool system_time_updated=0;
 
-
+/*! Systick IRQ handler */
 void sys_tick_handler(void) {
 	if (sleep_ms) {
 		sleep_ms--;
@@ -99,11 +87,13 @@ void sys_tick_handler(void) {
 
 }
 
+/*! Sleep in millisecond durations */
 void ms_sleep(int time) {
 	sleep_ms = time;
 	while (sleep_ms);
 }
 
+/*! Get time, wait until an atomic reading was successful */
 void get_system_time_blocking(struct sw_timer_system_time* result) {
 	//Try to copy time but if it was updated, discard and retry
 	while (1) {
@@ -116,11 +106,14 @@ void get_system_time_blocking(struct sw_timer_system_time* result) {
 }
 
 
+/*! Update status LED */
 void set_status_color(int r, int g, int b) {
 	ws2812_set_led(&StatusLED, 0, LED_Gamma[r], LED_Gamma[g], LED_Gamma[b]);
 	ws2812_update_blocking(&StatusLED);
 }
 
+
+/*! Application entry point */
 int main(void) {
 
 	//Setup main clock
@@ -130,7 +123,7 @@ int main(void) {
 
 
 	//Initiate all hardware
-	hw_init();	
+	hw_init();
 
 	//Say hello
 	struct sw_timer_system_time now;

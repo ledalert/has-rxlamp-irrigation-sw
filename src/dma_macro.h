@@ -1,3 +1,7 @@
+/*! \file dma_macro.h
+    \brief Helper macros for DMA HAL
+ 
+*/
 #ifndef _DMA_MACRO_H_
 #include "dma.h"
 
@@ -21,6 +25,7 @@
 	};
 
 
+/*! Create unconfigured DMA channel */
 #define DMA_CHANNEL_NOCONF(Name, Dma, Channel) DMA_CHANNEL_INSTANCE(Name, Dma, Channel, 0, 0, 0)
 
 #define _DMA_MACRO_H_

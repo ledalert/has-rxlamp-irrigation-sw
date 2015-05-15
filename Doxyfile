@@ -235,6 +235,7 @@ ALIASES += rccp{1}="@param \1 The RCC index"
 ALIASES += pinmodep{1}="@param \1 The GPIO pin mode"
 ALIASES += pinconfp{1}="@param \1 The GPIO pin configuration"
 ALIASES += pinnop{1}="@param \1 The GPIO pin mask"
+ALIASES += namep{1,2}="@param \1 The name that will be used for the \2 declaration. This name will also be prepended to any other variables declared"
 
 # This tag can be used to specify a number of word-keyword mappings (TCL only).
 # A mapping has the form "name=value". For example adding "class=itcl::class"
